@@ -14,6 +14,7 @@
 		057FCE3219C4905200BAA2D9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 057FCE3119C4905200BAA2D9 /* Images.xcassets */; };
 		057FCE3519C4905200BAA2D9 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 057FCE3319C4905200BAA2D9 /* LaunchScreen.xib */; };
 		057FCE4119C4905300BAA2D9 /* SuperAdminTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057FCE4019C4905300BAA2D9 /* SuperAdminTests.swift */; };
+		C0E3700F8D794009BA7BCF83 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 896DC0968B17459CB20E8DA1 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0517657D19C49AEB002D3957 /* SuperAdmin-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SuperAdmin-Bridging-Header.h"; sourceTree = "<group>"; };
 		057FCE2319C4905200BAA2D9 /* SuperAdmin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SuperAdmin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		057FCE2719C4905200BAA2D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		057FCE2819C4905200BAA2D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -38,6 +40,8 @@
 		057FCE3A19C4905200BAA2D9 /* SuperAdminTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SuperAdminTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		057FCE3F19C4905300BAA2D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		057FCE4019C4905300BAA2D9 /* SuperAdminTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperAdminTests.swift; sourceTree = "<group>"; };
+		896DC0968B17459CB20E8DA1 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		954EB4C49E0A4A5489593C6A /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0E3700F8D794009BA7BCF83 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,6 +69,8 @@
 				057FCE2519C4905200BAA2D9 /* SuperAdmin */,
 				057FCE3D19C4905300BAA2D9 /* SuperAdminTests */,
 				057FCE2419C4905200BAA2D9 /* Products */,
+				954EB4C49E0A4A5489593C6A /* Pods.xcconfig */,
+				BA5F393488BD4E9D98E65200 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -86,6 +93,7 @@
 				057FCE3119C4905200BAA2D9 /* Images.xcassets */,
 				057FCE3319C4905200BAA2D9 /* LaunchScreen.xib */,
 				057FCE2619C4905200BAA2D9 /* Supporting Files */,
+				0517657D19C49AEB002D3957 /* SuperAdmin-Bridging-Header.h */,
 			);
 			path = SuperAdmin;
 			sourceTree = "<group>";
@@ -115,6 +123,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		BA5F393488BD4E9D98E65200 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				896DC0968B17459CB20E8DA1 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -122,9 +138,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 057FCE4419C4905300BAA2D9 /* Build configuration list for PBXNativeTarget "SuperAdmin" */;
 			buildPhases = (
+				6D5C22DB030E44548F5069EE /* Check Pods Manifest.lock */,
 				057FCE1F19C4905200BAA2D9 /* Sources */,
 				057FCE2019C4905200BAA2D9 /* Frameworks */,
 				057FCE2119C4905200BAA2D9 /* Resources */,
+				8466B923B7C54558A4885B4E /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -164,6 +182,7 @@
 				TargetAttributes = {
 					057FCE2219C4905200BAA2D9 = {
 						CreatedOnToolsVersion = 6.0;
+						DevelopmentTeam = J7M2ZSPTSZ;
 					};
 					057FCE3919C4905200BAA2D9 = {
 						CreatedOnToolsVersion = 6.0;
@@ -209,6 +228,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6D5C22DB030E44548F5069EE /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		8466B923B7C54558A4885B4E /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		057FCE1F19C4905200BAA2D9 /* Sources */ = {
@@ -293,7 +345,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -329,7 +381,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -338,21 +390,27 @@
 		};
 		057FCE4519C4905300BAA2D9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 954EB4C49E0A4A5489593C6A /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = SuperAdmin/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SuperAdmin/SuperAdmin-Bridging-Header.h";
 			};
 			name = Debug;
 		};
 		057FCE4619C4905300BAA2D9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 954EB4C49E0A4A5489593C6A /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = SuperAdmin/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SuperAdmin/SuperAdmin-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -409,6 +467,7 @@
 				057FCE4619C4905300BAA2D9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		057FCE4719C4905300BAA2D9 /* Build configuration list for PBXNativeTarget "SuperAdminTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +476,7 @@
 				057FCE4919C4905300BAA2D9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
