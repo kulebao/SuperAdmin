@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>80805F76-03F0-4A19-AACB-4BFCF6C34EB1</string>
+	<key>IDESourceControlProjectName</key>
+	<string>SuperAdmin</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>7983D4A47BCD95CC61A61E80B1395A1F996A0C67</key>
+		<string>https://github.com/kulebao/SuperAdmin.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>SuperAdmin.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>7983D4A47BCD95CC61A61E80B1395A1F996A0C67</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/kulebao/SuperAdmin.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>7983D4A47BCD95CC61A61E80B1395A1F996A0C67</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>7983D4A47BCD95CC61A61E80B1395A1F996A0C67</string>
+			<key>IDESourceControlWCCName</key>
+			<string>SuperAdmin</string>
+		</dict>
+	</array>
+</dict>
+</plist>
