@@ -10,7 +10,10 @@ import Foundation
 
 class SchoolCell: UITableViewCell {
     
-    @IBOutlet var label: UILabel!
+    @IBOutlet var name: UILabel!
+    @IBOutlet var principal: UILabel!
+    @IBOutlet var logo: UIImageView!
+    
 
     override init(style: UITableViewCellStyle, reuseIdentifier: String!) {
         super.init(style: UITableViewCellStyle.Value1, reuseIdentifier: reuseIdentifier)

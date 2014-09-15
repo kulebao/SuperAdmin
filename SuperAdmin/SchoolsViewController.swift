@@ -23,7 +23,17 @@ class SchoolsViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         //cell.titleLabel.text="\(ListArray.objectAtIndex(indexPath.item))"
         
-        cell.label!.text="some school"
+        cell.name!.text="武警总队二小"
+        cell.principal!.text="校长：白求恩"
+
+        dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), {
+            var test =  UIImage(data: NSData(contentsOfURL: NSURL(string:"http://devhumor.com/wp-content/uploads/2012/04/devhumor.com_pointers.png")))
+            dispatch_sync(dispatch_get_main_queue()!, {
+                cell.imageView!.image = test
+                cell.setNeedsLayout()
+                cell.layoutIfNeeded()
+            })
+        })
         
         return cell
     }
