@@ -15,6 +15,8 @@
 		057FCE3219C4905200BAA2D9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 057FCE3119C4905200BAA2D9 /* Images.xcassets */; };
 		057FCE3519C4905200BAA2D9 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 057FCE3319C4905200BAA2D9 /* LaunchScreen.xib */; };
 		057FCE4119C4905300BAA2D9 /* SuperAdminTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057FCE4019C4905300BAA2D9 /* SuperAdminTests.swift */; };
+		05C979E219C7039100A9884B /* SchoolListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C979E119C7039100A9884B /* SchoolListView.swift */; };
+		05C979E419C7065400A9884B /* SchoolCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C979E319C7065400A9884B /* SchoolCell.swift */; };
 		C0E3700F8D794009BA7BCF83 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 896DC0968B17459CB20E8DA1 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +44,8 @@
 		057FCE3A19C4905200BAA2D9 /* SuperAdminTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SuperAdminTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		057FCE3F19C4905300BAA2D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		057FCE4019C4905300BAA2D9 /* SuperAdminTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperAdminTests.swift; sourceTree = "<group>"; };
+		05C979E119C7039100A9884B /* SchoolListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SchoolListView.swift; sourceTree = "<group>"; };
+		05C979E319C7065400A9884B /* SchoolCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SchoolCell.swift; sourceTree = "<group>"; };
 		896DC0968B17459CB20E8DA1 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		954EB4C49E0A4A5489593C6A /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -97,6 +101,8 @@
 				057FCE2619C4905200BAA2D9 /* Supporting Files */,
 				0517657D19C49AEB002D3957 /* SuperAdmin-Bridging-Header.h */,
 				0517657E19C4A5B2002D3957 /* SchoolsViewController.swift */,
+				05C979E119C7039100A9884B /* SchoolListView.swift */,
+				05C979E319C7065400A9884B /* SchoolCell.swift */,
 			);
 			path = SuperAdmin;
 			sourceTree = "<group>";
@@ -271,7 +277,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				0517657F19C4A5B2002D3957 /* SchoolsViewController.swift in Sources */,
+				05C979E219C7039100A9884B /* SchoolListView.swift in Sources */,
 				057FCE2D19C4905200BAA2D9 /* SecondViewController.swift in Sources */,
+				05C979E419C7065400A9884B /* SchoolCell.swift in Sources */,
 				057FCE2919C4905200BAA2D9 /* AppDelegate.swift in Sources */,
 				057FCE2B19C4905200BAA2D9 /* FirstViewController.swift in Sources */,
 			);

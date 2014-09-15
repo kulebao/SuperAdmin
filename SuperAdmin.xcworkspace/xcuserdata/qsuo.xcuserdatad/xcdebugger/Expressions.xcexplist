@@ -10,5 +10,13 @@
             </PersistentString>
          </PersistentStrings>
       </ContextState>
+      <ContextState
+         contextName = "SuperAdmin.SchoolsViewController.tableView (SuperAdmin.SchoolsViewController)(ObjectiveC.UITableView, cellForRowAtIndexPath : ObjectiveC.NSIndexPath) -&gt; ObjectiveC.UITableViewCell:SchoolsViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "cell.label!.text">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
    </ContextStates>
 </VariablesViewState>

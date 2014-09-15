@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ezh-wp-vx2">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ezh-wp-vx2">
                                 <rect key="frame" x="150" y="204" width="142" height="77"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -27,7 +27,7 @@
                                     <segue destination="a0u-i9-niY" kind="show" id="R4c-df-9rv"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WUO-FV-wxU">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WUO-FV-wxU">
                                 <rect key="frame" x="150" y="119" width="142" height="77"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -36,7 +36,7 @@
                                     <segue destination="a0u-i9-niY" kind="show" id="y7K-7m-m6q"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Id-Rp-7hE">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Id-Rp-7hE">
                                 <rect key="frame" x="150" y="289" width="142" height="77"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -45,7 +45,7 @@
                                     <segue destination="a0u-i9-niY" kind="show" id="AJA-NH-Me2"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ub1-a2-6NZ">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ub1-a2-6NZ">
                                 <rect key="frame" x="0.0" y="204" width="142" height="77"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -54,7 +54,7 @@
                                     <segue destination="a0u-i9-niY" kind="show" id="7my-K1-VbV"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bwb-yX-ZIc">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bwb-yX-ZIc">
                                 <rect key="frame" x="0.0" y="119" width="142" height="77"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -63,7 +63,7 @@
                                     <segue destination="a0u-i9-niY" kind="show" id="ZdK-uE-2vQ"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1BN-rX-VBr">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1BN-rX-VBr">
                                 <rect key="frame" x="150" y="28" width="142" height="77"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -72,7 +72,7 @@
                                     <segue destination="a0u-i9-niY" kind="show" id="z48-8R-UGu"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lEM-oc-X5R">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lEM-oc-X5R">
                                 <rect key="frame" x="0.0" y="374" width="142" height="77"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -81,7 +81,7 @@
                                     <segue destination="a0u-i9-niY" kind="show" id="Y8w-QW-FN2"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cBt-kU-w3m">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cBt-kU-w3m">
                                 <rect key="frame" x="0.0" y="28" width="142" height="77"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -106,7 +106,7 @@
                                     <segue destination="tug-YN-h4H" kind="show" id="NUa-eL-WgG"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BBl-K1-aFC">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BBl-K1-aFC">
                                 <rect key="frame" x="0.0" y="289" width="142" height="77"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -182,16 +182,16 @@
                                 <exclude reference="LXM-uN-8cE"/>
                                 <exclude reference="XGf-RN-d6s"/>
                                 <exclude reference="YMf-uy-z8a"/>
-                                <exclude reference="H9z-px-F2X"/>
-                                <exclude reference="Qkr-u4-Rec"/>
-                                <exclude reference="XTY-eS-8qh"/>
-                                <exclude reference="iS8-d7-2fu"/>
                                 <exclude reference="7fT-iE-bKj"/>
                                 <exclude reference="ajY-4C-JdF"/>
                                 <exclude reference="eZ4-xm-2Hh"/>
                                 <exclude reference="geX-1Z-2mG"/>
                                 <exclude reference="hG4-UU-oeq"/>
                                 <exclude reference="qBS-8o-aie"/>
+                                <exclude reference="H9z-px-F2X"/>
+                                <exclude reference="Qkr-u4-Rec"/>
+                                <exclude reference="XTY-eS-8qh"/>
+                                <exclude reference="iS8-d7-2fu"/>
                                 <exclude reference="B6a-cB-PHJ"/>
                                 <exclude reference="g44-8z-m8C"/>
                                 <exclude reference="nX1-zG-QhR"/>
@@ -232,16 +232,16 @@
                                 <include reference="LXM-uN-8cE"/>
                                 <include reference="XGf-RN-d6s"/>
                                 <include reference="YMf-uy-z8a"/>
-                                <include reference="H9z-px-F2X"/>
-                                <include reference="Qkr-u4-Rec"/>
-                                <include reference="XTY-eS-8qh"/>
-                                <include reference="iS8-d7-2fu"/>
                                 <include reference="7fT-iE-bKj"/>
                                 <include reference="ajY-4C-JdF"/>
                                 <include reference="eZ4-xm-2Hh"/>
                                 <include reference="geX-1Z-2mG"/>
                                 <include reference="hG4-UU-oeq"/>
                                 <include reference="qBS-8o-aie"/>
+                                <include reference="H9z-px-F2X"/>
+                                <include reference="Qkr-u4-Rec"/>
+                                <include reference="XTY-eS-8qh"/>
+                                <include reference="iS8-d7-2fu"/>
                                 <include reference="B6a-cB-PHJ"/>
                                 <include reference="g44-8z-m8C"/>
                                 <include reference="nX1-zG-QhR"/>
@@ -363,12 +363,12 @@
         <!--学校管理-->
         <scene sceneID="iLM-sY-aqI">
             <objects>
-                <viewController title="学校管理" id="tug-YN-h4H" customClass="SchoolsViewController" sceneMemberID="viewController">
+                <viewController title="学校管理" id="tug-YN-h4H" customClass="SchoolsViewController" customModule="SuperAdmin" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Q7h-fU-JJd"/>
                         <viewControllerLayoutGuide type="bottom" id="2z8-T6-bV6"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="hJL-4J-1Jh" customClass="SchoolsViewController">
+                    <view key="view" contentMode="scaleToFill" id="hJL-4J-1Jh" customClass="SchoolListView" customModule="SuperAdmin">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -378,6 +378,50 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Dhp-uZ-VzL">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" restorationIdentifier="Cell" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="Zx7-cu-qV5" customClass="SchoolCell" customModule="SuperAdmin">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Zx7-cu-qV5" id="X8S-Jz-FSJ">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GjG-0h-Vch">
+                                                    <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                                        <rect key="frame" x="56" y="0.0" width="198" height="36"/>
+                                                    </variation>
+                                                </label>
+                                            </subviews>
+                                            <variation key="default">
+                                                <mask key="subviews">
+                                                    <exclude reference="GjG-0h-Vch"/>
+                                                </mask>
+                                            </variation>
+                                            <variation key="heightClass=regular-widthClass=compact">
+                                                <mask key="subviews">
+                                                    <include reference="GjG-0h-Vch"/>
+                                                </mask>
+                                            </variation>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="label" destination="GjG-0h-Vch" id="Qbu-vu-eJa"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="64" width="400" height="687"/>
+                                </variation>
+                                <connections>
+                                    <outlet property="dataSource" destination="tug-YN-h4H" id="o7t-hs-5DK"/>
+                                    <outlet property="delegate" destination="tug-YN-h4H" id="wUo-ev-Hoi"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -387,6 +431,7 @@
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="uiw-CK-9ch"/>
+                                <exclude reference="Dhp-uZ-VzL"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="7ak-yt-U7G"/>
@@ -396,6 +441,7 @@
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
                                 <include reference="uiw-CK-9ch"/>
+                                <include reference="Dhp-uZ-VzL"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="7ak-yt-U7G"/>
@@ -403,6 +449,9 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="hJL-4J-1Jh" id="Bkh-XV-7qy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nS1-8h-xrb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
