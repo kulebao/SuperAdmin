@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0517657F19C4A5B2002D3957 /* SchoolsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0517657E19C4A5B2002D3957 /* SchoolsViewController.swift */; };
+		0529090F19C9C68900695D7E /* School.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0529090E19C9C68900695D7E /* School.swift */; };
 		057FCE2919C4905200BAA2D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057FCE2819C4905200BAA2D9 /* AppDelegate.swift */; };
 		057FCE2B19C4905200BAA2D9 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057FCE2A19C4905200BAA2D9 /* FirstViewController.swift */; };
 		057FCE2D19C4905200BAA2D9 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057FCE2C19C4905200BAA2D9 /* SecondViewController.swift */; };
@@ -33,6 +34,7 @@
 /* Begin PBXFileReference section */
 		0517657D19C49AEB002D3957 /* SuperAdmin-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SuperAdmin-Bridging-Header.h"; sourceTree = "<group>"; };
 		0517657E19C4A5B2002D3957 /* SchoolsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SchoolsViewController.swift; sourceTree = "<group>"; };
+		0529090E19C9C68900695D7E /* School.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = School.swift; sourceTree = "<group>"; };
 		057FCE2319C4905200BAA2D9 /* SuperAdmin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SuperAdmin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		057FCE2719C4905200BAA2D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		057FCE2819C4905200BAA2D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -69,6 +71,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0529090C19C9C66500695D7E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0529090E19C9C68900695D7E /* School.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		0529090D19C9C66F00695D7E /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
 		057FCE1A19C4905200BAA2D9 = {
 			isa = PBXGroup;
 			children = (
@@ -92,6 +109,8 @@
 		057FCE2519C4905200BAA2D9 /* SuperAdmin */ = {
 			isa = PBXGroup;
 			children = (
+				0529090D19C9C66F00695D7E /* Controllers */,
+				0529090C19C9C66500695D7E /* Models */,
 				057FCE2819C4905200BAA2D9 /* AppDelegate.swift */,
 				057FCE2A19C4905200BAA2D9 /* FirstViewController.swift */,
 				057FCE2C19C4905200BAA2D9 /* SecondViewController.swift */,
@@ -276,6 +295,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0529090F19C9C68900695D7E /* School.swift in Sources */,
 				0517657F19C4A5B2002D3957 /* SchoolsViewController.swift in Sources */,
 				05C979E219C7039100A9884B /* SchoolListView.swift in Sources */,
 				057FCE2D19C4905200BAA2D9 /* SecondViewController.swift in Sources */,

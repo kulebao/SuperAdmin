@@ -10,6 +10,7 @@ import Foundation
 
 class SchoolCell: UITableViewCell {
     
+    @IBOutlet var id: UILabel!
     @IBOutlet var name: UILabel!
     @IBOutlet var principal: UILabel!
     @IBOutlet var logo: UIImageView!

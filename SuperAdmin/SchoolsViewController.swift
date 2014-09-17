@@ -22,7 +22,7 @@ class SchoolsViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         
         //cell.titleLabel.text="\(ListArray.objectAtIndex(indexPath.item))"
-        
+        cell.id!.text = "132323"
         cell.name!.text="武警总队二小"
         cell.principal!.text="校长：白求恩"
 

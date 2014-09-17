@@ -3,6 +3,7 @@
     <dependencies>
         <deployment defaultVersion="1792" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -407,6 +408,15 @@
                                                         </mask>
                                                     </variation>
                                                 </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="id" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1GQ-b2-96c">
+                                                    <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                                        <rect key="frame" x="158" y="8.5" width="42.5" height="20.5"/>
+                                                    </variation>
+                                                </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GjG-0h-Vch">
                                                     <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -421,24 +431,29 @@
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="GjG-0h-Vch" firstAttribute="leading" secondItem="cEc-Bf-eSE" secondAttribute="trailing" constant="40" id="224-ce-wtl"/>
+                                                <constraint firstItem="GjG-0h-Vch" firstAttribute="leading" secondItem="cEc-Bf-eSE" secondAttribute="trailing" constant="40" id="68m-By-KIV"/>
+                                                <constraint firstItem="1GQ-b2-96c" firstAttribute="leading" secondItem="cEc-Bf-eSE" secondAttribute="trailing" constant="40" id="6JE-Wp-ZVc"/>
+                                                <constraint firstItem="1GQ-b2-96c" firstAttribute="top" secondItem="X8S-Jz-FSJ" secondAttribute="topMargin" id="BUp-uY-z2I"/>
                                                 <constraint firstItem="QdT-43-CNs" firstAttribute="leading" secondItem="cEc-Bf-eSE" secondAttribute="trailing" constant="40" id="GUg-OF-ezA"/>
                                                 <constraint firstItem="cEc-Bf-eSE" firstAttribute="leading" secondItem="X8S-Jz-FSJ" secondAttribute="leadingMargin" id="Pmc-Nm-WNI"/>
-                                                <constraint firstItem="GjG-0h-Vch" firstAttribute="top" secondItem="X8S-Jz-FSJ" secondAttribute="topMargin" id="hRt-wZ-OII"/>
+                                                <constraint firstItem="GjG-0h-Vch" firstAttribute="top" secondItem="1GQ-b2-96c" secondAttribute="bottom" constant="17.5" id="jCX-c2-koK"/>
                                                 <constraint firstItem="QdT-43-CNs" firstAttribute="top" secondItem="GjG-0h-Vch" secondAttribute="bottom" constant="16.5" id="tf0-tS-i8M"/>
                                                 <constraint firstItem="cEc-Bf-eSE" firstAttribute="top" secondItem="X8S-Jz-FSJ" secondAttribute="topMargin" id="z8d-Xq-D3P"/>
                                             </constraints>
                                             <variation key="default">
                                                 <mask key="subviews">
                                                     <exclude reference="cEc-Bf-eSE"/>
+                                                    <exclude reference="1GQ-b2-96c"/>
                                                     <exclude reference="GjG-0h-Vch"/>
                                                     <exclude reference="QdT-43-CNs"/>
                                                 </mask>
                                                 <mask key="constraints">
                                                     <exclude reference="Pmc-Nm-WNI"/>
                                                     <exclude reference="z8d-Xq-D3P"/>
-                                                    <exclude reference="224-ce-wtl"/>
-                                                    <exclude reference="hRt-wZ-OII"/>
+                                                    <exclude reference="6JE-Wp-ZVc"/>
+                                                    <exclude reference="BUp-uY-z2I"/>
+                                                    <exclude reference="68m-By-KIV"/>
+                                                    <exclude reference="jCX-c2-koK"/>
                                                     <exclude reference="GUg-OF-ezA"/>
                                                     <exclude reference="tf0-tS-i8M"/>
                                                 </mask>
@@ -446,20 +461,24 @@
                                             <variation key="heightClass=regular-widthClass=compact">
                                                 <mask key="subviews">
                                                     <include reference="cEc-Bf-eSE"/>
+                                                    <include reference="1GQ-b2-96c"/>
                                                     <include reference="GjG-0h-Vch"/>
                                                     <include reference="QdT-43-CNs"/>
                                                 </mask>
                                                 <mask key="constraints">
                                                     <include reference="Pmc-Nm-WNI"/>
                                                     <include reference="z8d-Xq-D3P"/>
-                                                    <include reference="224-ce-wtl"/>
-                                                    <include reference="hRt-wZ-OII"/>
+                                                    <include reference="6JE-Wp-ZVc"/>
+                                                    <include reference="BUp-uY-z2I"/>
+                                                    <include reference="68m-By-KIV"/>
+                                                    <include reference="jCX-c2-koK"/>
                                                     <include reference="GUg-OF-ezA"/>
                                                     <include reference="tf0-tS-i8M"/>
                                                 </mask>
                                             </variation>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="id" destination="1GQ-b2-96c" id="vb9-zm-od8"/>
                                             <outlet property="logo" destination="cEc-Bf-eSE" id="kpB-ug-g8W"/>
                                             <outlet property="name" destination="GjG-0h-Vch" id="Vof-C4-M9e"/>
                                             <outlet property="principal" destination="QdT-43-CNs" id="i22-1h-dN7"/>
