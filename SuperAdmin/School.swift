@@ -9,5 +9,15 @@
 import Foundation
 
 class School {
+    let id: Int
+    let name: String
+    let principal: String
+    let logoUrl: String
     
+    init(id: Int, name: String, principal: String, logo: String) {
+        self.id = id
+        self.name = name
+        self.principal = principal
+        self.logoUrl = logo
+    }
 }

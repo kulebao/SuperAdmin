@@ -82,8 +82,20 @@
 		0529090D19C9C66F00695D7E /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				057FCE2A19C4905200BAA2D9 /* FirstViewController.swift */,
+				057FCE2C19C4905200BAA2D9 /* SecondViewController.swift */,
+				0517657E19C4A5B2002D3957 /* SchoolsViewController.swift */,
 			);
 			name = Controllers;
+			sourceTree = "<group>";
+		};
+		0529091019C9CC5B00695D7E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				05C979E119C7039100A9884B /* SchoolListView.swift */,
+				05C979E319C7065400A9884B /* SchoolCell.swift */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 		057FCE1A19C4905200BAA2D9 = {
@@ -109,19 +121,15 @@
 		057FCE2519C4905200BAA2D9 /* SuperAdmin */ = {
 			isa = PBXGroup;
 			children = (
+				0529091019C9CC5B00695D7E /* Views */,
 				0529090D19C9C66F00695D7E /* Controllers */,
 				0529090C19C9C66500695D7E /* Models */,
 				057FCE2819C4905200BAA2D9 /* AppDelegate.swift */,
-				057FCE2A19C4905200BAA2D9 /* FirstViewController.swift */,
-				057FCE2C19C4905200BAA2D9 /* SecondViewController.swift */,
 				057FCE2E19C4905200BAA2D9 /* Main.storyboard */,
 				057FCE3119C4905200BAA2D9 /* Images.xcassets */,
 				057FCE3319C4905200BAA2D9 /* LaunchScreen.xib */,
 				057FCE2619C4905200BAA2D9 /* Supporting Files */,
 				0517657D19C49AEB002D3957 /* SuperAdmin-Bridging-Header.h */,
-				0517657E19C4A5B2002D3957 /* SchoolsViewController.swift */,
-				05C979E119C7039100A9884B /* SchoolListView.swift */,
-				05C979E319C7065400A9884B /* SchoolCell.swift */,
 			);
 			path = SuperAdmin;
 			sourceTree = "<group>";
