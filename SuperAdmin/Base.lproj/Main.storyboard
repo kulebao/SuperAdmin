@@ -413,9 +413,6 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
-                                                    <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                                        <rect key="frame" x="158" y="8.5" width="42.5" height="20.5"/>
-                                                    </variation>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GjG-0h-Vch">
                                                     <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
@@ -448,14 +445,14 @@
                                                     <exclude reference="QdT-43-CNs"/>
                                                 </mask>
                                                 <mask key="constraints">
-                                                    <exclude reference="Pmc-Nm-WNI"/>
-                                                    <exclude reference="z8d-Xq-D3P"/>
                                                     <exclude reference="6JE-Wp-ZVc"/>
                                                     <exclude reference="BUp-uY-z2I"/>
                                                     <exclude reference="68m-By-KIV"/>
                                                     <exclude reference="jCX-c2-koK"/>
                                                     <exclude reference="GUg-OF-ezA"/>
                                                     <exclude reference="tf0-tS-i8M"/>
+                                                    <exclude reference="Pmc-Nm-WNI"/>
+                                                    <exclude reference="z8d-Xq-D3P"/>
                                                 </mask>
                                             </variation>
                                             <variation key="heightClass=regular-widthClass=compact">
@@ -466,14 +463,14 @@
                                                     <include reference="QdT-43-CNs"/>
                                                 </mask>
                                                 <mask key="constraints">
-                                                    <include reference="Pmc-Nm-WNI"/>
-                                                    <include reference="z8d-Xq-D3P"/>
                                                     <include reference="6JE-Wp-ZVc"/>
                                                     <include reference="BUp-uY-z2I"/>
                                                     <include reference="68m-By-KIV"/>
                                                     <include reference="jCX-c2-koK"/>
                                                     <include reference="GUg-OF-ezA"/>
                                                     <include reference="tf0-tS-i8M"/>
+                                                    <include reference="Pmc-Nm-WNI"/>
+                                                    <include reference="z8d-Xq-D3P"/>
                                                 </mask>
                                             </variation>
                                         </tableViewCellContentView>

@@ -16,6 +16,8 @@
 		057FCE3219C4905200BAA2D9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 057FCE3119C4905200BAA2D9 /* Images.xcassets */; };
 		057FCE3519C4905200BAA2D9 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 057FCE3319C4905200BAA2D9 /* LaunchScreen.xib */; };
 		057FCE4119C4905300BAA2D9 /* SuperAdminTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057FCE4019C4905300BAA2D9 /* SuperAdminTests.swift */; };
+		05B7E0DA19CB2F97006E9A13 /* DataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B7E0D819CB2F97006E9A13 /* DataLoader.swift */; };
+		05B7E0DB19CB2F97006E9A13 /* JSONHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B7E0D919CB2F97006E9A13 /* JSONHelper.swift */; };
 		05C979E219C7039100A9884B /* SchoolListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C979E119C7039100A9884B /* SchoolListView.swift */; };
 		05C979E419C7065400A9884B /* SchoolCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C979E319C7065400A9884B /* SchoolCell.swift */; };
 		C0E3700F8D794009BA7BCF83 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 896DC0968B17459CB20E8DA1 /* libPods.a */; };
@@ -46,6 +48,8 @@
 		057FCE3A19C4905200BAA2D9 /* SuperAdminTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SuperAdminTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		057FCE3F19C4905300BAA2D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		057FCE4019C4905300BAA2D9 /* SuperAdminTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperAdminTests.swift; sourceTree = "<group>"; };
+		05B7E0D819CB2F97006E9A13 /* DataLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataLoader.swift; sourceTree = "<group>"; };
+		05B7E0D919CB2F97006E9A13 /* JSONHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONHelper.swift; sourceTree = "<group>"; };
 		05C979E119C7039100A9884B /* SchoolListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SchoolListView.swift; sourceTree = "<group>"; };
 		05C979E319C7065400A9884B /* SchoolCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SchoolCell.swift; sourceTree = "<group>"; };
 		896DC0968B17459CB20E8DA1 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -74,6 +78,8 @@
 		0529090C19C9C66500695D7E /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				05B7E0D819CB2F97006E9A13 /* DataLoader.swift */,
+				05B7E0D919CB2F97006E9A13 /* JSONHelper.swift */,
 				0529090E19C9C68900695D7E /* School.swift */,
 			);
 			name = Models;
@@ -306,7 +312,9 @@
 				0529090F19C9C68900695D7E /* School.swift in Sources */,
 				0517657F19C4A5B2002D3957 /* SchoolsViewController.swift in Sources */,
 				05C979E219C7039100A9884B /* SchoolListView.swift in Sources */,
+				05B7E0DB19CB2F97006E9A13 /* JSONHelper.swift in Sources */,
 				057FCE2D19C4905200BAA2D9 /* SecondViewController.swift in Sources */,
+				05B7E0DA19CB2F97006E9A13 /* DataLoader.swift in Sources */,
 				05C979E419C7065400A9884B /* SchoolCell.swift in Sources */,
 				057FCE2919C4905200BAA2D9 /* AppDelegate.swift in Sources */,
 				057FCE2B19C4905200BAA2D9 /* FirstViewController.swift in Sources */,
