@@ -10,15 +10,30 @@ import UIKit
 
 class SchoolsViewController: UITableViewController, UITableViewDelegate, UITableViewDataSource {
     
-    let schools: [School]
+    var schools: [School]
     
     required init(coder aDecoder: NSCoder) {
-        self.schools = DataLoader().loadSchools()
+        self.schools = []
         super.init(coder: aDecoder)
     }
     
     override func viewDidLoad() {
-//        self.tableView.registerClass(SchoolCell.self, forCellReuseIdentifier: "MyCell")
+        DataLoader().loadSchoolsFromStage(self.dataArrived)
+    }
+    
+    func dataArrived(schools: [AnyObject]) -> Void {
+      
+           self.schools = schools.map({
+                   (school: AnyObject) -> School in
+                   let id = school["school_id"] as Int
+                   let name = school["name"] as String
+                   let url = school["school_logo_url"] as String
+                   return School(id: id, name: name, principal: "王二", logo: url)
+               })
+      
+           dispatch_async(dispatch_get_main_queue(),{
+                self.tableView.reloadData()
+               });
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
