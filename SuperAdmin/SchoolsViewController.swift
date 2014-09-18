@@ -8,9 +8,8 @@
 
 import UIKit
 
-class SchoolsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class SchoolsViewController: UITableViewController, UITableViewDelegate, UITableViewDataSource {
     
-    @IBOutlet var tableView : UITableView!
     let schools: [School]
     
     required init(coder aDecoder: NSCoder) {
@@ -19,12 +18,12 @@ class SchoolsViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     override func viewDidLoad() {
-        self.tableView.registerClass(SchoolCell.self, forCellReuseIdentifier: "Cell")
+//        self.tableView.registerClass(SchoolCell.self, forCellReuseIdentifier: "MyCell")
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
-        var  cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as SchoolCell
+        var  cell = tableView.dequeueReusableCellWithIdentifier("MyCell", forIndexPath: indexPath) as SchoolCell
         
  
         let model = self.schools[indexPath.item]
@@ -32,7 +31,7 @@ class SchoolsViewController: UIViewController, UITableViewDelegate, UITableViewD
         return cell.loadContent(model)
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.schools.count
     }
     

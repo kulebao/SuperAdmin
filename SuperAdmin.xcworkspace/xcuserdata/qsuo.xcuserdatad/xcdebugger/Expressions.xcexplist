@@ -3,6 +3,20 @@
    version = "1.0">
    <ContextStates>
       <ContextState
+         contextName = "SuperAdmin.SchoolCell.init (SuperAdmin.SchoolCell.Type)(style : C.UITableViewCellStyle, reuseIdentifier : Swift.Optional&lt;Swift.String&gt;) -&gt; SuperAdmin.SchoolCell:SchoolCell.swift">
+      </ContextState>
+      <ContextState
+         contextName = "GLOBAL">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.contentView">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "SuperAdmin.SchoolCell.loadContent (SuperAdmin.SchoolCell)(SuperAdmin.School) -&gt; SuperAdmin.SchoolCell:SchoolCell.swift">
+      </ContextState>
+      <ContextState
          contextName = "SuperAdmin.FirstViewController.goSchoolManagement (SuperAdmin.FirstViewController)(Swift.AnyObject) -&gt; ():FirstViewController.swift">
          <PersistentStrings>
             <PersistentString
@@ -11,10 +25,13 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "SuperAdmin.SchoolsViewController.init (SuperAdmin.SchoolsViewController.Type)(coder : ObjectiveC.NSCoder) -&gt; SuperAdmin.SchoolsViewController:SchoolsViewController.swift">
+      </ContextState>
+      <ContextState
          contextName = "SuperAdmin.SchoolsViewController.tableView (SuperAdmin.SchoolsViewController)(ObjectiveC.UITableView, cellForRowAtIndexPath : ObjectiveC.NSIndexPath) -&gt; ObjectiveC.UITableViewCell:SchoolsViewController.swift">
          <PersistentStrings>
             <PersistentString
-               value = "cell.label!.text">
+               value = "cell.id">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
