@@ -18,11 +18,11 @@ class SchoolCell: UITableViewCell {
     override init(style: UITableViewCellStyle, reuseIdentifier: String!) {
         super.init(style: UITableViewCellStyle.Value1, reuseIdentifier: reuseIdentifier)
     }
-
+    
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
-
+    
     func loadContent(school: School) -> SchoolCell {
         self.id!.text = "id: \(school.id)"
         self.name!.text = school.name

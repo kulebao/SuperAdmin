@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
         <deployment defaultVersion="1792" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -362,7 +363,7 @@
             <objects>
                 <tableViewController autoresizesArchivedViewToFullSize="NO" id="Uto-Nw-TWb" customClass="SchoolsViewController" customModule="SuperAdmin" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="111" sectionHeaderHeight="22" sectionFooterHeight="22" id="HFh-DB-cAZ">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -429,18 +430,18 @@
                                             <exclude reference="DHO-Gh-UEs"/>
                                         </mask>
                                         <mask key="constraints">
-                                            <exclude reference="RhK-lj-jjA"/>
-                                            <exclude reference="Vcp-Bt-feb"/>
-                                            <exclude reference="tff-dn-wzn"/>
+                                            <exclude reference="VH6-44-7Ti"/>
+                                            <exclude reference="ick-El-Z1M"/>
+                                            <exclude reference="wFb-dW-uOV"/>
                                             <exclude reference="0EU-EZ-pom"/>
                                             <exclude reference="BbA-Hk-4uA"/>
                                             <exclude reference="DiV-kI-P4g"/>
                                             <exclude reference="0lf-kd-2nm"/>
                                             <exclude reference="OOb-KQ-6il"/>
                                             <exclude reference="VCZ-Od-U6j"/>
-                                            <exclude reference="VH6-44-7Ti"/>
-                                            <exclude reference="ick-El-Z1M"/>
-                                            <exclude reference="wFb-dW-uOV"/>
+                                            <exclude reference="RhK-lj-jjA"/>
+                                            <exclude reference="Vcp-Bt-feb"/>
+                                            <exclude reference="tff-dn-wzn"/>
                                         </mask>
                                     </variation>
                                     <variation key="heightClass=regular-widthClass=compact">
@@ -451,18 +452,18 @@
                                             <include reference="DHO-Gh-UEs"/>
                                         </mask>
                                         <mask key="constraints">
-                                            <include reference="RhK-lj-jjA"/>
-                                            <include reference="Vcp-Bt-feb"/>
-                                            <include reference="tff-dn-wzn"/>
+                                            <include reference="VH6-44-7Ti"/>
+                                            <include reference="ick-El-Z1M"/>
+                                            <include reference="wFb-dW-uOV"/>
                                             <include reference="0EU-EZ-pom"/>
                                             <include reference="BbA-Hk-4uA"/>
                                             <include reference="DiV-kI-P4g"/>
                                             <include reference="0lf-kd-2nm"/>
                                             <include reference="OOb-KQ-6il"/>
                                             <include reference="VCZ-Od-U6j"/>
-                                            <include reference="VH6-44-7Ti"/>
-                                            <include reference="ick-El-Z1M"/>
-                                            <include reference="wFb-dW-uOV"/>
+                                            <include reference="RhK-lj-jjA"/>
+                                            <include reference="Vcp-Bt-feb"/>
+                                            <include reference="tff-dn-wzn"/>
                                         </mask>
                                     </variation>
                                 </tableViewCellContentView>
