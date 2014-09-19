@@ -15,10 +15,6 @@ class SchoolCell: UITableViewCell {
     @IBOutlet var principal: UILabel!
     @IBOutlet var logo: UIImageView!
     
-    override init(style: UITableViewCellStyle, reuseIdentifier: String!) {
-        super.init(style: UITableViewCellStyle.Value1, reuseIdentifier: reuseIdentifier)
-    }
-    
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
