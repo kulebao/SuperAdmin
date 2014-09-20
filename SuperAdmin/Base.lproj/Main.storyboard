@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
+        <deployment defaultVersion="1792" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -68,6 +69,9 @@
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <state key="normal" title="收费管理"/>
+                                <connections>
+                                    <segue destination="a0u-i9-niY" kind="show" id="FEp-bz-38u"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lEM-oc-X5R">
                                 <rect key="frame" x="0.0" y="374" width="142" height="77"/>
@@ -159,7 +163,6 @@
                             <constraint firstItem="Ezh-wp-vx2" firstAttribute="width" secondItem="cBt-kU-w3m" secondAttribute="width" id="kFA-uZ-kDi"/>
                             <constraint firstItem="lEM-oc-X5R" firstAttribute="height" secondItem="cBt-kU-w3m" secondAttribute="height" id="kRX-dw-pNl"/>
                             <constraint firstItem="WUO-FV-wxU" firstAttribute="height" secondItem="cBt-kU-w3m" secondAttribute="height" id="nX1-zG-QhR"/>
-                            <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="lEM-oc-X5R" secondAttribute="bottom" constant="13" id="nx1-2p-zCV"/>
                             <constraint firstItem="BBl-K1-aFC" firstAttribute="top" secondItem="ub1-a2-6NZ" secondAttribute="bottom" constant="7" id="ny2-DI-yBZ">
                                 <variation key="heightClass=regular-widthClass=compact" constant="13"/>
                             </constraint>
@@ -219,7 +222,6 @@
                                 <exclude reference="IVC-TC-uFz"/>
                                 <exclude reference="ToI-yD-1Zm"/>
                                 <exclude reference="kRX-dw-pNl"/>
-                                <exclude reference="nx1-2p-zCV"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -269,7 +271,6 @@
                                 <include reference="IVC-TC-uFz"/>
                                 <include reference="ToI-yD-1Zm"/>
                                 <include reference="kRX-dw-pNl"/>
-                                <include reference="nx1-2p-zCV"/>
                             </mask>
                         </variation>
                     </view>
@@ -497,20 +498,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="纯练手，Swift娱乐用" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NDk-cv-Gan" userLabel="哦，纯粹练Swift娱乐用">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="纯练手，Swift娱乐用" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NDk-cv-Gan">
                                 <rect key="frame" x="192" y="329" width="215.5" height="17"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="131" id="bOy-Se-vNQ"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
-                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="92" y="429" width="216" height="17"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="bOy-Se-vNQ"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="bOy-Se-vNQ"/>
+                                    </mask>
                                 </variation>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" text="高大上的库乐宝超级管理员App" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="zEq-FU-wV5" userLabel="高大上的库乐宝超级管理员APP">
                                 <rect key="frame" x="195" y="279" width="209.5" height="41.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="300" id="eOO-yo-shc"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="eOO-yo-shc"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="28"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -520,8 +531,7 @@
                                         <exclude reference="eOO-yo-shc"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="-49" y="157" width="498" height="234"/>
+                                <variation key="heightClass=regular-widthClass=compact">
                                     <mask key="constraints">
                                         <include reference="eOO-yo-shc"/>
                                     </mask>
@@ -530,30 +540,37 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="zEq-FU-wV5" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" id="6X2-XH-cJx"/>
-                            <constraint firstItem="NDk-cv-Gan" firstAttribute="top" secondItem="zEq-FU-wV5" secondAttribute="bottom" constant="8" symbolic="YES" id="7f4-Tt-fEe"/>
-                            <constraint firstItem="NDk-cv-Gan" firstAttribute="centerX" secondItem="zEq-FU-wV5" secondAttribute="centerX" id="MnS-dE-9tF"/>
-                            <constraint firstItem="NDk-cv-Gan" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" constant="76" id="PmK-wG-4Mq"/>
+                            <constraint firstAttribute="centerX" secondItem="zEq-FU-wV5" secondAttribute="centerX" id="Ba2-7a-viE"/>
+                            <constraint firstItem="NDk-cv-Gan" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" constant="5" id="PmK-wG-4Mq"/>
                             <constraint firstItem="zEq-FU-wV5" firstAttribute="top" secondItem="L7p-HK-0SC" secondAttribute="bottom" constant="167" id="Pvm-qU-AVE"/>
-                            <constraint firstAttribute="centerX" secondItem="zEq-FU-wV5" secondAttribute="centerX" id="qqM-NS-xev"/>
-                            <constraint firstAttribute="centerY" secondItem="zEq-FU-wV5" secondAttribute="centerY" id="qzY-Ky-pLD"/>
+                            <constraint firstAttribute="centerX" secondItem="NDk-cv-Gan" secondAttribute="centerX" id="YpA-j9-RpS"/>
+                            <constraint firstItem="NDk-cv-Gan" firstAttribute="top" secondItem="zEq-FU-wV5" secondAttribute="bottom" constant="200" id="cXu-b3-Rbf"/>
+                            <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="NDk-cv-Gan" secondAttribute="trailing" constant="5" id="ePQ-aU-1BV"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="zEq-FU-wV5" secondAttribute="trailing" constant="5" id="jWx-8d-Fj4"/>
+                            <constraint firstItem="zEq-FU-wV5" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" constant="5" id="tda-ff-nlk"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="6X2-XH-cJx"/>
+                                <exclude reference="Ba2-7a-viE"/>
                                 <exclude reference="Pvm-qU-AVE"/>
-                                <exclude reference="7f4-Tt-fEe"/>
-                                <exclude reference="MnS-dE-9tF"/>
+                                <exclude reference="jWx-8d-Fj4"/>
+                                <exclude reference="tda-ff-nlk"/>
                                 <exclude reference="PmK-wG-4Mq"/>
+                                <exclude reference="YpA-j9-RpS"/>
+                                <exclude reference="cXu-b3-Rbf"/>
+                                <exclude reference="ePQ-aU-1BV"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="constraints">
-                                <include reference="6X2-XH-cJx"/>
+                                <include reference="Ba2-7a-viE"/>
                                 <include reference="Pvm-qU-AVE"/>
-                                <include reference="7f4-Tt-fEe"/>
-                                <include reference="MnS-dE-9tF"/>
+                                <include reference="jWx-8d-Fj4"/>
+                                <include reference="tda-ff-nlk"/>
                                 <include reference="PmK-wG-4Mq"/>
+                                <include reference="YpA-j9-RpS"/>
+                                <include reference="cXu-b3-Rbf"/>
+                                <include reference="ePQ-aU-1BV"/>
                             </mask>
                         </variation>
                     </view>
