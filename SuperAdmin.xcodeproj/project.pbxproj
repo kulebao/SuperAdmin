@@ -18,7 +18,6 @@
 		057FCE4119C4905300BAA2D9 /* SuperAdminTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057FCE4019C4905300BAA2D9 /* SuperAdminTests.swift */; };
 		05B7E0DA19CB2F97006E9A13 /* DataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B7E0D819CB2F97006E9A13 /* DataLoader.swift */; };
 		05B7E0DB19CB2F97006E9A13 /* JSONHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B7E0D919CB2F97006E9A13 /* JSONHelper.swift */; };
-		05C979E219C7039100A9884B /* SchoolListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C979E119C7039100A9884B /* SchoolListView.swift */; };
 		05C979E419C7065400A9884B /* SchoolCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C979E319C7065400A9884B /* SchoolCell.swift */; };
 		C0E3700F8D794009BA7BCF83 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 896DC0968B17459CB20E8DA1 /* libPods.a */; };
 /* End PBXBuildFile section */
@@ -50,7 +49,6 @@
 		057FCE4019C4905300BAA2D9 /* SuperAdminTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperAdminTests.swift; sourceTree = "<group>"; };
 		05B7E0D819CB2F97006E9A13 /* DataLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataLoader.swift; sourceTree = "<group>"; };
 		05B7E0D919CB2F97006E9A13 /* JSONHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONHelper.swift; sourceTree = "<group>"; };
-		05C979E119C7039100A9884B /* SchoolListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SchoolListView.swift; sourceTree = "<group>"; };
 		05C979E319C7065400A9884B /* SchoolCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SchoolCell.swift; sourceTree = "<group>"; };
 		896DC0968B17459CB20E8DA1 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		954EB4C49E0A4A5489593C6A /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
@@ -98,7 +96,6 @@
 		0529091019C9CC5B00695D7E /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				05C979E119C7039100A9884B /* SchoolListView.swift */,
 				05C979E319C7065400A9884B /* SchoolCell.swift */,
 			);
 			name = Views;
@@ -311,7 +308,6 @@
 			files = (
 				0529090F19C9C68900695D7E /* School.swift in Sources */,
 				0517657F19C4A5B2002D3957 /* SchoolsViewController.swift in Sources */,
-				05C979E219C7039100A9884B /* SchoolListView.swift in Sources */,
 				05B7E0DB19CB2F97006E9A13 /* JSONHelper.swift in Sources */,
 				057FCE2D19C4905200BAA2D9 /* SecondViewController.swift in Sources */,
 				05B7E0DA19CB2F97006E9A13 /* DataLoader.swift in Sources */,
