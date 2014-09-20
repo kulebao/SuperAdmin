@@ -21,16 +21,8 @@ class SchoolsViewController: UITableViewController, UITableViewDelegate, UITable
         DataLoader().loadSchoolsFromStage(self.dataArrived)
     }
     
-    func dataArrived(schools: [AnyObject]) -> Void {
-        
-        self.schools = schools.map({
-            school -> School in
-            let id = school["school_id"] as Int
-            let name = school["name"] as String
-            let url = school["school_logo_url"] as String
-            return School(id: id, name: name, principal: "王二", logo: url)
-        })
-        
+    func dataArrived(schools: [School]) -> Void {
+        self.schools = schools
         dispatch_async(dispatch_get_main_queue(),{
             self.tableView.reloadData()
         });

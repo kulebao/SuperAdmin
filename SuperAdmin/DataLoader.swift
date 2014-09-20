@@ -18,7 +18,7 @@ class DataLoader {
         ]
     }
     
-    func loadSchoolsFromStage(callback: ([AnyObject]) -> Void) -> [School] {
+    func loadSchoolsFromStage(callback: ([School]) -> Void) -> Void {
         let engine = JSONHelper()
         engine.HTTPPostJSON("http://127.0.0.1:9000/employee_login.do", jsonObj: ["account_name": "operator", "password": "daishu"]){
             (data: String, error: String?) -> Void in
@@ -31,13 +31,19 @@ class DataLoader {
                     if (error != nil) {
                         println(error)
                     } else {
-                        callback(data)
+                        let schools = data.map({
+                            school -> School in
+                            let id = school["school_id"] as Int
+                            let name = school["name"] as String
+                            let url = school["school_logo_url"] as String
+                            return School(id: id, name: name, principal: "王二", logo: url)
+                        })
+                        callback(schools)
                     }
                 }
                 
             }
         }
-        return []
     }
     
 }
