@@ -13,6 +13,7 @@ class School {
     let name: String
     let principal: String
     let logoUrl: String
+    var charge: Charge?
     
     init(id: Int, name: String, principal: String, logo: String) {
         self.id = id

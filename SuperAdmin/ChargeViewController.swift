@@ -9,19 +9,19 @@
 import UIKit
 
 class ChargeViewController: UITableViewController, UITableViewDelegate, UITableViewDataSource {
-    var charges: [Charge]
+    var schools: [School]
     
     required init(coder aDecoder: NSCoder) {
-        self.charges = [Charge(school: 123, member: 100, video: 200)]
+        self.schools = []
         super.init(coder: aDecoder)
     }
     
     override func viewDidLoad() {
-//        DataLoader().loadSchoolsFromStage(self.dataArrived)
+        DataLoader().loadChargeInfoFromStage(self.dataArrived)
     }
     
-    func dataArrived(schools: [School]) -> Void {
-//        self.cha = schools
+    func dataArrived(charges: [School]) -> Void {
+        self.schools = charges
         dispatch_async(dispatch_get_main_queue(),{
             self.tableView.reloadData()
         });
@@ -32,12 +32,12 @@ class ChargeViewController: UITableViewController, UITableViewDelegate, UITableV
         var  cell = tableView.dequeueReusableCellWithIdentifier("ChargeCell", forIndexPath: indexPath) as ChargeCell
         
         
-        let model = self.charges[indexPath.item]
+        let model = self.schools[indexPath.item]
         
         return cell.loadContent(model)
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.charges.count
+        return self.schools.count
     }
 }

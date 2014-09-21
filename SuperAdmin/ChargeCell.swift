@@ -18,11 +18,11 @@ class ChargeCell: UITableViewCell {
         super.init(coder: aDecoder)
     }
     
-    func loadContent(charge: Charge) -> ChargeCell {
-        self.name!.text = "学校：\(charge.schoolId)"
+    func loadContent(school: School) -> ChargeCell {
+        self.name!.text = "学校：\(school.name)"
+        let charge = school.charge!
         self.member!.text = "会员总数：\(charge.totalPhoneNumber)"
         self.video!.text = "视频总数：\(charge.totalVideoNumber)"
-    
         return self
     }
     
