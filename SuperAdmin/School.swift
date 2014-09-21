@@ -20,4 +20,8 @@ class School {
         self.principal = principal
         self.logoUrl = logo
     }
+    
+    convenience init(dic: [String: AnyObject]) {
+        self.init(id: dic["school_id"]! as Int, name: dic["name"]! as String, principal: "王二", logo: dic["school_logo_url"]! as String)
+    }
 }

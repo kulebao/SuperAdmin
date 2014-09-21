@@ -9,6 +9,9 @@
 import Foundation
 
 class DataLoader {
+    
+    let engine = JSONHelper()
+    
     func loadSchools() -> [School] {
         return [
             School(id: 99999, name: "武警总队二小", principal: "白求恩", logo: "http://devhumor.com/wp-content/uploads/2012/04/devhumor.com_pointers.png"),
@@ -19,31 +22,31 @@ class DataLoader {
     }
     
     func loadSchoolsFromStage(callback: ([School]) -> Void) -> Void {
-        let engine = JSONHelper()
-        engine.HTTPPostJSON("http://127.0.0.1:9000/employee_login.do", jsonObj: ["account_name": "operator", "password": "daishu"]){
+        self.login() {
+            (user: User) -> Void in
+                self.engine.HTTPGetJSONArray("http://127.0.0.1:9000/kindergarten") {
+                    (data: [AnyObject], error: String?) -> Void in
+                    if (error != nil) {
+                        println(error)
+                    } else {
+                        callback(data.map({school in School(dic: school as [String: AnyObject])}))
+                    }
+                }
+                
+            }
+    }
+    
+    func login(callback: (User) -> Void) -> Void {
+        self.engine.HTTPPostJSON("http://127.0.0.1:9000/employee_login.do", jsonObj: ["account_name": "operator", "password": "daishu"]){
             (data: String, error: String?) -> Void in
             if (error != nil) {
                 println(error)
             } else {
                 println(data)
-                engine.HTTPGetJSONArray("http://127.0.0.1:9000/kindergarten") {
-                    (data: [AnyObject], error: String?) -> Void in
-                    if (error != nil) {
-                        println(error)
-                    } else {
-                        let schools = data.map({
-                            school -> School in
-                            let id = school["school_id"] as Int
-                            let name = school["name"] as String
-                            let url = school["school_logo_url"] as String
-                            return School(id: id, name: name, principal: "王二", logo: url)
-                        })
-                        callback(schools)
-                    }
-                }
-                
+                callback(User(dic: self.engine.JSONParseDict(data)))
             }
         }
+        
     }
     
 }
