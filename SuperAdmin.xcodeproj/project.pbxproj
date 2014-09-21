@@ -19,6 +19,9 @@
 		05B7E0DA19CB2F97006E9A13 /* DataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B7E0D819CB2F97006E9A13 /* DataLoader.swift */; };
 		05B7E0DB19CB2F97006E9A13 /* JSONHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B7E0D919CB2F97006E9A13 /* JSONHelper.swift */; };
 		05B7FA0F19CEBCEA002378BC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B7FA0E19CEBCEA002378BC /* User.swift */; };
+		05B7FA1119CECA36002378BC /* ChargeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B7FA1019CECA36002378BC /* ChargeViewController.swift */; };
+		05B7FA1319CECB97002378BC /* Charge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B7FA1219CECB97002378BC /* Charge.swift */; };
+		05B7FA1619CECCFE002378BC /* ChargeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B7FA1519CECCFE002378BC /* ChargeCell.swift */; };
 		05C979E419C7065400A9884B /* SchoolCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C979E319C7065400A9884B /* SchoolCell.swift */; };
 		C0E3700F8D794009BA7BCF83 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 896DC0968B17459CB20E8DA1 /* libPods.a */; };
 /* End PBXBuildFile section */
@@ -51,6 +54,9 @@
 		05B7E0D819CB2F97006E9A13 /* DataLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataLoader.swift; sourceTree = "<group>"; };
 		05B7E0D919CB2F97006E9A13 /* JSONHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONHelper.swift; sourceTree = "<group>"; };
 		05B7FA0E19CEBCEA002378BC /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		05B7FA1019CECA36002378BC /* ChargeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChargeViewController.swift; sourceTree = "<group>"; };
+		05B7FA1219CECB97002378BC /* Charge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Charge.swift; sourceTree = "<group>"; };
+		05B7FA1519CECCFE002378BC /* ChargeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChargeCell.swift; sourceTree = "<group>"; };
 		05C979E319C7065400A9884B /* SchoolCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SchoolCell.swift; sourceTree = "<group>"; };
 		896DC0968B17459CB20E8DA1 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		954EB4C49E0A4A5489593C6A /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
@@ -82,6 +88,7 @@
 				05B7E0D919CB2F97006E9A13 /* JSONHelper.swift */,
 				0529090E19C9C68900695D7E /* School.swift */,
 				05B7FA0E19CEBCEA002378BC /* User.swift */,
+				05B7FA1219CECB97002378BC /* Charge.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -92,6 +99,7 @@
 				057FCE2A19C4905200BAA2D9 /* FirstViewController.swift */,
 				057FCE2C19C4905200BAA2D9 /* SecondViewController.swift */,
 				0517657E19C4A5B2002D3957 /* SchoolsViewController.swift */,
+				05B7FA1019CECA36002378BC /* ChargeViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -100,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				05C979E319C7065400A9884B /* SchoolCell.swift */,
+				05B7FA1519CECCFE002378BC /* ChargeCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -314,10 +323,13 @@
 				05B7E0DB19CB2F97006E9A13 /* JSONHelper.swift in Sources */,
 				057FCE2D19C4905200BAA2D9 /* SecondViewController.swift in Sources */,
 				05B7E0DA19CB2F97006E9A13 /* DataLoader.swift in Sources */,
+				05B7FA1619CECCFE002378BC /* ChargeCell.swift in Sources */,
 				05B7FA0F19CEBCEA002378BC /* User.swift in Sources */,
+				05B7FA1119CECA36002378BC /* ChargeViewController.swift in Sources */,
 				05C979E419C7065400A9884B /* SchoolCell.swift in Sources */,
 				057FCE2919C4905200BAA2D9 /* AppDelegate.swift in Sources */,
 				057FCE2B19C4905200BAA2D9 /* FirstViewController.swift in Sources */,
+				05B7FA1319CECB97002378BC /* Charge.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -70,7 +70,7 @@
                                 <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <state key="normal" title="收费管理"/>
                                 <connections>
-                                    <segue destination="a0u-i9-niY" kind="show" id="FEp-bz-38u"/>
+                                    <segue destination="Gkk-SX-LfW" kind="show" id="c3N-aR-fig"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lEM-oc-X5R">
@@ -358,10 +358,10 @@
             </objects>
             <point key="canvasLocation" x="864" y="-381"/>
         </scene>
-        <!--Schools View Controller-->
+        <!--全部学校-->
         <scene sceneID="dpW-jQ-on4">
             <objects>
-                <tableViewController autoresizesArchivedViewToFullSize="NO" id="Uto-Nw-TWb" customClass="SchoolsViewController" customModule="SuperAdmin" sceneMemberID="viewController">
+                <tableViewController autoresizesArchivedViewToFullSize="NO" title="全部学校" id="Uto-Nw-TWb" customClass="SchoolsViewController" customModule="SuperAdmin" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="111" sectionHeaderHeight="22" sectionFooterHeight="22" id="HFh-DB-cAZ">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -485,6 +485,79 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Jl-2v-lc0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2902.5" y="-813.75"/>
+        </scene>
+        <!--收费管理-->
+        <scene sceneID="xtK-ex-CDY">
+            <objects>
+                <tableViewController title="收费管理" id="Gkk-SX-LfW" customClass="ChargeViewController" customModule="SuperAdmin" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="113" sectionHeaderHeight="22" sectionFooterHeight="22" id="mWx-B7-mbB">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChargeCell" rowHeight="113" id="MB2-bk-BaM" customClass="ChargeCell" customModule="SuperAdmin" customModuleProvider="target">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="MB2-bk-BaM" id="HUC-7s-Sg6">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="id" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AjJ-D5-Inx">
+                                            <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                            <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                                <rect key="frame" x="8" y="9" width="392" height="21"/>
+                                            </variation>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="member" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="peo-gT-anH">
+                                            <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                            <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                                <rect key="frame" x="13" y="46" width="170" height="21"/>
+                                            </variation>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="video" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JUJ-ND-TlF">
+                                            <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                            <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                                <rect key="frame" x="191" y="46" width="201" height="21"/>
+                                            </variation>
+                                        </label>
+                                    </subviews>
+                                    <variation key="default">
+                                        <mask key="subviews">
+                                            <exclude reference="AjJ-D5-Inx"/>
+                                            <exclude reference="peo-gT-anH"/>
+                                            <exclude reference="JUJ-ND-TlF"/>
+                                        </mask>
+                                    </variation>
+                                    <variation key="heightClass=regular-widthClass=compact">
+                                        <mask key="subviews">
+                                            <include reference="AjJ-D5-Inx"/>
+                                            <include reference="peo-gT-anH"/>
+                                            <include reference="JUJ-ND-TlF"/>
+                                        </mask>
+                                    </variation>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="member" destination="peo-gT-anH" id="Rfj-dY-1Ig"/>
+                                    <outlet property="name" destination="AjJ-D5-Inx" id="LqC-dl-W56"/>
+                                    <outlet property="video" destination="JUJ-ND-TlF" id="C0u-YP-L7R"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Gkk-SX-LfW" id="IWj-mv-tqz"/>
+                            <outlet property="delegate" destination="Gkk-SX-LfW" id="LJ8-sx-m8Q"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CbU-dg-Q82" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3631.5" y="-819"/>
         </scene>
         <!--信息-->
         <scene sceneID="wg7-f3-ORb">
