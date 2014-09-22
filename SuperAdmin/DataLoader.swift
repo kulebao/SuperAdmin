@@ -31,11 +31,41 @@ class DataLoader {
                     println(error)
                 } else {
                     self.schools = data.map({school in School(dic: school as [String: AnyObject])})
-                    callback(self.schools)
+                    
+                    for school in self.schools {
+                        self.engine.HTTPGetJSONArray("http://127.0.0.1:9000/kindergarten/\(school.id)/principal") {
+                            (data: [AnyObject], error: String?) -> Void in
+                            if (error != nil) {
+                                println(error)
+                            } else {
+                                self.schools.filter({ (s: School) -> Bool in
+                                    return s.id == school.id as Int
+                                }).map({(s:School) -> School in
+                                    if (data.count > 0 && data[0]["phone"] as? String != nil) {
+                                        let phone: String = data[0]["phone"] as String
+                                        self.engine.HTTPGetJSON("http://127.0.0.1:9000/kindergarten/\(s.id)/employee/\(phone)", self.callback2(s))
+                                    } else {
+                                        s.principal = "未指定"
+                                    }
+                                    return s
+                                })
+                                if self.schools.filter({ (s: School) -> Bool in
+                                    return s.principal.isEmpty
+                                }).count == 0 {
+                                    callback(self.schools)
+                                }
+                            }
+                        }
+                    }
                 }
             }
-            
         }
+        
+    }
+    
+    func callback2(school: School)(employeeData: [String: AnyObject], error: String?) -> Void {
+        school.principal = employeeData["name"]! as String
+        
     }
     
     func login(callback: (User) -> Void) -> Void {
@@ -53,7 +83,7 @@ class DataLoader {
     func loadChargeInfoFromStage(callback: [School] -> Void) -> Void {
         self.login() {
             (user: User) -> Void in
-            if self.schools.count == 0 {
+            if self.schools.isEmpty {
                 self.loadSchoolsFromStage(self.chargeInSchool(callback))
             } else {
                 self.chargeInSchool(callback)(schools: self.schools)
@@ -75,7 +105,7 @@ class DataLoader {
                         return s.id == res["school_id"] as Int
                     }).map({(s:School) -> School in
                         s.charge = Charge(school: res["school_id"] as Int, member: res["total_phone_number"] as Int, video: res["total_video_account"] as Int)
-
+                        
                         return s
                     })
                     if self.schools.filter({ (s: School) -> Bool in

@@ -3,18 +3,38 @@
    version = "1.0">
    <ContextStates>
       <ContextState
-         contextName = "SuperAdmin.SchoolCell.init (SuperAdmin.SchoolCell.Type)(style : C.UITableViewCellStyle, reuseIdentifier : Swift.Optional&lt;Swift.String&gt;) -&gt; SuperAdmin.SchoolCell:SchoolCell.swift">
-      </ContextState>
-      <ContextState
          contextName = "GLOBAL">
          <PersistentStrings>
             <PersistentString
-               value = "self.contentView">
+               value = "employeeData[&quot;name&quot;]! as String">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "SuperAdmin.SchoolsViewController.init (SuperAdmin.SchoolsViewController.Type)(coder : ObjectiveC.NSCoder) -&gt; SuperAdmin.SchoolsViewController:SchoolsViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "SuperAdmin.DataLoader.(loadSchoolsFromStage (SuperAdmin.DataLoader) -&gt; ((Swift.Array&lt;SuperAdmin.School&gt;) -&gt; ()) -&gt; ()).(closure #1).(closure #1).(closure #2).(closure #2):DataLoader.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "res">
+            </PersistentString>
+            <PersistentString
+               value = "res[&quot;name&quot;]">
+            </PersistentString>
+            <PersistentString
+               value = "data[0]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "SuperAdmin.SchoolCell.init (SuperAdmin.SchoolCell.Type)(style : C.UITableViewCellStyle, reuseIdentifier : Swift.Optional&lt;Swift.String&gt;) -&gt; SuperAdmin.SchoolCell:SchoolCell.swift">
+      </ContextState>
+      <ContextState
          contextName = "SuperAdmin.SchoolCell.loadContent (SuperAdmin.SchoolCell)(SuperAdmin.School) -&gt; SuperAdmin.SchoolCell:SchoolCell.swift">
+      </ContextState>
+      <ContextState
+         contextName = "SuperAdmin.DataLoader.callback2 (SuperAdmin.DataLoader)(SuperAdmin.School)(employeeData : Swift.Dictionary&lt;Swift.String, Swift.AnyObject&gt;, error : Swift.Optional&lt;Swift.String&gt;) -&gt; ():DataLoader.swift">
       </ContextState>
       <ContextState
          contextName = "SuperAdmin.FirstViewController.goSchoolManagement (SuperAdmin.FirstViewController)(Swift.AnyObject) -&gt; ():FirstViewController.swift">
@@ -23,9 +43,6 @@
                value = "navigationController">
             </PersistentString>
          </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "SuperAdmin.SchoolsViewController.init (SuperAdmin.SchoolsViewController.Type)(coder : ObjectiveC.NSCoder) -&gt; SuperAdmin.SchoolsViewController:SchoolsViewController.swift">
       </ContextState>
       <ContextState
          contextName = "SuperAdmin.SchoolsViewController.tableView (SuperAdmin.SchoolsViewController)(ObjectiveC.UITableView, cellForRowAtIndexPath : ObjectiveC.NSIndexPath) -&gt; ObjectiveC.UITableViewCell:SchoolsViewController.swift">

@@ -11,7 +11,7 @@ import Foundation
 class School {
     let id: Int
     let name: String
-    let principal: String
+    var principal: String
     let logoUrl: String
     var charge: Charge?
     
