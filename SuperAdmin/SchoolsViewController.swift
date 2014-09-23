@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SchoolsViewController: UITableViewController, UITableViewDelegate, UITableViewDataSource {
+class SchoolsViewController: UITableViewController {
     
     var schools: [School]
     

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ChargeViewController: UITableViewController, UITableViewDelegate, UITableViewDataSource {
+class ChargeViewController: UITableViewController {
     var schools: [School]
     
     required init(coder aDecoder: NSCoder) {
@@ -29,8 +29,7 @@ class ChargeViewController: UITableViewController, UITableViewDelegate, UITableV
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
-        var  cell = tableView.dequeueReusableCellWithIdentifier("ChargeCell", forIndexPath: indexPath) as ChargeCell
-        
+        let cell = tableView.dequeueReusableCellWithIdentifier("ChargeCell", forIndexPath: indexPath) as ChargeCell
         
         let model = self.schools[indexPath.item]
         
