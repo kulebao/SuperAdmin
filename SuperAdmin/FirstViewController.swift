@@ -9,7 +9,7 @@
 import UIKit
 
 
-class FirstViewController: UIViewController {
+class FirstViewController: UIViewController, MBProgressHUDDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()

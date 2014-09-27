@@ -8,8 +8,9 @@
 
 import UIKit
 
-class ChargeViewController: UITableViewController {
+class ChargeViewController: UITableViewController, MBProgressHUDDelegate {
     var schools: [School]
+    var progHud: MBProgressHUD!
     
     required init(coder aDecoder: NSCoder) {
         self.schools = []
@@ -17,6 +18,13 @@ class ChargeViewController: UITableViewController {
     }
     
     override func viewDidLoad() {
+        let navView = self.view
+        self.progHud = MBProgressHUD(view: navView)
+        self.progHud.labelText = "Loading..."
+        self.progHud.center = navView.center
+        self.progHud.delegate = self
+        self.progHud.show(true)
+        self.view.addSubview(self.progHud)
         DataLoader().loadChargeInfoFromStage(self.dataArrived)
     }
     
@@ -24,6 +32,7 @@ class ChargeViewController: UITableViewController {
         self.schools = charges
         dispatch_async(dispatch_get_main_queue(),{
             self.tableView.reloadData()
+            self.progHud.hide(true)
         });
     }
     

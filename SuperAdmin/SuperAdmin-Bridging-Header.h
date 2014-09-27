@@ -10,5 +10,6 @@
 #define SuperAdmin_BridgeHeader_h
 
 #import <AFNetworking/AFNetworking.h>
+#import <MBProgressHUD/MBProgressHUD.h>
 
 #endif
