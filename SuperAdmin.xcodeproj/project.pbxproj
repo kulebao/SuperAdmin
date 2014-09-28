@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		050AC23E19D7D546000DF8DE /* Spinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050AC23D19D7D546000DF8DE /* Spinner.swift */; };
 		0517657F19C4A5B2002D3957 /* SchoolsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0517657E19C4A5B2002D3957 /* SchoolsViewController.swift */; };
 		0529090F19C9C68900695D7E /* School.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0529090E19C9C68900695D7E /* School.swift */; };
 		057FCE2919C4905200BAA2D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057FCE2819C4905200BAA2D9 /* AppDelegate.swift */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		050AC23D19D7D546000DF8DE /* Spinner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Spinner.swift; sourceTree = "<group>"; };
 		0517657D19C49AEB002D3957 /* SuperAdmin-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SuperAdmin-Bridging-Header.h"; sourceTree = "<group>"; };
 		0517657E19C4A5B2002D3957 /* SchoolsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SchoolsViewController.swift; sourceTree = "<group>"; };
 		0529090E19C9C68900695D7E /* School.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = School.swift; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 		0529091019C9CC5B00695D7E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				050AC23D19D7D546000DF8DE /* Spinner.swift */,
 				05C979E319C7065400A9884B /* SchoolCell.swift */,
 				05B7FA1519CECCFE002378BC /* ChargeCell.swift */,
 			);
@@ -324,6 +327,7 @@
 				057FCE2D19C4905200BAA2D9 /* SecondViewController.swift in Sources */,
 				05B7E0DA19CB2F97006E9A13 /* DataLoader.swift in Sources */,
 				05B7FA1619CECCFE002378BC /* ChargeCell.swift in Sources */,
+				050AC23E19D7D546000DF8DE /* Spinner.swift in Sources */,
 				05B7FA0F19CEBCEA002378BC /* User.swift in Sources */,
 				05B7FA1119CECA36002378BC /* ChargeViewController.swift in Sources */,
 				05C979E419C7065400A9884B /* SchoolCell.swift in Sources */,
