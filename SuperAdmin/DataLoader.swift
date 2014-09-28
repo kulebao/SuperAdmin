@@ -110,4 +110,11 @@ class DataLoader {
             callback(self.schools)
         }
     }
+    func loadScoreInfoFromStage(callback:[Teacher] -> Void) {
+        let t = Teacher(name: "王老师")
+        t.score = Score(assignment: 1, assess: 2, chat: 3, news: 4)
+        let t2 = Teacher(name: "张老师")
+        t2.score = Score(assignment: 11, assess: 12, chat:33, news: 44)
+        callback([t, t2])
+    }
 }

@@ -17,6 +17,10 @@
 		057FCE3219C4905200BAA2D9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 057FCE3119C4905200BAA2D9 /* Images.xcassets */; };
 		057FCE3519C4905200BAA2D9 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 057FCE3319C4905200BAA2D9 /* LaunchScreen.xib */; };
 		057FCE4119C4905300BAA2D9 /* SuperAdminTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057FCE4019C4905300BAA2D9 /* SuperAdminTests.swift */; };
+		058542D819D84D5C0085CC03 /* ScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058542D719D84D5C0085CC03 /* ScoreViewController.swift */; };
+		058542DA19D84E7B0085CC03 /* ScoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058542D919D84E7B0085CC03 /* ScoreCell.swift */; };
+		058542DC19D84F6C0085CC03 /* Teacher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058542DB19D84F6C0085CC03 /* Teacher.swift */; };
+		058542DE19D84FB70085CC03 /* Score.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058542DD19D84FB70085CC03 /* Score.swift */; };
 		05B7E0DA19CB2F97006E9A13 /* DataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B7E0D819CB2F97006E9A13 /* DataLoader.swift */; };
 		05B7E0DB19CB2F97006E9A13 /* JSONHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B7E0D919CB2F97006E9A13 /* JSONHelper.swift */; };
 		05B7FA0F19CEBCEA002378BC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B7FA0E19CEBCEA002378BC /* User.swift */; };
@@ -53,6 +57,10 @@
 		057FCE3A19C4905200BAA2D9 /* SuperAdminTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SuperAdminTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		057FCE3F19C4905300BAA2D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		057FCE4019C4905300BAA2D9 /* SuperAdminTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperAdminTests.swift; sourceTree = "<group>"; };
+		058542D719D84D5C0085CC03 /* ScoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoreViewController.swift; sourceTree = "<group>"; };
+		058542D919D84E7B0085CC03 /* ScoreCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoreCell.swift; sourceTree = "<group>"; };
+		058542DB19D84F6C0085CC03 /* Teacher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Teacher.swift; sourceTree = "<group>"; };
+		058542DD19D84FB70085CC03 /* Score.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Score.swift; sourceTree = "<group>"; };
 		05B7E0D819CB2F97006E9A13 /* DataLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataLoader.swift; sourceTree = "<group>"; };
 		05B7E0D919CB2F97006E9A13 /* JSONHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONHelper.swift; sourceTree = "<group>"; };
 		05B7FA0E19CEBCEA002378BC /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -91,6 +99,8 @@
 				0529090E19C9C68900695D7E /* School.swift */,
 				05B7FA0E19CEBCEA002378BC /* User.swift */,
 				05B7FA1219CECB97002378BC /* Charge.swift */,
+				058542DB19D84F6C0085CC03 /* Teacher.swift */,
+				058542DD19D84FB70085CC03 /* Score.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -102,6 +112,7 @@
 				057FCE2C19C4905200BAA2D9 /* SecondViewController.swift */,
 				0517657E19C4A5B2002D3957 /* SchoolsViewController.swift */,
 				05B7FA1019CECA36002378BC /* ChargeViewController.swift */,
+				058542D719D84D5C0085CC03 /* ScoreViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -112,6 +123,7 @@
 				050AC23D19D7D546000DF8DE /* Spinner.swift */,
 				05C979E319C7065400A9884B /* SchoolCell.swift */,
 				05B7FA1519CECCFE002378BC /* ChargeCell.swift */,
+				058542D919D84E7B0085CC03 /* ScoreCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -321,18 +333,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				058542DE19D84FB70085CC03 /* Score.swift in Sources */,
 				0529090F19C9C68900695D7E /* School.swift in Sources */,
 				0517657F19C4A5B2002D3957 /* SchoolsViewController.swift in Sources */,
 				05B7E0DB19CB2F97006E9A13 /* JSONHelper.swift in Sources */,
 				057FCE2D19C4905200BAA2D9 /* SecondViewController.swift in Sources */,
+				058542DC19D84F6C0085CC03 /* Teacher.swift in Sources */,
 				05B7E0DA19CB2F97006E9A13 /* DataLoader.swift in Sources */,
 				05B7FA1619CECCFE002378BC /* ChargeCell.swift in Sources */,
 				050AC23E19D7D546000DF8DE /* Spinner.swift in Sources */,
+				058542D819D84D5C0085CC03 /* ScoreViewController.swift in Sources */,
 				05B7FA0F19CEBCEA002378BC /* User.swift in Sources */,
 				05B7FA1119CECA36002378BC /* ChargeViewController.swift in Sources */,
 				05C979E419C7065400A9884B /* SchoolCell.swift in Sources */,
 				057FCE2919C4905200BAA2D9 /* AppDelegate.swift in Sources */,
 				057FCE2B19C4905200BAA2D9 /* FirstViewController.swift in Sources */,
+				058542DA19D84E7B0085CC03 /* ScoreCell.swift in Sources */,
 				05B7FA1319CECB97002378BC /* Charge.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
