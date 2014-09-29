@@ -9,22 +9,22 @@
 import UIKit
 
 class PrincipalsViewController: UITableViewController {
-    var schools: [School]
+    var teachers: [Teacher]
     var spinner: Spinner!
     
     required init(coder aDecoder: NSCoder) {
-        self.schools = []
+        self.teachers = []
         super.init(coder: aDecoder)
     }
     
     override func viewDidLoad() {
         spinner = Spinner(view: self.view)
         spinner.show("Loading...")
-        DataLoader().loadPrincipalsInfoFromStage(self.dataArrived)
+        DataLoader().loadEmployeesFromStage(self.dataArrived)
     }
     
-    func dataArrived(schools: [School]) -> Void {
-        self.schools = schools
+    func dataArrived(teachers: [Teacher]) -> Void {
+        self.teachers = teachers
         dispatch_async(dispatch_get_main_queue(),{
             self.tableView.reloadData()
             self.spinner.hide()
@@ -35,12 +35,12 @@ class PrincipalsViewController: UITableViewController {
     {
         let cell = tableView.dequeueReusableCellWithIdentifier("PrincipalCell", forIndexPath: indexPath) as PrincipalCell
         
-        let model = self.schools[indexPath.item]
+        let model = self.teachers[indexPath.item]
         
         return cell.loadContent(model)
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.schools.count
+        return self.teachers.count
     }
 }

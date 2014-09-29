@@ -17,9 +17,15 @@ class PrincipalCell: UITableViewCell {
         super.init(coder: aDecoder)
     }
     
-    func loadContent(school: School) -> PrincipalCell {
-        self.name!.text = school.principal.name
-        self.school!.text = "所在学校: \(school.name)"
+    func loadContent(teacher: Teacher) -> PrincipalCell {
+        self.name!.text = teacher.name
+        if teacher.school == 0 {
+            self.school!.text = "超级管理员"
+        } else {
+            self.school!.text = "所在学校: \(teacher.school)"
+        }
+        
+        
         return self
     }
     

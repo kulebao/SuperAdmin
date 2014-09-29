@@ -11,9 +11,13 @@ import Foundation
 class Teacher {
     let name: String
     var score: Score?
-    var school: School?
+    let school: Int
     
-    init(name: String) {
+    init(name: String, school: Int) {
         self.name = name
+        self.school = school
+    }
+    convenience init(dic: [String: AnyObject]) {
+        self.init(name: dic["name"]! as String, school: dic["school_id"]! as Int)
     }
 }

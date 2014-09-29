@@ -44,7 +44,7 @@ class DataLoader {
                     let phone: String = data[0]["phone"] as String
                     self.engine.HTTPGetJSON("\(self.serverHost)/kindergarten/\(s.id)/employee/\(phone)", self.employeeCallback(s))
                 } else {
-                    s.principal = Teacher(name: "未指定")
+                    s.principal = Teacher(name: "未指定", school: s.id)
                 }
                 return s
             })
@@ -58,7 +58,7 @@ class DataLoader {
     }
     
     func employeeCallback(school: School)(employeeData: [String: AnyObject], error: String?) -> Void {
-        school.principal = Teacher(name: employeeData["name"]! as String)
+        school.principal = Teacher(name: employeeData["name"]! as String, school: employeeData["school_id"]! as Int)
     }
     
     func login(callback: (User) -> Void) -> Void {
@@ -111,16 +111,25 @@ class DataLoader {
         }
     }
     func loadScoreInfoFromStage(callback:[Teacher] -> Void) {
-        let t = Teacher(name: "王老师")
+        let t = Teacher(name: "王老师", school: 123)
         t.score = Score(assignment: 1, assess: 2, chat: 3, news: 4)
-        let t2 = Teacher(name: "张老师")
+        let t2 = Teacher(name: "张老师", school: 321)
         t2.score = Score(assignment: 11, assess: 12, chat:33, news: 44)
         callback([t, t2])
     }
     
-    func loadPrincipalsInfoFromStage(callback:[School] -> Void) {
-        let s1 = School(id: 12345, name: "中央中南海", principal: "王老师", logo: "")
-        let s2 = School(id: 54321, name: "地中海花园", principal: "张老师", logo: "")
-        callback([s1, s2])
+    func loadEmployeesFromStage(callback:[Teacher] -> Void) {
+        self.login() {
+            (user: User) -> Void in
+            self.engine.HTTPGetJSONArray("\(self.serverHost)/employee") {
+                (data: [AnyObject], error: String?) -> Void in
+                if (error != nil) {
+                    println(error)
+                } else {
+                    let teachers = data.map({teacher in Teacher(dic: teacher as [String: AnyObject])})
+                    callback(teachers)
+                }
+            }
+        }
     }
 }
