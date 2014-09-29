@@ -10,9 +10,9 @@ import Foundation
 
 class ChargeCell: UITableViewCell {
 
-    @IBOutlet var name: UILabel!
-    @IBOutlet var member: UILabel!
-    @IBOutlet var video: UILabel!
+    @IBOutlet weak var name: UILabel!
+    @IBOutlet weak var member: UILabel!
+    @IBOutlet weak var video: UILabel!
     
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)

@@ -20,4 +20,8 @@ struct Score {
         self.chat = chat
         self.news = news
     }
+    
+    func total() -> Int {
+        return self.assignment + self.assess + self.chat + self.news
+    }
 }

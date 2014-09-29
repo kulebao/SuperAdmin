@@ -10,10 +10,10 @@ import Foundation
 
 class SchoolCell: UITableViewCell {
     
-    @IBOutlet var id: UILabel!
-    @IBOutlet var name: UILabel!
-    @IBOutlet var principal: UILabel!
-    @IBOutlet var logo: UIImageView!
+    @IBOutlet weak var id: UILabel!
+    @IBOutlet weak var name: UILabel!
+    @IBOutlet weak var principal: UILabel!
+    @IBOutlet weak var logo: UIImageView!
     
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
