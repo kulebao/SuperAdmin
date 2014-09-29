@@ -11,14 +11,14 @@ import Foundation
 class School {
     let id: Int
     let name: String
-    var principal: String
+    var principal: Teacher
     let logoUrl: String
     var charge: Charge?
     
     init(id: Int, name: String, principal: String, logo: String) {
         self.id = id
         self.name = name
-        self.principal = principal
+        self.principal = Teacher(name: principal)
         self.logoUrl = logo
     }
     

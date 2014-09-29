@@ -11,6 +11,7 @@ import Foundation
 class Teacher {
     let name: String
     var score: Score?
+    var school: School?
     
     init(name: String) {
         self.name = name

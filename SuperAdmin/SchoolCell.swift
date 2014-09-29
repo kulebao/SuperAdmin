@@ -22,7 +22,7 @@ class SchoolCell: UITableViewCell {
     func loadContent(school: School) -> SchoolCell {
         self.id!.text = "id: \(school.id)"
         self.name!.text = school.name
-        self.principal!.text = "校长：\(school.principal)"
+        self.principal!.text = "校长：\(school.principal.name)"
         dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), {
             let imageUrl = school.logoUrl
             var imageData =  UIImage(data: NSData(contentsOfURL: NSURL(string:school.logoUrl)))

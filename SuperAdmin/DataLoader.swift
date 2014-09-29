@@ -44,21 +44,21 @@ class DataLoader {
                     let phone: String = data[0]["phone"] as String
                     self.engine.HTTPGetJSON("\(self.serverHost)/kindergarten/\(s.id)/employee/\(phone)", self.employeeCallback(s))
                 } else {
-                    s.principal = "未指定"
+                    s.principal = Teacher(name: "未指定")
                 }
                 return s
             })
             
         }
         if self.schools.filter({ (s: School) -> Bool in
-            return s.principal.isEmpty
+            return s.principal.name.isEmpty
         }).count == 0 {
             callback(self.schools)
         }
     }
     
     func employeeCallback(school: School)(employeeData: [String: AnyObject], error: String?) -> Void {
-        school.principal = employeeData["name"]! as String
+        school.principal = Teacher(name: employeeData["name"]! as String)
     }
     
     func login(callback: (User) -> Void) -> Void {
@@ -116,5 +116,11 @@ class DataLoader {
         let t2 = Teacher(name: "张老师")
         t2.score = Score(assignment: 11, assess: 12, chat:33, news: 44)
         callback([t, t2])
+    }
+    
+    func loadPrincipalsInfoFromStage(callback:[School] -> Void) {
+        let s1 = School(id: 12345, name: "中央中南海", principal: "王老师", logo: "")
+        let s2 = School(id: 54321, name: "地中海花园", principal: "张老师", logo: "")
+        callback([s1, s2])
     }
 }
