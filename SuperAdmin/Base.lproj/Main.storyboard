@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A361c" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
+        <deployment defaultVersion="1792" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -31,7 +32,7 @@
                                 <rect key="frame" x="150" y="119" width="142" height="77"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <state key="normal" title="校长信息"/>
+                                <state key="normal" title="所有教师"/>
                                 <connections>
                                     <segue destination="j5t-5H-elX" kind="show" id="jMo-Bx-v7b"/>
                                 </connections>
@@ -669,15 +670,16 @@
             </objects>
             <point key="canvasLocation" x="4351.5" y="-815.25"/>
         </scene>
-        <!--校长列表-->
+        <!--教师列表-->
         <scene sceneID="D1V-73-BFS">
             <objects>
-                <tableViewController title="校长列表" id="j5t-5H-elX" customClass="PrincipalsViewController" customModule="SuperAdmin" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="教师列表" id="j5t-5H-elX" customClass="PrincipalsViewController" customModule="SuperAdmin" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="51" sectionHeaderHeight="22" sectionFooterHeight="22" id="2FZ-v8-Ftn">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PrincipalCell" rowHeight="51" id="OOY-oE-mjf" customClass="PrincipalCell" customModule="SuperAdmin" customModuleProvider="target">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="PrincipalCell" rowHeight="51" id="OOY-oE-mjf" customClass="PrincipalCell" customModule="SuperAdmin" customModuleProvider="target">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="OOY-oE-mjf" id="mrN-YO-FtA">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -717,6 +719,7 @@
                                 <connections>
                                     <outlet property="name" destination="eMD-lf-piQ" id="bAN-bJ-sUh"/>
                                     <outlet property="school" destination="QBi-VC-xhv" id="Nvc-sM-r0c"/>
+                                    <segue destination="MSU-bG-eZF" kind="show" id="ghj-FW-KbM"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -725,10 +728,95 @@
                             <outlet property="delegate" destination="j5t-5H-elX" id="RmE-ph-MOx"/>
                         </connections>
                     </tableView>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Title" id="jyf-s4-dHL">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="hyn-Ll-ucV">
+                            <connections>
+                                <segue destination="l4X-e0-WbW" kind="show" id="K7u-I4-bRp"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZEp-xg-xqk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5035.5" y="-815.25"/>
+            <point key="canvasLocation" x="2902.5" y="-1461.75"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="2Lk-qg-UiV">
+            <objects>
+                <viewController id="MSU-bG-eZF" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="HfT-jh-cez"/>
+                        <viewControllerLayoutGuide type="bottom" id="AVU-1v-gFQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="c6f-W4-Mpq">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="教师信息" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Hb-sS-BTh">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="166" y="389" width="68" height="21"/>
+                                </variation>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="5Hb-sS-BTh"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="5Hb-sS-BTh"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="chJ-aW-cAW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3667.5" y="-1461.75"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="zB0-KY-tzA">
+            <objects>
+                <viewController id="l4X-e0-WbW" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="lMe-S1-lfy"/>
+                        <viewControllerLayoutGuide type="bottom" id="xJK-al-NZm"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="s4M-FI-8fU">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="添加教师" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4dI-9m-C2v">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="179" y="389" width="68" height="21"/>
+                                </variation>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="4dI-9m-C2v"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="4dI-9m-C2v"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="v1v-Wl-6fl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3667.5" y="-2142"/>
         </scene>
         <!--信息-->
         <scene sceneID="wg7-f3-ORb">
