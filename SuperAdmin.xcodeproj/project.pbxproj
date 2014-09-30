@@ -21,6 +21,7 @@
 		058542DA19D84E7B0085CC03 /* ScoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058542D919D84E7B0085CC03 /* ScoreCell.swift */; };
 		058542DC19D84F6C0085CC03 /* Teacher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058542DB19D84F6C0085CC03 /* Teacher.swift */; };
 		058542DE19D84FB70085CC03 /* Score.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058542DD19D84FB70085CC03 /* Score.swift */; };
+		05AE5F2619DB08CD00403EFA /* EditTeatherController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AE5F2519DB08CD00403EFA /* EditTeatherController.swift */; };
 		05B7E0DA19CB2F97006E9A13 /* DataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B7E0D819CB2F97006E9A13 /* DataLoader.swift */; };
 		05B7E0DB19CB2F97006E9A13 /* JSONHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B7E0D919CB2F97006E9A13 /* JSONHelper.swift */; };
 		05B7FA0F19CEBCEA002378BC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B7FA0E19CEBCEA002378BC /* User.swift */; };
@@ -63,6 +64,7 @@
 		058542D919D84E7B0085CC03 /* ScoreCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoreCell.swift; sourceTree = "<group>"; };
 		058542DB19D84F6C0085CC03 /* Teacher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Teacher.swift; sourceTree = "<group>"; };
 		058542DD19D84FB70085CC03 /* Score.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Score.swift; sourceTree = "<group>"; };
+		05AE5F2519DB08CD00403EFA /* EditTeatherController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditTeatherController.swift; sourceTree = "<group>"; };
 		05B7E0D819CB2F97006E9A13 /* DataLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataLoader.swift; sourceTree = "<group>"; };
 		05B7E0D919CB2F97006E9A13 /* JSONHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONHelper.swift; sourceTree = "<group>"; };
 		05B7FA0E19CEBCEA002378BC /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 				0517657E19C4A5B2002D3957 /* SchoolsViewController.swift */,
 				05B7FA1019CECA36002378BC /* ChargeViewController.swift */,
 				058542D719D84D5C0085CC03 /* ScoreViewController.swift */,
+				05AE5F2519DB08CD00403EFA /* EditTeatherController.swift */,
 				05BBB18819D9A819009D52CD /* PrincipalsController.swift */,
 			);
 			name = Controllers;
@@ -352,6 +355,7 @@
 				058542D819D84D5C0085CC03 /* ScoreViewController.swift in Sources */,
 				05B7FA0F19CEBCEA002378BC /* User.swift in Sources */,
 				05B7FA1119CECA36002378BC /* ChargeViewController.swift in Sources */,
+				05AE5F2619DB08CD00403EFA /* EditTeatherController.swift in Sources */,
 				05C979E419C7065400A9884B /* SchoolCell.swift in Sources */,
 				057FCE2919C4905200BAA2D9 /* AppDelegate.swift in Sources */,
 				057FCE2B19C4905200BAA2D9 /* FirstViewController.swift in Sources */,

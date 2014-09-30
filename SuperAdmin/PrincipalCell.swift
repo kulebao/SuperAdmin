@@ -12,6 +12,8 @@ class PrincipalCell: UITableViewCell {
     
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var school: UILabel!
+    
+    var teacher: Teacher?
    
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -24,7 +26,7 @@ class PrincipalCell: UITableViewCell {
         } else {
             self.school!.text = "所在学校: \(teacher.school)"
         }
-        
+        self.teacher = teacher
         
         return self
     }

@@ -3,15 +3,38 @@
    version = "1.0">
    <ContextStates>
       <ContextState
+         contextName = "SuperAdmin.EditTeatherController.viewDidLoad (SuperAdmin.EditTeatherController)() -&gt; ():EditTeatherController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.name">
+            </PersistentString>
+            <PersistentString
+               value = "self.teacher">
+            </PersistentString>
+            <PersistentString
+               value = "self.teacher!.name">
+            </PersistentString>
+            <PersistentString
+               value = "self">
+            </PersistentString>
+            <PersistentString
+               value = "self.teacher.name">
+            </PersistentString>
+            <PersistentString
+               value = "teacher">
+            </PersistentString>
+            <PersistentString
+               value = "self.name!.text">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "GLOBAL">
          <PersistentStrings>
             <PersistentString
                value = "employeeData[&quot;name&quot;]! as String">
             </PersistentString>
          </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "SuperAdmin.SchoolsViewController.init (SuperAdmin.SchoolsViewController.Type)(coder : ObjectiveC.NSCoder) -&gt; SuperAdmin.SchoolsViewController:SchoolsViewController.swift">
       </ContextState>
       <ContextState
          contextName = "SuperAdmin.DataLoader.(loadSchoolsFromStage (SuperAdmin.DataLoader) -&gt; ((Swift.Array&lt;SuperAdmin.School&gt;) -&gt; ()) -&gt; ()).(closure #1).(closure #1).(closure #2).(closure #2):DataLoader.swift">
@@ -28,19 +51,10 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "SuperAdmin.SchoolCell.init (SuperAdmin.SchoolCell.Type)(style : C.UITableViewCellStyle, reuseIdentifier : Swift.Optional&lt;Swift.String&gt;) -&gt; SuperAdmin.SchoolCell:SchoolCell.swift">
-      </ContextState>
-      <ContextState
-         contextName = "SuperAdmin.SchoolCell.loadContent (SuperAdmin.SchoolCell)(SuperAdmin.School) -&gt; SuperAdmin.SchoolCell:SchoolCell.swift">
-      </ContextState>
-      <ContextState
-         contextName = "SuperAdmin.DataLoader.callback2 (SuperAdmin.DataLoader)(SuperAdmin.School)(employeeData : Swift.Dictionary&lt;Swift.String, Swift.AnyObject&gt;, error : Swift.Optional&lt;Swift.String&gt;) -&gt; ():DataLoader.swift">
-      </ContextState>
-      <ContextState
-         contextName = "SuperAdmin.FirstViewController.goSchoolManagement (SuperAdmin.FirstViewController)(Swift.AnyObject) -&gt; ():FirstViewController.swift">
+         contextName = "SuperAdmin.PrincipalsViewController.prepareForSegue (SuperAdmin.PrincipalsViewController)(Swift.Optional&lt;ObjectiveC.UIStoryboardSegue&gt;, sender : Swift.Optional&lt;Swift.AnyObject&gt;) -&gt; ():PrincipalsController.swift">
          <PersistentStrings>
             <PersistentString
-               value = "navigationController">
+               value = "segue!.identifier">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -53,10 +67,90 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "SuperAdmin.FirstViewController.goSchoolManagement (SuperAdmin.FirstViewController)(Swift.AnyObject) -&gt; ():FirstViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "navigationController">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "SuperAdmin.PrincipalsViewController.prepareForSegue (SuperAdmin.PrincipalsViewController)(ObjectiveC.UIStoryboardSegue, sender : Swift.ImplicitlyUnwrappedOptional&lt;Swift.AnyObject&gt;) -&gt; ():PrincipalsController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "segue">
+            </PersistentString>
+            <PersistentString
+               value = "segue.identifier">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "SuperAdmin.DataLoader.callback2 (SuperAdmin.DataLoader)(SuperAdmin.School)(employeeData : Swift.Dictionary&lt;Swift.String, Swift.AnyObject&gt;, error : Swift.Optional&lt;Swift.String&gt;) -&gt; ():DataLoader.swift">
+      </ContextState>
+      <ContextState
+         contextName = "SuperAdmin.SchoolsViewController.init (SuperAdmin.SchoolsViewController.Type)(coder : ObjectiveC.NSCoder) -&gt; SuperAdmin.SchoolsViewController:SchoolsViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "SuperAdmin.SchoolCell.init (SuperAdmin.SchoolCell.Type)(style : C.UITableViewCellStyle, reuseIdentifier : Swift.Optional&lt;Swift.String&gt;) -&gt; SuperAdmin.SchoolCell:SchoolCell.swift">
+      </ContextState>
+      <ContextState
+         contextName = "SuperAdmin.PrincipalsViewController.tableView (SuperAdmin.PrincipalsViewController)(ObjectiveC.UITableView, didSelectRowAtIndexPath : ObjectiveC.NSIndexPath) -&gt; ():PrincipalsController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "model.name">
+            </PersistentString>
+            <PersistentString
+               value = "cell.name!.text!">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "SuperAdmin.Spinner.show (SuperAdmin.Spinner)(Swift.String) -&gt; ():Spinner.swift">
          <PersistentStrings>
             <PersistentString
                value = "self.view.subviews">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "SuperAdmin.SchoolCell.loadContent (SuperAdmin.SchoolCell)(SuperAdmin.School) -&gt; SuperAdmin.SchoolCell:SchoolCell.swift">
+      </ContextState>
+      <ContextState
+         contextName = "SuperAdmin.PrincipalsViewController.prepareForSegue (SuperAdmin.PrincipalsViewController)(ObjectiveC.UIStoryboardSegue, sender : Swift.Optional&lt;Swift.AnyObject&gt;) -&gt; ():PrincipalsController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "s.identifier">
+            </PersistentString>
+            <PersistentString
+               value = "vc.teacher">
+            </PersistentString>
+            <PersistentString
+               value = "self.current!">
+            </PersistentString>
+            <PersistentString
+               value = "segue">
+            </PersistentString>
+            <PersistentString
+               value = "vc">
+            </PersistentString>
+            <PersistentString
+               value = "sender!">
+            </PersistentString>
+            <PersistentString
+               value = "segue.identifier">
+            </PersistentString>
+            <PersistentString
+               value = "c">
+            </PersistentString>
+            <PersistentString
+               value = "self">
+            </PersistentString>
+            <PersistentString
+               value = "s">
+            </PersistentString>
+            <PersistentString
+               value = "t.teacher!">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
