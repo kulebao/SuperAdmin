@@ -10,9 +10,11 @@ import Foundation
 
 class EditTeatherController: UIViewController {
     
-    @IBOutlet weak var name: UILabel!
     var teacher: Teacher!
     
+    @IBOutlet weak var name: UITextField!
+    
+    @IBOutlet weak var school: UITextField!
     
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -21,6 +23,11 @@ class EditTeatherController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.name!.text = self.teacher!.name
+        self.school!.text = "\(self.teacher!.school)"
+    }
+    
+    @IBAction func save(sender: AnyObject) {
+        
     }
    
    
