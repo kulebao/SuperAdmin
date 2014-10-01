@@ -15,6 +15,8 @@ class EditTeatherController: UIViewController {
     @IBOutlet weak var name: UITextField!
     
     @IBOutlet weak var school: UITextField!
+   
+    @IBOutlet weak var loginName: UITextField!
     
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -24,6 +26,7 @@ class EditTeatherController: UIViewController {
         super.viewDidLoad()
         self.name!.text = self.teacher!.name
         self.school!.text = "\(self.teacher!.school)"
+        self.loginName!.text = self.teacher!.login_name
     }
     
     @IBAction func save(sender: AnyObject) {

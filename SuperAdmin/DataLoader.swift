@@ -44,7 +44,7 @@ class DataLoader {
                     let phone: String = data[0]["phone"] as String
                     self.engine.HTTPGetJSON("\(self.serverHost)/kindergarten/\(s.id)/employee/\(phone)", self.employeeCallback(s))
                 } else {
-                    s.principal = Teacher(name: "未指定", school: s.id)
+                    s.principal = Teacher(name: "未指定", school: s.id, login_name: "")
                 }
                 return s
             })
@@ -58,7 +58,7 @@ class DataLoader {
     }
     
     func employeeCallback(school: School)(employeeData: [String: AnyObject], error: String?) -> Void {
-        school.principal = Teacher(name: employeeData["name"]! as String, school: employeeData["school_id"]! as Int)
+        school.principal = Teacher(dic: employeeData)
     }
     
     func login(callback: (User) -> Void) -> Void {
@@ -111,9 +111,9 @@ class DataLoader {
         }
     }
     func loadScoreInfoFromStage(callback:[Teacher] -> Void) {
-        let t = Teacher(name: "王老师", school: 123)
+        let t = Teacher(name: "王老师", school: 123, login_name: "a")
         t.score = Score(assignment: 1, assess: 2, chat: 3, news: 4)
-        let t2 = Teacher(name: "张老师", school: 321)
+        let t2 = Teacher(name: "张老师", school: 321, login_name: "b")
         t2.score = Score(assignment: 11, assess: 12, chat:33, news: 44)
         callback([t, t2])
     }

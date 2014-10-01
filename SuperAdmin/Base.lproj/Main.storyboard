@@ -772,12 +772,21 @@
                                     <rect key="frame" x="16" y="133" width="68" height="21"/>
                                 </variation>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="性别" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gaP-qu-JV6">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="174" width="68" height="21"/>
+                                </variation>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4yA-7P-fNN">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="保存修改"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="53" y="254" width="294" height="38"/>
+                                    <rect key="frame" x="55" y="404" width="294" height="38"/>
                                 </variation>
                                 <connections>
                                     <action selector="save:" destination="MSU-bG-eZF" eventType="touchUpInside" id="6Qy-kN-e64"/>
@@ -788,7 +797,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="70" y="82" width="264" height="30"/>
+                                    <rect key="frame" x="107" y="82" width="227" height="30"/>
                                 </variation>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IqB-Ct-78I">
@@ -796,7 +805,51 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="70" y="129" width="264" height="30"/>
+                                    <rect key="frame" x="107" y="129" width="227" height="30"/>
+                                </variation>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="生日" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VBy-S2-Tgb">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="216" width="68" height="21"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="登录名" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fqn-Ae-j5B">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="257" width="68" height="21"/>
+                                </variation>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9Cs-dJ-Vep">
+                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="107" y="253" width="227" height="30"/>
+                                </variation>
+                            </textField>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="925-nB-4OP">
+                                <rect key="frame" x="-61" y="-14" width="123" height="29"/>
+                                <segments>
+                                    <segment title="男"/>
+                                    <segment title="女"/>
+                                </segments>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="107" y="171" width="123" height="29"/>
+                                </variation>
+                            </segmentedControl>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IzI-Xy-nOA">
+                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="107" y="213" width="227" height="30"/>
                                 </variation>
                             </textField>
                         </subviews>
@@ -805,29 +858,42 @@
                             <mask key="subviews">
                                 <exclude reference="9PL-DG-aWK"/>
                                 <exclude reference="wc9-Tp-e0l"/>
+                                <exclude reference="gaP-qu-JV6"/>
                                 <exclude reference="4yA-7P-fNN"/>
                                 <exclude reference="3Uc-Sl-4da"/>
                                 <exclude reference="IqB-Ct-78I"/>
+                                <exclude reference="VBy-S2-Tgb"/>
+                                <exclude reference="Fqn-Ae-j5B"/>
+                                <exclude reference="9Cs-dJ-Vep"/>
+                                <exclude reference="925-nB-4OP"/>
+                                <exclude reference="IzI-Xy-nOA"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
                                 <include reference="9PL-DG-aWK"/>
                                 <include reference="wc9-Tp-e0l"/>
+                                <include reference="gaP-qu-JV6"/>
                                 <include reference="4yA-7P-fNN"/>
                                 <include reference="3Uc-Sl-4da"/>
                                 <include reference="IqB-Ct-78I"/>
+                                <include reference="VBy-S2-Tgb"/>
+                                <include reference="Fqn-Ae-j5B"/>
+                                <include reference="9Cs-dJ-Vep"/>
+                                <include reference="925-nB-4OP"/>
+                                <include reference="IzI-Xy-nOA"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="loginName" destination="9Cs-dJ-Vep" id="hCW-KT-KBL"/>
                         <outlet property="name" destination="3Uc-Sl-4da" id="3Ri-vH-ZLx"/>
                         <outlet property="school" destination="IqB-Ct-78I" id="Xgb-MQ-BIy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="chJ-aW-cAW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3667" y="-1462"/>
+            <point key="canvasLocation" x="3666" y="-1462.5"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="zB0-KY-tzA">
