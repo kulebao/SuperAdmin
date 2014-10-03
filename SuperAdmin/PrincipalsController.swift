@@ -51,5 +51,9 @@ class PrincipalsViewController: UITableViewController {
             let t = sender! as PrincipalCell
             vc.teacher = t.teacher!
         }
+        if segue.identifier == "addTeacher"{
+            let vc = segue.destinationViewController as EditTeatherController
+            vc.teacher = Teacher(name: "", school: 0, login_name: "")
+        }
     }
 }
