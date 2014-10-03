@@ -792,7 +792,7 @@
                                     <action selector="save:" destination="MSU-bG-eZF" eventType="touchUpInside" id="6Qy-kN-e64"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3Uc-Sl-4da">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="输入姓名" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3Uc-Sl-4da">
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -800,13 +800,16 @@
                                     <rect key="frame" x="107" y="82" width="227" height="30"/>
                                 </variation>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IqB-Ct-78I">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="学校编号" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IqB-Ct-78I">
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="107" y="129" width="227" height="30"/>
                                 </variation>
+                                <connections>
+                                    <outlet property="delegate" destination="MSU-bG-eZF" id="7SO-oo-W4Q"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="生日" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VBy-S2-Tgb">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
@@ -826,7 +829,7 @@
                                     <rect key="frame" x="16" y="257" width="68" height="21"/>
                                 </variation>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9Cs-dJ-Vep">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入登录名" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9Cs-dJ-Vep">
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -844,7 +847,7 @@
                                     <rect key="frame" x="107" y="171" width="123" height="29"/>
                                 </variation>
                             </segmentedControl>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IzI-Xy-nOA">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="选择一个生日" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IzI-Xy-nOA">
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -852,6 +855,16 @@
                                     <rect key="frame" x="107" y="213" width="227" height="30"/>
                                 </variation>
                             </textField>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7NQ-GQ-bkO">
+                                <rect key="frame" x="0.0" y="-162" width="320" height="162"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="20" y="586" width="400" height="162"/>
+                                </variation>
+                                <connections>
+                                    <outlet property="dataSource" destination="MSU-bG-eZF" id="jYg-Fq-klP"/>
+                                    <outlet property="delegate" destination="MSU-bG-eZF" id="X31-So-JmF"/>
+                                </connections>
+                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
@@ -867,6 +880,7 @@
                                 <exclude reference="9Cs-dJ-Vep"/>
                                 <exclude reference="925-nB-4OP"/>
                                 <exclude reference="IzI-Xy-nOA"/>
+                                <exclude reference="7NQ-GQ-bkO"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -882,6 +896,7 @@
                                 <include reference="9Cs-dJ-Vep"/>
                                 <include reference="925-nB-4OP"/>
                                 <include reference="IzI-Xy-nOA"/>
+                                <include reference="7NQ-GQ-bkO"/>
                             </mask>
                         </variation>
                     </view>
@@ -889,6 +904,7 @@
                         <outlet property="loginName" destination="9Cs-dJ-Vep" id="hCW-KT-KBL"/>
                         <outlet property="name" destination="3Uc-Sl-4da" id="3Ri-vH-ZLx"/>
                         <outlet property="school" destination="IqB-Ct-78I" id="Xgb-MQ-BIy"/>
+                        <outlet property="schoolList" destination="7NQ-GQ-bkO" id="JPN-hb-XfP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="chJ-aW-cAW" userLabel="First Responder" sceneMemberID="firstResponder"/>

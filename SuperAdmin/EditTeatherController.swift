@@ -8,7 +8,7 @@
 
 import Foundation
 
-class EditTeatherController: UIViewController {
+class EditTeatherController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate {
     
     var teacher: Teacher!
     
@@ -17,6 +17,12 @@ class EditTeatherController: UIViewController {
     @IBOutlet weak var school: UITextField!
    
     @IBOutlet weak var loginName: UITextField!
+    
+    @IBOutlet weak var schoolList: UIPickerView!
+    
+    let schools = [1000, 1001]
+
+    var numberOfComponents: Int = 1
     
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -27,11 +33,31 @@ class EditTeatherController: UIViewController {
         self.name!.text = self.teacher!.name
         self.school!.text = "\(self.teacher!.school)"
         self.loginName!.text = self.teacher!.login_name
+        self.schoolList.hidden = true
     }
     
     @IBAction func save(sender: AnyObject) {
         
     }
+    
+    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String! {
+        return "\(schools[row])"
+    }
    
+    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        school.text = "\(schools[row])"
+    }
+    
+    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
+        return 1
+    }
    
+    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return schools.count
+    }
+    
+    func textFieldShouldBeginEditing(textField: UITextField) -> Bool {
+        self.schoolList.hidden = false
+        return true
+    }
 }
