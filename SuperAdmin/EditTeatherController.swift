@@ -20,7 +20,7 @@ class EditTeatherController: UIViewController, UIPickerViewDelegate, UIPickerVie
     
     @IBOutlet weak var schoolList: UIPickerView!
     
-    let schools = [1000, 1001]
+    let schools = [School(id: 1234, name: "中文大学", principal: "王尼玛", logo: ""), School(id: 321545, name: "厦门大学", principal: "七枷社", logo: "")]
 
     var numberOfComponents: Int = 1
     
@@ -41,11 +41,13 @@ class EditTeatherController: UIViewController, UIPickerViewDelegate, UIPickerVie
     }
     
     func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String! {
-        return "\(schools[row])"
+        let school = schools[row]
+        return "\(school.id) \(school.name)"
+        
     }
    
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        school.text = "\(schools[row])"
+        school.text = "\(schools[row].id)"
     }
     
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
@@ -58,6 +60,11 @@ class EditTeatherController: UIViewController, UIPickerViewDelegate, UIPickerVie
     
     func textFieldShouldBeginEditing(textField: UITextField) -> Bool {
         self.schoolList.hidden = false
+        return true
+    }
+    
+    func textFieldShouldEndEditing(textField: UITextField) -> Bool {
+        self.schoolList.hidden = true
         return true
     }
 }
