@@ -854,17 +854,32 @@
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="107" y="213" width="227" height="30"/>
                                 </variation>
+                                <connections>
+                                    <outlet property="delegate" destination="MSU-bG-eZF" id="xu3-vG-SP1"/>
+                                </connections>
                             </textField>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7NQ-GQ-bkO">
                                 <rect key="frame" x="0.0" y="-162" width="320" height="162"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="20" y="586" width="400" height="162"/>
+                                    <rect key="frame" x="2" y="594" width="400" height="162"/>
                                 </variation>
                                 <connections>
                                     <outlet property="dataSource" destination="MSU-bG-eZF" id="jYg-Fq-klP"/>
                                     <outlet property="delegate" destination="MSU-bG-eZF" id="X31-So-JmF"/>
                                 </connections>
                             </pickerView>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="lwu-Bi-mrl">
+                                <rect key="frame" x="-160" y="-81" width="320" height="162"/>
+                                <date key="date" timeIntervalSinceReferenceDate="434162737.00379503">
+                                    <!--2014-10-05 00:45:37 +0000-->
+                                </date>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="594" width="400" height="162"/>
+                                </variation>
+                                <connections>
+                                    <action selector="valueChanged:" destination="MSU-bG-eZF" eventType="valueChanged" id="RJ9-KJ-jyU"/>
+                                </connections>
+                            </datePicker>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
@@ -881,6 +896,7 @@
                                 <exclude reference="925-nB-4OP"/>
                                 <exclude reference="IzI-Xy-nOA"/>
                                 <exclude reference="7NQ-GQ-bkO"/>
+                                <exclude reference="lwu-Bi-mrl"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -897,10 +913,13 @@
                                 <include reference="925-nB-4OP"/>
                                 <include reference="IzI-Xy-nOA"/>
                                 <include reference="7NQ-GQ-bkO"/>
+                                <include reference="lwu-Bi-mrl"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="birthday" destination="IzI-Xy-nOA" id="kY2-3K-VuM"/>
+                        <outlet property="datePicker" destination="lwu-Bi-mrl" id="y93-UB-g3f"/>
                         <outlet property="loginName" destination="9Cs-dJ-Vep" id="hCW-KT-KBL"/>
                         <outlet property="name" destination="3Uc-Sl-4da" id="3Ri-vH-ZLx"/>
                         <outlet property="school" destination="IqB-Ct-78I" id="Xgb-MQ-BIy"/>

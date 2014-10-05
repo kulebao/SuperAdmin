@@ -15,18 +15,25 @@ class EditTeatherController: UIViewController, UIPickerViewDelegate, UIPickerVie
     @IBOutlet weak var name: UITextField!
     
     @IBOutlet weak var school: UITextField!
-   
+    
     @IBOutlet weak var loginName: UITextField!
     
     @IBOutlet weak var schoolList: UIPickerView!
     
+    @IBOutlet weak var birthday: UITextField!
+    
+    @IBOutlet weak var datePicker: UIDatePicker!
+    
     let schools = [School(id: 1234, name: "中文大学", principal: "王尼玛", logo: ""), School(id: 321545, name: "厦门大学", principal: "七枷社", logo: "")]
-
-    var numberOfComponents: Int = 1
+    
+    let formatter = NSDateFormatter()
     
     required init(coder aDecoder: NSCoder) {
+        self.formatter.dateFormat = "yyyy-MM-dd"
         super.init(coder: aDecoder)
     }
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,6 +41,12 @@ class EditTeatherController: UIViewController, UIPickerViewDelegate, UIPickerVie
         self.school!.text = "\(self.teacher!.school)"
         self.loginName!.text = self.teacher!.login_name
         self.schoolList.hidden = true
+        self.birthday.text = "1980-11-11"
+        self.datePicker.hidden = true
+        self.datePicker.datePickerMode = UIDatePickerMode.Date
+        
+        self.datePicker.date = self.formatter.dateFromString(self.birthday.text)!
+        
     }
     
     @IBAction func save(sender: AnyObject) {
@@ -45,7 +58,7 @@ class EditTeatherController: UIViewController, UIPickerViewDelegate, UIPickerVie
         return "\(school.id) \(school.name)"
         
     }
-   
+    
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         school.text = "\(schools[row].id)"
     }
@@ -53,18 +66,33 @@ class EditTeatherController: UIViewController, UIPickerViewDelegate, UIPickerVie
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
         return 1
     }
-   
+    
     func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return schools.count
     }
     
     func textFieldShouldBeginEditing(textField: UITextField) -> Bool {
-        self.schoolList.hidden = false
+        if textField == self.birthday {
+            self.datePicker.hidden = false
+        }
+        if textField == self.school {
+            self.schoolList.hidden = false
+        }
         return true
     }
     
     func textFieldShouldEndEditing(textField: UITextField) -> Bool {
-        self.schoolList.hidden = true
+        if textField == self.birthday {
+            self.datePicker.hidden = true
+        }
+        if textField == self.school {
+            self.schoolList.hidden = true
+        }
         return true
+    }
+    
+    @IBAction func valueChanged(sender: UIDatePicker) {
+        
+        self.birthday.text = formatter.stringFromDate(sender.date)
     }
 }
