@@ -41,7 +41,7 @@ class EditTeatherController: UIViewController, UIPickerViewDelegate, UIPickerVie
         self.school!.text = "\(self.teacher!.school)"
         self.loginName!.text = self.teacher!.login_name
         self.schoolList.hidden = true
-        self.birthday.text = "1980-11-11"
+        self.birthday.text = self.teacher!.birthday
         self.datePicker.hidden = true
         self.datePicker.datePickerMode = UIDatePickerMode.Date
         

@@ -10,16 +10,19 @@ import Foundation
 
 class Teacher {
     let name: String
-    var score: Score?
     let school: Int
     let login_name: String
+    let birthday: String
     
-    init(name: String, school: Int, login_name: String) {
+    var score: Score?
+    
+    init(name: String, school: Int, login_name: String, birthday: String) {
         self.name = name
         self.school = school
         self.login_name = login_name
+        self.birthday = birthday
     }
     convenience init(dic: [String: AnyObject]) {
-        self.init(name: dic["name"]! as String, school: dic["school_id"]! as Int, login_name: dic["login_name"]! as String)
+        self.init(name: dic["name"]! as String, school: dic["school_id"]! as Int, login_name: dic["login_name"]! as String, birthday: dic["birthday"]! as String)
     }
 }
