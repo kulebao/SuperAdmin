@@ -24,7 +24,8 @@ class EditTeatherController: UIViewController, UIPickerViewDelegate, UIPickerVie
     
     @IBOutlet weak var datePicker: UIDatePicker!
     
-    let schools = [School(id: 1234, name: "中文大学", principal: "王尼玛", logo: ""), School(id: 321545, name: "厦门大学", principal: "七枷社", logo: "")]
+    var schools: [School] = []
+    var spinner: Spinner!
     
     let formatter = NSDateFormatter()
     
@@ -46,7 +47,16 @@ class EditTeatherController: UIViewController, UIPickerViewDelegate, UIPickerVie
         self.datePicker.datePickerMode = UIDatePickerMode.Date
         
         self.datePicker.date = self.formatter.dateFromString(self.birthday.text)!
-        
+        spinner = Spinner(view: self.view)
+        spinner.show("Loading...")
+        DataLoader().loadSchoolsFromStage(self.dataArrived)
+    }
+    func dataArrived(schools: [School]) -> Void {
+        self.schools = schools
+        dispatch_async(dispatch_get_main_queue(),{
+            self.schoolList.reloadAllComponents()
+            self.spinner.hide()
+        });
     }
     
     @IBAction func save(sender: AnyObject) {
