@@ -53,7 +53,7 @@ class PrincipalsViewController: UITableViewController {
         }
         if segue.identifier == "addTeacher"{
             let vc = segue.destinationViewController as EditTeatherController
-            vc.teacher = Teacher(name: "", school: 0, login_name: "", birthday: "")
+            vc.teacher = Teacher(name: "", school: 0, login_name: "", birthday: "", id: "3_1_1", phone: "1234321")
         }
     }
 }

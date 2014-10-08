@@ -24,6 +24,8 @@ class EditTeatherController: UIViewController, UIPickerViewDelegate, UIPickerVie
     
     @IBOutlet weak var datePicker: UIDatePicker!
     
+    @IBOutlet weak var cellPhone: UILabel!
+    
     var schools: [School] = []
     var spinner: Spinner!
     
@@ -41,6 +43,7 @@ class EditTeatherController: UIViewController, UIPickerViewDelegate, UIPickerVie
         self.name!.text = self.teacher!.name
         self.school!.text = "\(self.teacher!.school)"
         self.loginName!.text = self.teacher!.login_name
+        self.cellPhone!.text = self.teacher!.phone
         self.schoolList.hidden = true
         self.birthday.text = self.teacher!.birthday
         self.datePicker.hidden = true
