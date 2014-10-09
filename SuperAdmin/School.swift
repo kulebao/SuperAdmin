@@ -18,7 +18,7 @@ class School {
     init(id: Int, name: String, principal: String, logo: String) {
         self.id = id
         self.name = name
-        self.principal = Teacher(name: principal, school: id, login_name: "", birthday: "1979-01-01", id: "3_1_2", phone: "123123")
+        self.principal = Teacher(name: principal, school: id, loginName: "", birthday: "1979-01-01", id: "3_1_2", phone: "123123")
         self.logoUrl = logo
     }
     

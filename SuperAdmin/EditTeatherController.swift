@@ -42,7 +42,7 @@ class EditTeatherController: UIViewController, UIPickerViewDelegate, UIPickerVie
         super.viewDidLoad()
         self.name!.text = self.teacher!.name
         self.school!.text = "\(self.teacher!.school)"
-        self.loginName!.text = self.teacher!.login_name
+        self.loginName!.text = self.teacher!.loginName
         self.cellPhone!.text = self.teacher!.phone
         self.schoolList.hidden = true
         self.birthday.text = self.teacher!.birthday
@@ -63,8 +63,25 @@ class EditTeatherController: UIViewController, UIPickerViewDelegate, UIPickerVie
     }
     
     @IBAction func save(sender: AnyObject) {
-        
+        spinner.show("Saving...")
+        let data: [String: AnyObject] = ["name": self.name!.text as String, "school_id": self.school!.text.toInt()!, "login_name": self.loginName!.text as String, "birthday": self.birthday!.text as String, "id": self.teacher.id as String, "phone": self.cellPhone!.text! as String]
+        let t = Teacher(dic: data)
+        t.save(self.saved, self.saveFailed)
     }
+    
+    func saved(code: Int, msg: String){
+        dispatch_async(dispatch_get_main_queue()) {
+            self.spinner.hide()
+            self.navigationController?.popViewControllerAnimated(true)
+        }
+    }
+
+    func saveFailed(code: Int, msg: String){
+        dispatch_async(dispatch_get_main_queue()) {
+            self.spinner.hide()
+        }
+    }
+
     
     func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String! {
         let school = schools[row]
