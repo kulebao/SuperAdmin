@@ -26,6 +26,7 @@ class EditTeatherController: UIViewController, UIPickerViewDelegate, UIPickerVie
     
     @IBOutlet weak var cellPhone: UILabel!
     
+    @IBOutlet weak var saveButton: UIButton!
     var schools: [School] = []
     var spinner: Spinner!
     
@@ -53,6 +54,7 @@ class EditTeatherController: UIViewController, UIPickerViewDelegate, UIPickerVie
         spinner = Spinner(view: self.view)
         spinner.show("Loading...")
         DataLoader().loadSchoolsFromStage(self.dataArrived)
+        saveButton.enabled = false
     }
     func dataArrived(schools: [School]) -> Void {
         self.schools = schools
@@ -60,6 +62,9 @@ class EditTeatherController: UIViewController, UIPickerViewDelegate, UIPickerVie
             self.schoolList.reloadAllComponents()
             self.spinner.hide()
         });
+    }
+    @IBAction func editingChanged(sender: AnyObject) {
+        saveButton.enabled = true
     }
     
     @IBAction func save(sender: AnyObject) {
@@ -90,6 +95,7 @@ class EditTeatherController: UIViewController, UIPickerViewDelegate, UIPickerVie
     }
     
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        self.editingChanged(pickerView)
         school.text = "\(schools[row].id)"
     }
     
@@ -102,13 +108,14 @@ class EditTeatherController: UIViewController, UIPickerViewDelegate, UIPickerVie
     }
     
     func textFieldShouldBeginEditing(textField: UITextField) -> Bool {
+        self.hideAllInputView()
         if textField == self.birthday {
             self.datePicker.hidden = false
         }
         if textField == self.school {
             self.schoolList.hidden = false
         }
-        return true
+        return false
     }
     
     func textFieldShouldEndEditing(textField: UITextField) -> Bool {
@@ -121,8 +128,13 @@ class EditTeatherController: UIViewController, UIPickerViewDelegate, UIPickerVie
         return true
     }
     
+    func hideAllInputView() {
+        self.datePicker.hidden = true
+        self.schoolList.hidden = true
+    }
+    
     @IBAction func valueChanged(sender: UIDatePicker) {
-        
+        self.editingChanged(sender)
         self.birthday.text = formatter.stringFromDate(sender.date)
     }
 }

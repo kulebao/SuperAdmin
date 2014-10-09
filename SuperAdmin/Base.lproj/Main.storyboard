@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A379a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A386a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
         <deployment defaultVersion="1792" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
@@ -799,6 +799,9 @@
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="107" y="82" width="227" height="30"/>
                                 </variation>
+                                <connections>
+                                    <action selector="editingChanged:" destination="MSU-bG-eZF" eventType="editingChanged" id="egZ-Qs-mBc"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="学校编号" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IqB-Ct-78I">
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
@@ -838,14 +841,6 @@
                                     <rect key="frame" x="107" y="297" width="227" height="21"/>
                                 </variation>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入登录名" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9Cs-dJ-Vep">
-                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="107" y="253" width="227" height="30"/>
-                                </variation>
-                            </textField>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="925-nB-4OP">
                                 <rect key="frame" x="-61" y="-14" width="123" height="29"/>
                                 <segments>
@@ -855,6 +850,9 @@
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="107" y="171" width="123" height="29"/>
                                 </variation>
+                                <connections>
+                                    <action selector="editingChanged:" destination="MSU-bG-eZF" eventType="valueChanged" id="bDW-B9-KnS"/>
+                                </connections>
                             </segmentedControl>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="选择一个生日" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IzI-Xy-nOA">
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
@@ -898,6 +896,17 @@
                                     <rect key="frame" x="16" y="297" width="68" height="21"/>
                                 </variation>
                             </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入登录名" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9Cs-dJ-Vep">
+                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="107" y="253" width="227" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="editingChanged:" destination="MSU-bG-eZF" eventType="editingChanged" id="lAh-y0-OPl"/>
+                                </connections>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
@@ -911,12 +920,12 @@
                                 <exclude reference="VBy-S2-Tgb"/>
                                 <exclude reference="Fqn-Ae-j5B"/>
                                 <exclude reference="ijb-aE-HfU"/>
-                                <exclude reference="9Cs-dJ-Vep"/>
                                 <exclude reference="925-nB-4OP"/>
                                 <exclude reference="IzI-Xy-nOA"/>
                                 <exclude reference="lwu-Bi-mrl"/>
                                 <exclude reference="7NQ-GQ-bkO"/>
                                 <exclude reference="Eg1-h5-nWZ"/>
+                                <exclude reference="9Cs-dJ-Vep"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -930,12 +939,12 @@
                                 <include reference="VBy-S2-Tgb"/>
                                 <include reference="Fqn-Ae-j5B"/>
                                 <include reference="ijb-aE-HfU"/>
-                                <include reference="9Cs-dJ-Vep"/>
                                 <include reference="925-nB-4OP"/>
                                 <include reference="IzI-Xy-nOA"/>
                                 <include reference="lwu-Bi-mrl"/>
                                 <include reference="7NQ-GQ-bkO"/>
                                 <include reference="Eg1-h5-nWZ"/>
+                                <include reference="9Cs-dJ-Vep"/>
                             </mask>
                         </variation>
                     </view>
@@ -945,6 +954,7 @@
                         <outlet property="datePicker" destination="lwu-Bi-mrl" id="y93-UB-g3f"/>
                         <outlet property="loginName" destination="9Cs-dJ-Vep" id="hCW-KT-KBL"/>
                         <outlet property="name" destination="3Uc-Sl-4da" id="3Ri-vH-ZLx"/>
+                        <outlet property="saveButton" destination="4yA-7P-fNN" id="O3b-Xa-AEg"/>
                         <outlet property="school" destination="IqB-Ct-78I" id="Xgb-MQ-BIy"/>
                         <outlet property="schoolList" destination="7NQ-GQ-bkO" id="JPN-hb-XfP"/>
                     </connections>
