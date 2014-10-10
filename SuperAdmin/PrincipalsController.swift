@@ -17,10 +17,11 @@ class PrincipalsViewController: UITableViewController {
         super.init(coder: aDecoder)
     }
     
-    override func viewDidLoad() {
+    override func viewDidAppear(animated: Bool) {
         spinner = Spinner(view: self.view)
         spinner.show("Loading...")
         DataLoader().loadEmployeesFromStage(self.dataArrived)
+
     }
     
     func dataArrived(teachers: [Teacher]) -> Void {
