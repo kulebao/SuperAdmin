@@ -10,6 +10,7 @@
 		050AC23E19D7D546000DF8DE /* Spinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050AC23D19D7D546000DF8DE /* Spinner.swift */; };
 		0517657F19C4A5B2002D3957 /* SchoolsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0517657E19C4A5B2002D3957 /* SchoolsViewController.swift */; };
 		0529090F19C9C68900695D7E /* School.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0529090E19C9C68900695D7E /* School.swift */; };
+		0552CACA19E98B7C004B2AC5 /* EditSchoolController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0552CAC919E98B7C004B2AC5 /* EditSchoolController.swift */; };
 		057FCE2919C4905200BAA2D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057FCE2819C4905200BAA2D9 /* AppDelegate.swift */; };
 		057FCE2B19C4905200BAA2D9 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057FCE2A19C4905200BAA2D9 /* FirstViewController.swift */; };
 		057FCE2D19C4905200BAA2D9 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057FCE2C19C4905200BAA2D9 /* SecondViewController.swift */; };
@@ -49,6 +50,7 @@
 		0517657D19C49AEB002D3957 /* SuperAdmin-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SuperAdmin-Bridging-Header.h"; sourceTree = "<group>"; };
 		0517657E19C4A5B2002D3957 /* SchoolsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SchoolsViewController.swift; sourceTree = "<group>"; };
 		0529090E19C9C68900695D7E /* School.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = School.swift; sourceTree = "<group>"; };
+		0552CAC919E98B7C004B2AC5 /* EditSchoolController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditSchoolController.swift; sourceTree = "<group>"; };
 		057FCE2319C4905200BAA2D9 /* SuperAdmin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SuperAdmin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		057FCE2719C4905200BAA2D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		057FCE2819C4905200BAA2D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -120,6 +122,7 @@
 				05B7FA1019CECA36002378BC /* ChargeViewController.swift */,
 				058542D719D84D5C0085CC03 /* ScoreViewController.swift */,
 				05AE5F2519DB08CD00403EFA /* EditTeatherController.swift */,
+				0552CAC919E98B7C004B2AC5 /* EditSchoolController.swift */,
 				05BBB18819D9A819009D52CD /* PrincipalsController.swift */,
 			);
 			name = Controllers;
@@ -359,6 +362,7 @@
 				05C979E419C7065400A9884B /* SchoolCell.swift in Sources */,
 				057FCE2919C4905200BAA2D9 /* AppDelegate.swift in Sources */,
 				057FCE2B19C4905200BAA2D9 /* FirstViewController.swift in Sources */,
+				0552CACA19E98B7C004B2AC5 /* EditSchoolController.swift in Sources */,
 				05BBB18B19D9A84B009D52CD /* PrincipalCell.swift in Sources */,
 				058542DA19D84E7B0085CC03 /* ScoreCell.swift in Sources */,
 				05B7FA1319CECB97002378BC /* Charge.swift in Sources */,

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A386a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A388a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
         <deployment defaultVersion="1792" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
@@ -394,27 +394,18 @@
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
-                                            <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                                <rect key="frame" x="193" y="8" width="199" height="20.5"/>
-                                            </variation>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nfv-mh-rz4">
                                             <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
-                                            <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                                <rect key="frame" x="193" y="44.5" width="199" height="20.5"/>
-                                            </variation>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="principal" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DHO-Gh-UEs">
                                             <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
-                                            <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                                <rect key="frame" x="193" y="81" width="199" height="20.5"/>
-                                            </variation>
                                         </label>
                                     </subviews>
                                     <constraints>
@@ -481,7 +472,7 @@
                                     <outlet property="logo" destination="jsr-u3-ESz" id="Mm5-sY-eOh"/>
                                     <outlet property="name" destination="Nfv-mh-rz4" id="9Tp-56-QTS"/>
                                     <outlet property="principal" destination="DHO-Gh-UEs" id="DPM-bS-IJG"/>
-                                    <segue destination="6kD-iX-0h5" kind="show" id="fhm-Ve-Wm8"/>
+                                    <segue destination="6kD-iX-0h5" kind="show" identifier="editSchool" id="fhm-Ve-Wm8"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -496,15 +487,16 @@
             </objects>
             <point key="canvasLocation" x="4315.5" y="-1088.25"/>
         </scene>
-        <!--View Controller-->
+        <!--编辑学校-->
         <scene sceneID="3sZ-Kc-YCw">
             <objects>
-                <viewController id="6kD-iX-0h5" sceneMemberID="viewController">
+                <viewController title="编辑学校" id="6kD-iX-0h5" customClass="EditSchoolController" customModule="SuperAdmin" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="cHD-j3-ZcN"/>
                         <viewControllerLayoutGuide type="bottom" id="REo-bP-P1y"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="eyD-ty-jKy">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="编号" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="urT-8U-qcr">
@@ -548,7 +540,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="92" y="112" width="272" height="30"/>
+                                    <rect key="frame" x="112" y="112" width="252" height="30"/>
                                 </variation>
                                 <connections>
                                     <action selector="editingChanged:" destination="MSU-bG-eZF" eventType="editingChanged" id="Dw2-0d-ynC"/>
@@ -560,7 +552,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="92" y="81" width="272" height="21"/>
+                                    <rect key="frame" x="112" y="81" width="252" height="21"/>
                                 </variation>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="手机端显示的名称，7个字以内" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="otB-gp-QnR">
@@ -568,7 +560,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="92" y="152" width="272" height="30"/>
+                                    <rect key="frame" x="112" y="152" width="252" height="30"/>
                                 </variation>
                                 <connections>
                                     <action selector="editingChanged:" destination="MSU-bG-eZF" eventType="editingChanged" id="gsg-L6-bjg"/>
@@ -579,7 +571,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="92" y="190" width="272" height="30"/>
+                                    <rect key="frame" x="112" y="190" width="252" height="30"/>
                                 </variation>
                                 <connections>
                                     <action selector="editingChanged:" destination="MSU-bG-eZF" eventType="editingChanged" id="YBH-xJ-rTh"/>
@@ -599,7 +591,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="92" y="232" width="272" height="30"/>
+                                    <rect key="frame" x="112" y="232" width="252" height="30"/>
                                 </variation>
                                 <connections>
                                     <action selector="editingChanged:" destination="MSU-bG-eZF" eventType="editingChanged" id="mSh-5o-lut"/>
@@ -737,6 +729,9 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="schoolId" destination="WaJ-dZ-EgV" id="80r-bO-g6x"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fP8-zx-FoU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

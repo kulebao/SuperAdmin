@@ -15,11 +15,14 @@ class SchoolCell: UITableViewCell {
     @IBOutlet weak var principal: UILabel!
     @IBOutlet weak var logo: UIImageView!
     
+    var school: School!
+    
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
     
     func loadContent(school: School) -> SchoolCell {
+        self.school = school
         self.id!.text = "id: \(school.id)"
         self.name!.text = school.name
         self.principal!.text = "校长：\(school.principal.name)"

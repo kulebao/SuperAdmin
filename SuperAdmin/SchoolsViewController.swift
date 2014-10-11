@@ -46,4 +46,14 @@ class SchoolsViewController: UITableViewController {
         return self.schools.count
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        super.prepareForSegue(segue, sender: sender)
+        if segue.identifier == "editSchool"{
+            let vc = segue.destinationViewController as EditSchoolController
+            let t = sender! as SchoolCell
+            vc.school = t.school!
+        }
+        
+    }
+    
 }
