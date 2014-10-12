@@ -730,7 +730,15 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="address" destination="9cV-zK-dlW" id="rmX-Vk-6ON"/>
+                        <outlet property="contact" destination="xOE-2p-AdR" id="n3C-vQ-fPC"/>
+                        <outlet property="expire" destination="r5w-kz-2Lh" id="gMn-ey-u1T"/>
+                        <outlet property="loginName" destination="fOj-f8-xqV" id="95o-vD-A1r"/>
+                        <outlet property="memberLimitation" destination="0Cw-5j-keC" id="zZY-w5-zWU"/>
                         <outlet property="schoolId" destination="WaJ-dZ-EgV" id="80r-bO-g6x"/>
+                        <outlet property="schoolName" destination="ckp-Jl-df9" id="M4u-lo-yf1"/>
+                        <outlet property="shortName" destination="otB-gp-QnR" id="mra-0I-Zgy"/>
+                        <outlet property="token" destination="ZuQ-QN-rhN" id="eKm-z4-nxl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fP8-zx-FoU" userLabel="First Responder" sceneMemberID="firstResponder"/>
