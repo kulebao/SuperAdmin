@@ -21,7 +21,7 @@ class SchoolsViewController: UITableViewController {
     override func viewDidLoad() {
         spinner = Spinner(view: self.view)
         spinner.show("Loading...")
-        DataLoader().loadSchoolsFromStage(self.dataArrived)
+        DataLoader().loadChargeInfoFromStage(self.dataArrived)
     }
     
     func dataArrived(schools: [School]) -> Void {

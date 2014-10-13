@@ -639,7 +639,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="399" width="68" height="21"/>
+                                    <rect key="frame" x="16" y="440" width="68" height="21"/>
                                 </variation>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W0s-LM-upB">
@@ -647,7 +647,7 @@
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="保存修改"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="53" y="462" width="294" height="38"/>
+                                    <rect key="frame" x="53" y="503" width="294" height="38"/>
                                 </variation>
                                 <connections>
                                     <action selector="save:" destination="MSU-bG-eZF" eventType="touchUpInside" id="IBS-0I-aES"/>
@@ -672,6 +672,24 @@
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="address" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9cV-zK-dlW">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="112" y="440" width="252" height="21"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="视频账号" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="asp-RL-xNP">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="399" width="68" height="21"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="video_account_count" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lKq-0n-ZzG">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -703,6 +721,8 @@
                                 <exclude reference="r5w-kz-2Lh"/>
                                 <exclude reference="0Cw-5j-keC"/>
                                 <exclude reference="9cV-zK-dlW"/>
+                                <exclude reference="asp-RL-xNP"/>
+                                <exclude reference="lKq-0n-ZzG"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -726,6 +746,8 @@
                                 <include reference="r5w-kz-2Lh"/>
                                 <include reference="0Cw-5j-keC"/>
                                 <include reference="9cV-zK-dlW"/>
+                                <include reference="asp-RL-xNP"/>
+                                <include reference="lKq-0n-ZzG"/>
                             </mask>
                         </variation>
                     </view>
@@ -739,6 +761,7 @@
                         <outlet property="schoolName" destination="ckp-Jl-df9" id="M4u-lo-yf1"/>
                         <outlet property="shortName" destination="otB-gp-QnR" id="mra-0I-Zgy"/>
                         <outlet property="token" destination="ZuQ-QN-rhN" id="eKm-z4-nxl"/>
+                        <outlet property="videoLimitation" destination="lKq-0n-ZzG" id="2Gn-J8-ee1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fP8-zx-FoU" userLabel="First Responder" sceneMemberID="firstResponder"/>

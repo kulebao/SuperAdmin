@@ -100,7 +100,7 @@ class DataLoader {
             self.schools.filter({ (s: School) -> Bool in
                 return s.id == res["school_id"] as Int
             }).map({(s:School) -> School in
-                s.charge = Charge(school: res["school_id"] as Int, member: res["total_phone_number"] as Int, video: res["total_video_account"] as Int)
+                s.charge = Charge(school: res["school_id"] as Int, member: res["total_phone_number"] as Int, video: res["total_video_account"] as Int, expiryDate: res["expire_date"] as String)
                 return s
             })
         }
