@@ -543,7 +543,7 @@
                                     <rect key="frame" x="112" y="112" width="252" height="30"/>
                                 </variation>
                                 <connections>
-                                    <action selector="editingChanged:" destination="MSU-bG-eZF" eventType="editingChanged" id="Dw2-0d-ynC"/>
+                                    <action selector="valueChange:" destination="6kD-iX-0h5" eventType="editingChanged" id="Ffc-06-zHA"/>
                                 </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="school_id" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WaJ-dZ-EgV">
@@ -563,7 +563,7 @@
                                     <rect key="frame" x="112" y="152" width="252" height="30"/>
                                 </variation>
                                 <connections>
-                                    <action selector="editingChanged:" destination="MSU-bG-eZF" eventType="editingChanged" id="gsg-L6-bjg"/>
+                                    <action selector="valueChange:" destination="6kD-iX-0h5" eventType="editingChanged" id="6Hk-cf-XSh"/>
                                 </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="手机或者座机" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xOE-2p-AdR">
@@ -574,7 +574,7 @@
                                     <rect key="frame" x="112" y="190" width="252" height="30"/>
                                 </variation>
                                 <connections>
-                                    <action selector="editingChanged:" destination="MSU-bG-eZF" eventType="editingChanged" id="YBH-xJ-rTh"/>
+                                    <action selector="valueChange:" destination="6kD-iX-0h5" eventType="editingChanged" id="RWO-9Y-tpp"/>
                                 </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="验证码" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m8i-yB-xRv">
@@ -594,7 +594,7 @@
                                     <rect key="frame" x="112" y="232" width="252" height="30"/>
                                 </variation>
                                 <connections>
-                                    <action selector="editingChanged:" destination="MSU-bG-eZF" eventType="editingChanged" id="mSh-5o-lut"/>
+                                    <action selector="valueChange:" destination="6kD-iX-0h5" eventType="editingChanged" id="Kki-2f-Cyd"/>
                                 </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="校长登录名" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="33c-Zv-QYh">
@@ -650,7 +650,7 @@
                                     <rect key="frame" x="53" y="503" width="294" height="38"/>
                                 </variation>
                                 <connections>
-                                    <action selector="save:" destination="MSU-bG-eZF" eventType="touchUpInside" id="IBS-0I-aES"/>
+                                    <action selector="saveSchool:" destination="6kD-iX-0h5" eventType="touchUpInside" id="HZU-y3-8aS"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="expire_time" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r5w-kz-2Lh">
@@ -757,6 +757,7 @@
                         <outlet property="expire" destination="r5w-kz-2Lh" id="gMn-ey-u1T"/>
                         <outlet property="loginName" destination="fOj-f8-xqV" id="95o-vD-A1r"/>
                         <outlet property="memberLimitation" destination="0Cw-5j-keC" id="zZY-w5-zWU"/>
+                        <outlet property="saveButton" destination="W0s-LM-upB" id="1vg-zp-UnB"/>
                         <outlet property="schoolId" destination="WaJ-dZ-EgV" id="80r-bO-g6x"/>
                         <outlet property="schoolName" destination="ckp-Jl-df9" id="M4u-lo-yf1"/>
                         <outlet property="shortName" destination="otB-gp-QnR" id="mra-0I-Zgy"/>

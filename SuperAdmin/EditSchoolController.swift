@@ -21,6 +21,7 @@ class EditSchoolController: UIViewController {
     @IBOutlet weak var memberLimitation: UILabel!
     @IBOutlet weak var address: UILabel!
     @IBOutlet weak var videoLimitation: UILabel!
+    @IBOutlet weak var saveButton: UIButton!
     
     override func viewDidLoad() {
         self.schoolId!.text = "\(self.school.id)"
@@ -33,6 +34,13 @@ class EditSchoolController: UIViewController {
         self.memberLimitation!.text = "\(self.school.charge!.totalPhoneNumber)"
         self.videoLimitation!.text = "\(self.school.charge!.totalVideoNumber)"
         self.address!.text = self.school.address
-        
+        self.saveButton.enabled = false
+    }
+    @IBAction func valueChange(sender: AnyObject) {
+        self.saveButton.enabled = true
+    }
+    
+    @IBAction func saveSchool(sender: AnyObject) {
+        self.saveButton.enabled = false
     }
 }
