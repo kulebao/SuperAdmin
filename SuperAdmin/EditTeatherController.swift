@@ -56,7 +56,7 @@ class EditTeatherController: UIViewController, UIPickerViewDelegate, UIPickerVie
         DataLoader().loadSchoolsFromStage(self.dataArrived)
         saveButton.enabled = false
     }
-    func dataArrived(schools: [School]) -> Void {
+    func dataArrived(schools: [School]) {
         self.schools = schools
         dispatch_async(dispatch_get_main_queue(),{
             self.schoolList.reloadAllComponents()

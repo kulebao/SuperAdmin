@@ -18,7 +18,7 @@ class Spinner: NSObject, MBProgressHUDDelegate {
         self.progHud = MBProgressHUD(view: view)
     }
     
-    func show(text: String) -> Void {
+    func show(text: String) {
         self.progHud.labelText = text
         self.progHud.center = self.view.center
         self.progHud.delegate = self
@@ -26,7 +26,7 @@ class Spinner: NSObject, MBProgressHUDDelegate {
         self.view.addSubview(self.progHud)
     }
     
-    func hide() -> Void {
+    func hide() {
         self.progHud.hide(true)
         self.progHud.removeFromSuperview()
     }

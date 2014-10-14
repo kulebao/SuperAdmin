@@ -24,7 +24,7 @@ class PrincipalsViewController: UITableViewController {
 
     }
     
-    func dataArrived(teachers: [Teacher]) -> Void {
+    func dataArrived(teachers: [Teacher]) {
         self.teachers = teachers
         dispatch_async(dispatch_get_main_queue(),{
             self.tableView.reloadData()

@@ -24,7 +24,7 @@ class SchoolsViewController: UITableViewController {
         DataLoader().loadChargeInfoFromStage(self.dataArrived)
     }
     
-    func dataArrived(schools: [School]) -> Void {
+    func dataArrived(schools: [School]) {
         self.schools = schools
         dispatch_async(dispatch_get_main_queue(),{
             self.tableView.reloadData()

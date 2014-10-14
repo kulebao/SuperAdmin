@@ -14,11 +14,11 @@ class DataLoader {
     let engine = JSONHelper()
     var schools: [School] = []
     
-    func loadSchoolsFromStage(callback: ([School]) -> Void) -> Void {
+    func loadSchoolsFromStage(callback: ([School]) -> Void) {
         self.login() {
-            (user: User) -> Void in
+            (user: User) in
             self.engine.HTTPGetJSONArray("\(self.serverHost)/kindergarten") {
-                (data: [AnyObject], error: String?) -> Void in
+                (data: [AnyObject], error: String?) in
                 if (error != nil) {
                     println(error)
                 } else {
@@ -33,7 +33,7 @@ class DataLoader {
         
     }
     
-    func principalCallback(school: School, callback: ([School]) -> Void)(data: [AnyObject], error: String?) -> Void {
+    func principalCallback(school: School, callback: ([School]) -> Void)(data: [AnyObject], error: String?) {
         if (error != nil) {
             println(error)
         } else {
@@ -57,13 +57,13 @@ class DataLoader {
         }
     }
     
-    func employeeCallback(school: School)(employeeData: [String: AnyObject], error: String?) -> Void {
+    func employeeCallback(school: School)(employeeData: [String: AnyObject], error: String?) {
         school.principal = Teacher(dic: employeeData)
     }
     
-    func login(callback: (User) -> Void) -> Void {
+    func login(callback: (User) -> Void) {
         self.engine.HTTPPostJSON("\(self.serverHost)/employee_login.do", jsonObj: ["account_name": "operator", "password": "daishu"]){
-            (data: String, error: String?) -> Void in
+            (data: String, error: String?) in
             if (error != nil) {
                 println(error)
             } else {
@@ -73,9 +73,9 @@ class DataLoader {
         }
         
     }
-    func loadChargeInfoFromStage(callback: [School] -> Void) -> Void {
+    func loadChargeInfoFromStage(callback: [School] -> Void) {
         self.login() {
-            (user: User) -> Void in
+            (user: User) in
             if self.schools.isEmpty {
                 self.loadSchoolsFromStage(self.chargeInSchool(callback))
             } else {
@@ -84,14 +84,14 @@ class DataLoader {
             
         }
     }
-    func chargeInSchool(callback: [School] -> Void)(schools: [School]) -> Void {
+    func chargeInSchool(callback: [School] -> Void)(schools: [School]) {
         self.schools = schools
         for school in schools {
             self.engine.HTTPGetJSONArray("\(self.serverHost)/kindergarten/\(school.id)/charge", self.chargeCallback(school, callback: callback))
         }
     }
     
-    func chargeCallback(school: School, callback: [School] -> Void)(data: [AnyObject], error: String?) -> Void {
+    func chargeCallback(school: School, callback: [School] -> Void)(data: [AnyObject], error: String?) {
         if (error != nil) {
             println(error)
         } else {
@@ -120,9 +120,9 @@ class DataLoader {
     
     func loadEmployeesFromStage(callback:[Teacher] -> Void) {
         self.login() {
-            (user: User) -> Void in
+            (user: User) in
             self.engine.HTTPGetJSONArray("\(self.serverHost)/employee") {
-                (data: [AnyObject], error: String?) -> Void in
+                (data: [AnyObject], error: String?) in
                 if (error != nil) {
                     println(error)
                 } else {
@@ -135,7 +135,7 @@ class DataLoader {
     
     func post(uri: String, json: AnyObject, succeed:(Int, String) -> Void, failed: (Int, String) -> Void) {
         self.login() {
-            (user: User) -> Void in
+            (user: User) in
             self.engine.HTTPPostJSON("\(self.serverHost)\(uri)", jsonObj: json) {
                (data: String, error: String?) -> Void in
                 if (error != nil) {

@@ -13,7 +13,7 @@ class JSONHelper {
         callback: (String, String?) -> Void) {
             let task = NSURLSession.sharedSession()
                 .dataTaskWithRequest(request) {
-                    (data, response, error) -> Void in
+                    (data, response, error) in
                     if (error != nil) {
                         callback("", error.localizedDescription)
                     } else {
@@ -72,7 +72,7 @@ class JSONHelper {
             var request = NSMutableURLRequest(URL: NSURL(string: url))
             request.setValue("application/json", forHTTPHeaderField: "Accept")
             HTTPsendRequest(request) {
-                (data: String, error: String?) -> Void in
+                (data: String, error: String?) in
                 if (error != nil) {
                     callback(Dictionary<String, AnyObject>(), error)
                 } else {
@@ -88,7 +88,7 @@ class JSONHelper {
             var request = NSMutableURLRequest(URL: NSURL(string: url))
             request.setValue("application/json", forHTTPHeaderField: "Accept")
             HTTPsendRequest(request) {
-                (data: String, error: String?) -> Void in
+                (data: String, error: String?) in
                 if (error != nil) {
                     callback([], error)
                 } else {
