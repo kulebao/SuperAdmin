@@ -668,7 +668,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="112" y="360" width="252" height="21"/>
+                                    <rect key="frame" x="112" y="360" width="163" height="21"/>
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="address" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9cV-zK-dlW">
@@ -698,6 +698,18 @@
                                     <rect key="frame" x="112" y="399" width="252" height="21"/>
                                 </variation>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ptf-zX-ddb">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="342" y="360" width="22" height="22"/>
+                                </variation>
+                                <connections>
+                                    <action selector="changeChargeInfo:" destination="6kD-iX-0h5" eventType="touchUpInside" id="9h6-wA-Y33"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
@@ -723,6 +735,7 @@
                                 <exclude reference="9cV-zK-dlW"/>
                                 <exclude reference="asp-RL-xNP"/>
                                 <exclude reference="lKq-0n-ZzG"/>
+                                <exclude reference="ptf-zX-ddb"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -748,6 +761,7 @@
                                 <include reference="9cV-zK-dlW"/>
                                 <include reference="asp-RL-xNP"/>
                                 <include reference="lKq-0n-ZzG"/>
+                                <include reference="ptf-zX-ddb"/>
                             </mask>
                         </variation>
                     </view>
