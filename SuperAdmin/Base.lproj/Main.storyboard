@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A388a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
-        <deployment defaultVersion="1792" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -707,7 +706,7 @@
                                     <rect key="frame" x="342" y="360" width="22" height="22"/>
                                 </variation>
                                 <connections>
-                                    <segue destination="kEZ-wH-xbn" kind="show" id="Brz-xL-GGU"/>
+                                    <segue destination="kEZ-wH-xbn" kind="show" identifier="editCharge" id="Brz-xL-GGU"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -783,10 +782,10 @@
             </objects>
             <point key="canvasLocation" x="5010" y="-1088.25"/>
         </scene>
-        <!--View Controller-->
+        <!--Edit School Charge Controller-->
         <scene sceneID="n8Q-yA-T9Y">
             <objects>
-                <viewController id="kEZ-wH-xbn" sceneMemberID="viewController">
+                <viewController id="kEZ-wH-xbn" customClass="EditSchoolChargeController" customModule="SuperAdmin" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="tJN-qf-kMP"/>
                         <viewControllerLayoutGuide type="bottom" id="XZm-ZA-oCp"/>
@@ -871,6 +870,9 @@
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="53" y="351" width="294" height="38"/>
                                 </variation>
+                                <connections>
+                                    <action selector="saveCharge:" destination="kEZ-wH-xbn" eventType="touchUpInside" id="HsO-xf-Uy3"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -901,6 +903,12 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="memberCount" destination="ILQ-yQ-eB4" id="5sU-LX-QDm"/>
+                        <outlet property="schoolId" destination="upz-iS-HU5" id="DYP-Ta-7us"/>
+                        <outlet property="schoolName" destination="XUe-7q-qBU" id="jzb-uL-KeF"/>
+                        <outlet property="videoMemberCount" destination="E6z-fm-T40" id="Mf1-nt-vtm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XcG-1o-G5D" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

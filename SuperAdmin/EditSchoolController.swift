@@ -36,6 +36,7 @@ class EditSchoolController: UIViewController {
         self.address!.text = self.school.address
         self.saveButton.enabled = false
     }
+    
     @IBAction func valueChange(sender: AnyObject) {
         self.saveButton.enabled = true
     }
@@ -43,4 +44,13 @@ class EditSchoolController: UIViewController {
     @IBAction func saveSchool(sender: AnyObject) {
         self.saveButton.enabled = false
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        super.prepareForSegue(segue, sender: sender)
+        if segue.identifier == "editCharge"{
+            let vc = segue.destinationViewController as EditSchoolChargeController
+            vc.school = self.school
+        }
+    }
+
 }
