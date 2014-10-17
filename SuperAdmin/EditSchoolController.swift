@@ -43,9 +43,4 @@ class EditSchoolController: UIViewController {
     @IBAction func saveSchool(sender: AnyObject) {
         self.saveButton.enabled = false
     }
-    @IBAction func changeChargeInfo(sender: AnyObject) {
-        var alert = UIAlertController(title: "动作", message: "从这里过去修改收费信息，会不会很奇怪？", preferredStyle: UIAlertControllerStyle.Alert)
-        alert.addAction(UIAlertAction(title: "确定", style: UIAlertActionStyle.Default, handler: nil))
-        self.presentViewController(alert, animated: true, completion: nil)
-    }
 }
