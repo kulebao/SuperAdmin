@@ -23,7 +23,8 @@ class EditSchoolController: UIViewController {
     @IBOutlet weak var videoLimitation: UILabel!
     @IBOutlet weak var saveButton: UIButton!
     
-    override func viewDidLoad() {
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
         self.schoolId!.text = "\(self.school.id)"
         self.schoolName!.text = self.school.name
         self.shortName!.text = self.school.name

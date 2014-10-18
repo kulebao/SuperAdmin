@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A388a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
+        <deployment defaultVersion="1792" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -791,6 +792,7 @@
                         <viewControllerLayoutGuide type="bottom" id="XZm-ZA-oCp"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="tVb-Uc-yKv">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="编号" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mfd-Ku-YrB">
@@ -854,6 +856,9 @@
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="122" y="149" width="222" height="30"/>
                                 </variation>
+                                <connections>
+                                    <action selector="valueChange:" destination="kEZ-wH-xbn" eventType="editingChanged" id="TD9-2U-oUJ"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="开通视频账号总数" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="E6z-fm-T40">
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
@@ -862,6 +867,9 @@
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="122" y="189" width="222" height="30"/>
                                 </variation>
+                                <connections>
+                                    <action selector="valueChange:" destination="kEZ-wH-xbn" eventType="editingChanged" id="ucB-gr-CwH"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ywm-qR-wdl">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -905,6 +913,7 @@
                     </view>
                     <connections>
                         <outlet property="memberCount" destination="ILQ-yQ-eB4" id="5sU-LX-QDm"/>
+                        <outlet property="saveButton" destination="Ywm-qR-wdl" id="swI-57-Yes"/>
                         <outlet property="schoolId" destination="upz-iS-HU5" id="DYP-Ta-7us"/>
                         <outlet property="schoolName" destination="XUe-7q-qBU" id="jzb-uL-KeF"/>
                         <outlet property="videoMemberCount" destination="E6z-fm-T40" id="Mf1-nt-vtm"/>
