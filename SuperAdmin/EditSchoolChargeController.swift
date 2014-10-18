@@ -18,6 +18,7 @@ class EditSchoolChargeController: UIViewController {
     @IBOutlet weak var memberCount: UITextField!
     @IBOutlet weak var videoMemberCount: UITextField!
     @IBOutlet weak var saveButton: UIButton!
+    
     override func viewDidLoad() {
         self.schoolId.text = "\(self.school.id)"
         self.schoolName.text = self.school.name

@@ -77,17 +77,43 @@ class DataLoader {
         self.login() {
             (user: User) in
             if self.schools.isEmpty {
-                self.loadSchoolsFromStage(self.chargeInSchool(callback))
+                self.loadSchoolsFromStage(self.chargeInSchools(callback))
             } else {
-                self.chargeInSchool(callback)(schools: self.schools)
+                self.chargeInSchools(callback)(schools: self.schools)
             }
             
         }
     }
-    func chargeInSchool(callback: [School] -> Void)(schools: [School]) {
+    
+    func loadChargeInfoForSchool(school: School, callback: School -> Void) {
+        self.login() {
+            (user: User) in
+            self.chargeInSingleSchool(school, callback: callback)
+        }
+    }
+    
+    func chargeInSingleSchool(school: School, callback: School -> Void) {
+        self.engine.HTTPGetJSONArray("\(self.serverHost)/kindergarten/\(school.id)/charge", self.singleChargeCallback(school, callback: callback))
+
+    }
+
+    
+    func chargeInSchools(callback: [School] -> Void)(schools: [School]) {
         self.schools = schools
         for school in schools {
             self.engine.HTTPGetJSONArray("\(self.serverHost)/kindergarten/\(school.id)/charge", self.chargeCallback(school, callback: callback))
+        }
+    }
+    
+    func singleChargeCallback(school: School, callback: School -> Void)(data: [AnyObject], error: String?) {
+        if (error != nil) {
+            println(error)
+        } else {
+            println(data[0])
+            let res: AnyObject = data[0] as AnyObject
+            school.charge = Charge(school: res["school_id"] as Int, member: res["total_phone_number"] as Int, video: res["total_video_account"] as Int, expiryDate:  res["expire_date"] as String)
+            callback(school)
+            
         }
     }
     

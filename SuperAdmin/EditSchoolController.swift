@@ -10,6 +10,7 @@ import Foundation
 
 class EditSchoolController: UIViewController {
     var school : School!
+    var spinner: Spinner!
     
     @IBOutlet weak var schoolId: UILabel!
     @IBOutlet weak var schoolName: UITextField!
@@ -25,17 +26,27 @@ class EditSchoolController: UIViewController {
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-        self.schoolId!.text = "\(self.school.id)"
-        self.schoolName!.text = self.school.name
-        self.shortName!.text = self.school.name
-        self.contact!.text = self.school.principal.phone
-        self.token!.text = self.school.token
-        self.loginName!.text = self.school.principal.loginName
-        self.expire!.text = self.school.charge!.expiryDate
-        self.memberLimitation!.text = "\(self.school.charge!.totalPhoneNumber)"
-        self.videoLimitation!.text = "\(self.school.charge!.totalVideoNumber)"
-        self.address!.text = self.school.address
-        self.saveButton.enabled = false
+                spinner = Spinner(view: self.view)
+        spinner.show("Loading...")
+        DataLoader().loadChargeInfoForSchool(self.school, self.dataArrived)
+    }
+    
+    func dataArrived(school: School) {
+        self.school = school
+        dispatch_async(dispatch_get_main_queue(),{
+            self.schoolId!.text = "\(self.school.id)"
+            self.schoolName!.text = self.school.name
+            self.shortName!.text = self.school.name
+            self.contact!.text = self.school.principal.phone
+            self.token!.text = self.school.token
+            self.loginName!.text = self.school.principal.loginName
+            self.expire!.text = self.school.charge!.expiryDate
+            self.memberLimitation!.text = "\(self.school.charge!.totalPhoneNumber)"
+            self.videoLimitation!.text = "\(self.school.charge!.totalVideoNumber)"
+            self.address!.text = self.school.address
+            self.saveButton.enabled = false
+            self.spinner.hide()
+        });
     }
     
     @IBAction func valueChange(sender: AnyObject) {
