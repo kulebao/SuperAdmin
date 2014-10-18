@@ -20,4 +20,11 @@ class Charge {
         self.totalVideoNumber = video
         self.expiryDate = expiryDate
     }
+    func save(succeed:(Int, String) -> Void, failed: (Int, String) -> Void)  {
+        DataLoader().post("/kindergarten/\(self.schoolId)/charge", json: self.createJson(), succeed: succeed, failed: failed)
+    }
+    func createJson() -> AnyObject {
+        return ["school_id": self.schoolId, "total_phone_number": self.totalPhoneNumber, "expire_date": self.expiryDate, "status": 1, "used": 0, "total_video_account": self.totalVideoNumber]
+    }
+    
 }

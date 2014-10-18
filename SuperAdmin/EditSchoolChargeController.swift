@@ -28,9 +28,24 @@ class EditSchoolChargeController: UIViewController {
         
     }
     @IBAction func saveCharge(sender: AnyObject) {
-//        spinner.show("Loading...")
-        self.navigationController?.popViewControllerAnimated(true)
+        spinner.show("Saving...")
+        let charge = Charge(school: self.school!.id as Int, member: self.memberCount.text.toInt()!, video: self.videoMemberCount.text.toInt()!, expiryDate: self.school.charge!.expiryDate)
+        charge.save(self.saved, self.saveFailed)
     }
+    
+    func saved(code: Int, msg: String){
+        dispatch_async(dispatch_get_main_queue()) {
+            self.spinner.hide()
+            self.navigationController?.popViewControllerAnimated(true)
+        }
+    }
+    
+    func saveFailed(code: Int, msg: String){
+        dispatch_async(dispatch_get_main_queue()) {
+            self.spinner.hide()
+        }
+    }
+    
     @IBAction func valueChange(sender: AnyObject) {
         self.saveButton.enabled = true
     }
