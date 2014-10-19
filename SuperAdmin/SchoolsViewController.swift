@@ -18,7 +18,8 @@ class SchoolsViewController: UITableViewController {
         super.init(coder: aDecoder)
     }
     
-    override func viewDidLoad() {
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
         spinner = Spinner(view: self.view)
         spinner.show("Loading...")
         DataLoader().loadChargeInfoFromStage(self.dataArrived)

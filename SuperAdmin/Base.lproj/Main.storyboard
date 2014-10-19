@@ -671,15 +671,6 @@
                                     <rect key="frame" x="112" y="360" width="163" height="21"/>
                                 </variation>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="address" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9cV-zK-dlW">
-                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="112" y="440" width="252" height="21"/>
-                                </variation>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="视频账号" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="asp-RL-xNP">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -710,6 +701,17 @@
                                     <segue destination="kEZ-wH-xbn" kind="show" identifier="editCharge" id="Brz-xL-GGU"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="学校地址" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qB1-ug-q12">
+                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="112" y="436" width="252" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="valueChange:" destination="6kD-iX-0h5" eventType="editingChanged" id="T6H-hy-fFo"/>
+                                </connections>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
@@ -732,10 +734,10 @@
                                 <exclude reference="W0s-LM-upB"/>
                                 <exclude reference="r5w-kz-2Lh"/>
                                 <exclude reference="0Cw-5j-keC"/>
-                                <exclude reference="9cV-zK-dlW"/>
                                 <exclude reference="asp-RL-xNP"/>
                                 <exclude reference="lKq-0n-ZzG"/>
                                 <exclude reference="ptf-zX-ddb"/>
+                                <exclude reference="qB1-ug-q12"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -758,15 +760,15 @@
                                 <include reference="W0s-LM-upB"/>
                                 <include reference="r5w-kz-2Lh"/>
                                 <include reference="0Cw-5j-keC"/>
-                                <include reference="9cV-zK-dlW"/>
                                 <include reference="asp-RL-xNP"/>
                                 <include reference="lKq-0n-ZzG"/>
                                 <include reference="ptf-zX-ddb"/>
+                                <include reference="qB1-ug-q12"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
-                        <outlet property="address" destination="9cV-zK-dlW" id="rmX-Vk-6ON"/>
+                        <outlet property="address" destination="qB1-ug-q12" id="JFl-zY-c9i"/>
                         <outlet property="contact" destination="xOE-2p-AdR" id="n3C-vQ-fPC"/>
                         <outlet property="expire" destination="r5w-kz-2Lh" id="gMn-ey-u1T"/>
                         <outlet property="loginName" destination="fOj-f8-xqV" id="95o-vD-A1r"/>
@@ -783,10 +785,10 @@
             </objects>
             <point key="canvasLocation" x="5010" y="-1088.25"/>
         </scene>
-        <!--Edit School Charge Controller-->
+        <!--调整收费-->
         <scene sceneID="n8Q-yA-T9Y">
             <objects>
-                <viewController id="kEZ-wH-xbn" customClass="EditSchoolChargeController" customModule="SuperAdmin" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="调整收费" id="kEZ-wH-xbn" customClass="EditSchoolChargeController" customModule="SuperAdmin" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="tJN-qf-kMP"/>
                         <viewControllerLayoutGuide type="bottom" id="XZm-ZA-oCp"/>

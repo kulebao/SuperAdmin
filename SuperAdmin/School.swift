@@ -40,4 +40,10 @@ class School {
             return ""
         }
     }
+    func save(succeed:(Int, String) -> Void, failed: (Int, String) -> Void)  {
+        DataLoader().post("/kindergarten/\(self.id)", json: self.createJson(), succeed: succeed, failed: failed)
+    }
+    func createJson() -> AnyObject {
+        return ["school_id": self.id, "phone": "123", "timestamp": 0, "desc": "desc", "school_logo_url": "", "name": self.name, "address": self.address, "full_name": self.fullName, "token": self.token]
+    }
 }

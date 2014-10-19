@@ -20,13 +20,14 @@ class EditSchoolController: UIViewController {
     @IBOutlet weak var loginName: UILabel!
     @IBOutlet weak var expire: UILabel!
     @IBOutlet weak var memberLimitation: UILabel!
-    @IBOutlet weak var address: UILabel!
+    @IBOutlet weak var address: UITextField!
+    
     @IBOutlet weak var videoLimitation: UILabel!
     @IBOutlet weak var saveButton: UIButton!
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-                spinner = Spinner(view: self.view)
+        spinner = Spinner(view: self.view)
         spinner.show("Loading...")
         DataLoader().loadChargeInfoForSchool(self.school, self.dataArrived)
     }
@@ -55,6 +56,21 @@ class EditSchoolController: UIViewController {
     
     @IBAction func saveSchool(sender: AnyObject) {
         self.saveButton.enabled = false
+        let school = School(id: self.school.id, name: self.shortName.text, principal: self.school.principal.name, logo: "", fullName: self.schoolName.text, token: self.token.text, address: self.address.text)
+        school.save(self.saved, self.saveFailed)
+    }
+    
+    func saved(code: Int, msg: String){
+        dispatch_async(dispatch_get_main_queue()) {
+            self.spinner.hide()
+            self.navigationController?.popViewControllerAnimated(true)
+        }
+    }
+    
+    func saveFailed(code: Int, msg: String){
+        dispatch_async(dispatch_get_main_queue()) {
+            self.spinner.hide()
+        }
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -64,5 +80,5 @@ class EditSchoolController: UIViewController {
             vc.school = self.school
         }
     }
-
+    
 }
