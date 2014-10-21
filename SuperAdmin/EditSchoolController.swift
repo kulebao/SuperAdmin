@@ -56,7 +56,7 @@ class EditSchoolController: UIViewController {
     
     @IBAction func saveSchool(sender: AnyObject) {
         self.saveButton.enabled = false
-        let school = School(id: self.school.id, name: self.shortName.text, principal: self.school.principal.name, logo: "", fullName: self.schoolName.text, token: self.token.text, address: self.address.text)
+        let school = School(id: self.school.id, name: self.shortName.text, principal: self.school.principal.name, logo: self.school.logoUrl, fullName: self.schoolName.text, token: self.token.text, address: self.address.text)
         school.save(self.saved, self.saveFailed)
     }
     
