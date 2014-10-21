@@ -26,17 +26,23 @@ class SchoolCell: UITableViewCell {
         self.id!.text = "id: \(school.id)"
         self.name!.text = school.name
         self.principal!.text = "校长：\(school.principal.name)"
+        loadImage(school.logoUrl)
+        return self
+    }
+    func loadImage(url: String) {
+        if url.isEmpty {
+            return
+        }
         dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), {
-            let imageUrl = school.logoUrl
-            var imageData =  UIImage(data: NSData(contentsOfURL: NSURL(string:school.logoUrl)))
+            let imageUrl = url
+            var imageData =  UIImage(data: NSData(contentsOfURL: NSURL(string:url)!)!)
             dispatch_sync(dispatch_get_main_queue()!, {
-                if school.logoUrl == imageUrl {
+                if url == imageUrl {
                     self.logo.image = imageData
                     self.setNeedsLayout()
                     self.layoutIfNeeded()
                 }
             })
         })
-        return self
     }
 }

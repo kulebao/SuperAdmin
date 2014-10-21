@@ -18,7 +18,7 @@ class JSONHelper {
                         callback("", error.localizedDescription)
                     } else {
                         callback(NSString(data: data,
-                            encoding: NSUTF8StringEncoding), nil)
+                            encoding: NSUTF8StringEncoding)!, nil)
                     }
             }
             
@@ -33,7 +33,7 @@ class JSONHelper {
         if e != nil {
             return ""
         } else {
-            return NSString(data: jsonData, encoding: NSUTF8StringEncoding)
+            return NSString(data: jsonData, encoding: NSUTF8StringEncoding)!
         }
     }
     
@@ -69,7 +69,7 @@ class JSONHelper {
     func HTTPGetJSON(
         url: String,
         callback: (Dictionary<String, AnyObject>, String?) -> Void) {
-            var request = NSMutableURLRequest(URL: NSURL(string: url))
+            var request = NSMutableURLRequest(URL: NSURL(string: url)!)
             request.setValue("application/json", forHTTPHeaderField: "Accept")
             HTTPsendRequest(request) {
                 (data: String, error: String?) in
@@ -85,7 +85,7 @@ class JSONHelper {
     func HTTPGetJSONArray(
         url: String,
         callback: ([AnyObject], String?) -> Void) {
-            var request = NSMutableURLRequest(URL: NSURL(string: url))
+            var request = NSMutableURLRequest(URL: NSURL(string: url)!)
             request.setValue("application/json", forHTTPHeaderField: "Accept")
             HTTPsendRequest(request) {
                 (data: String, error: String?) in
@@ -100,7 +100,7 @@ class JSONHelper {
     func HTTPPostJSON(url: String,
         jsonObj: AnyObject,
         callback: (String, String?) -> Void) {
-            var request = NSMutableURLRequest(URL: NSURL(string: url))
+            var request = NSMutableURLRequest(URL: NSURL(string: url)!)
             request.HTTPMethod = "POST"
             request.addValue("application/json",
             forHTTPHeaderField: "Content-Type")
