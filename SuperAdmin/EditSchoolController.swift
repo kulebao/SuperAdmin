@@ -22,6 +22,7 @@ class EditSchoolController: UIViewController {
     @IBOutlet weak var memberLimitation: UILabel!
     @IBOutlet weak var address: UITextField!
     
+    @IBOutlet weak var logoUrl: UILabel!
     @IBOutlet weak var videoLimitation: UILabel!
     @IBOutlet weak var saveButton: UIButton!
     
@@ -45,6 +46,7 @@ class EditSchoolController: UIViewController {
             self.memberLimitation!.text = "\(self.school.charge!.totalPhoneNumber)"
             self.videoLimitation!.text = "\(self.school.charge!.totalVideoNumber)"
             self.address!.text = self.school.address
+            self.logoUrl!.text = self.school.logoUrl
             self.saveButton.enabled = false
             self.spinner.hide()
         });

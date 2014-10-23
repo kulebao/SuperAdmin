@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A388a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A388a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
-        <deployment defaultVersion="1792" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -647,7 +647,7 @@
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="保存修改"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="53" y="503" width="294" height="38"/>
+                                    <rect key="frame" x="53" y="561" width="294" height="38"/>
                                 </variation>
                                 <connections>
                                     <action selector="saveSchool:" destination="6kD-iX-0h5" eventType="touchUpInside" id="HZU-y3-8aS"/>
@@ -712,6 +712,24 @@
                                     <action selector="valueChange:" destination="6kD-iX-0h5" eventType="editingChanged" id="T6H-hy-fFo"/>
                                 </connections>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LOGO" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="44u-Db-VO5">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="482" width="49" height="21"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="logo_url" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pFw-rx-qBf">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="112" y="482" width="252" height="21"/>
+                                </variation>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
@@ -738,6 +756,8 @@
                                 <exclude reference="lKq-0n-ZzG"/>
                                 <exclude reference="ptf-zX-ddb"/>
                                 <exclude reference="qB1-ug-q12"/>
+                                <exclude reference="44u-Db-VO5"/>
+                                <exclude reference="pFw-rx-qBf"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -764,6 +784,8 @@
                                 <include reference="lKq-0n-ZzG"/>
                                 <include reference="ptf-zX-ddb"/>
                                 <include reference="qB1-ug-q12"/>
+                                <include reference="44u-Db-VO5"/>
+                                <include reference="pFw-rx-qBf"/>
                             </mask>
                         </variation>
                     </view>
@@ -772,6 +794,7 @@
                         <outlet property="contact" destination="xOE-2p-AdR" id="n3C-vQ-fPC"/>
                         <outlet property="expire" destination="r5w-kz-2Lh" id="gMn-ey-u1T"/>
                         <outlet property="loginName" destination="fOj-f8-xqV" id="95o-vD-A1r"/>
+                        <outlet property="logoUrl" destination="pFw-rx-qBf" id="NcR-ww-zkk"/>
                         <outlet property="memberLimitation" destination="0Cw-5j-keC" id="zZY-w5-zWU"/>
                         <outlet property="saveButton" destination="W0s-LM-upB" id="1vg-zp-UnB"/>
                         <outlet property="schoolId" destination="WaJ-dZ-EgV" id="80r-bO-g6x"/>
