@@ -11,6 +11,7 @@
 		0517657F19C4A5B2002D3957 /* SchoolsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0517657E19C4A5B2002D3957 /* SchoolsViewController.swift */; };
 		0529090F19C9C68900695D7E /* School.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0529090E19C9C68900695D7E /* School.swift */; };
 		0552CACA19E98B7C004B2AC5 /* EditSchoolController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0552CAC919E98B7C004B2AC5 /* EditSchoolController.swift */; };
+		056F543219FA73A30048C106 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056F543119FA73A30048C106 /* ImageLoader.swift */; };
 		057FCE2919C4905200BAA2D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057FCE2819C4905200BAA2D9 /* AppDelegate.swift */; };
 		057FCE2B19C4905200BAA2D9 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057FCE2A19C4905200BAA2D9 /* FirstViewController.swift */; };
 		057FCE2D19C4905200BAA2D9 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057FCE2C19C4905200BAA2D9 /* SecondViewController.swift */; };
@@ -52,6 +53,7 @@
 		0517657E19C4A5B2002D3957 /* SchoolsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SchoolsViewController.swift; sourceTree = "<group>"; };
 		0529090E19C9C68900695D7E /* School.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = School.swift; sourceTree = "<group>"; };
 		0552CAC919E98B7C004B2AC5 /* EditSchoolController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditSchoolController.swift; sourceTree = "<group>"; };
+		056F543119FA73A30048C106 /* ImageLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
 		057FCE2319C4905200BAA2D9 /* SuperAdmin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SuperAdmin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		057FCE2719C4905200BAA2D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		057FCE2819C4905200BAA2D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 				05B7FA1219CECB97002378BC /* Charge.swift */,
 				058542DB19D84F6C0085CC03 /* Teacher.swift */,
 				058542DD19D84FB70085CC03 /* Score.swift */,
+				056F543119FA73A30048C106 /* ImageLoader.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -363,6 +366,7 @@
 				05B7FA0F19CEBCEA002378BC /* User.swift in Sources */,
 				05B7FA1119CECA36002378BC /* ChargeViewController.swift in Sources */,
 				05AE5F2619DB08CD00403EFA /* EditTeatherController.swift in Sources */,
+				056F543219FA73A30048C106 /* ImageLoader.swift in Sources */,
 				05C979E419C7065400A9884B /* SchoolCell.swift in Sources */,
 				057FCE2919C4905200BAA2D9 /* AppDelegate.swift in Sources */,
 				057FCE2B19C4905200BAA2D9 /* FirstViewController.swift in Sources */,

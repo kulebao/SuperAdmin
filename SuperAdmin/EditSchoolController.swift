@@ -22,9 +22,10 @@ class EditSchoolController: UIViewController {
     @IBOutlet weak var memberLimitation: UILabel!
     @IBOutlet weak var address: UITextField!
     
-    @IBOutlet weak var logoUrl: UILabel!
+    @IBOutlet weak var logoUrl: UIImageView!
     @IBOutlet weak var videoLimitation: UILabel!
-    @IBOutlet weak var saveButton: UIButton!
+    
+    @IBOutlet weak var saveSchool: UIBarButtonItem!
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
@@ -46,18 +47,21 @@ class EditSchoolController: UIViewController {
             self.memberLimitation!.text = "\(self.school.charge!.totalPhoneNumber)"
             self.videoLimitation!.text = "\(self.school.charge!.totalVideoNumber)"
             self.address!.text = self.school.address
-            self.logoUrl!.text = self.school.logoUrl
-            self.saveButton.enabled = false
+            ImageLoader.loadImage(school.logoUrl, target: self.logoUrl)
+            self.saveSchool.enabled = false
             self.spinner.hide()
         });
     }
     
+    
+
+    
     @IBAction func valueChange(sender: AnyObject) {
-        self.saveButton.enabled = true
+        self.saveSchool.enabled = true
     }
     
-    @IBAction func saveSchool(sender: AnyObject) {
-        self.saveButton.enabled = false
+    @IBAction func save(sender: AnyObject) {
+        self.saveSchool.enabled = false
         let school = School(id: self.school.id, name: self.shortName.text, principal: self.school.principal.name, logo: self.school.logoUrl, fullName: self.schoolName.text, token: self.token.text, address: self.address.text)
         school.save(self.saved, self.saveFailed)
     }

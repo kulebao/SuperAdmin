@@ -603,7 +603,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="279" width="85" height="21"/>
+                                    <rect key="frame" x="16" y="437" width="85" height="21"/>
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="过期时间" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tvW-hH-LXT">
@@ -621,7 +621,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="112" y="279" width="252" height="21"/>
+                                    <rect key="frame" x="112" y="437" width="252" height="21"/>
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="授权账号" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JN0-eo-Bl5">
@@ -639,20 +639,9 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="440" width="68" height="21"/>
+                                    <rect key="frame" x="16" y="282" width="68" height="21"/>
                                 </variation>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W0s-LM-upB">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="保存修改"/>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="53" y="561" width="294" height="38"/>
-                                </variation>
-                                <connections>
-                                    <action selector="saveSchool:" destination="6kD-iX-0h5" eventType="touchUpInside" id="HZU-y3-8aS"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="expire_time" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r5w-kz-2Lh">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -706,7 +695,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="112" y="436" width="252" height="30"/>
+                                    <rect key="frame" x="112" y="278" width="252" height="30"/>
                                 </variation>
                                 <connections>
                                     <action selector="valueChange:" destination="6kD-iX-0h5" eventType="editingChanged" id="T6H-hy-fFo"/>
@@ -718,18 +707,15 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="482" width="49" height="21"/>
+                                    <rect key="frame" x="16" y="519" width="49" height="21"/>
                                 </variation>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="logo_url" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pFw-rx-qBf">
-                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MCH-5h-4SG">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="112" y="482" width="252" height="21"/>
+                                    <rect key="frame" x="112" y="466" width="240" height="128"/>
                                 </variation>
-                            </label>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
@@ -749,7 +735,6 @@
                                 <exclude reference="fOj-f8-xqV"/>
                                 <exclude reference="JN0-eo-Bl5"/>
                                 <exclude reference="MvG-ir-pt5"/>
-                                <exclude reference="W0s-LM-upB"/>
                                 <exclude reference="r5w-kz-2Lh"/>
                                 <exclude reference="0Cw-5j-keC"/>
                                 <exclude reference="asp-RL-xNP"/>
@@ -757,7 +742,7 @@
                                 <exclude reference="ptf-zX-ddb"/>
                                 <exclude reference="qB1-ug-q12"/>
                                 <exclude reference="44u-Db-VO5"/>
-                                <exclude reference="pFw-rx-qBf"/>
+                                <exclude reference="MCH-5h-4SG"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -777,7 +762,6 @@
                                 <include reference="fOj-f8-xqV"/>
                                 <include reference="JN0-eo-Bl5"/>
                                 <include reference="MvG-ir-pt5"/>
-                                <include reference="W0s-LM-upB"/>
                                 <include reference="r5w-kz-2Lh"/>
                                 <include reference="0Cw-5j-keC"/>
                                 <include reference="asp-RL-xNP"/>
@@ -785,18 +769,27 @@
                                 <include reference="ptf-zX-ddb"/>
                                 <include reference="qB1-ug-q12"/>
                                 <include reference="44u-Db-VO5"/>
-                                <include reference="pFw-rx-qBf"/>
+                                <include reference="MCH-5h-4SG"/>
                             </mask>
                         </variation>
                     </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="编辑学校" id="3zd-LA-A5I">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="mtf-Af-1Ck">
+                            <connections>
+                                <action selector="save:" destination="6kD-iX-0h5" id="njS-G1-1pn"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="address" destination="qB1-ug-q12" id="JFl-zY-c9i"/>
                         <outlet property="contact" destination="xOE-2p-AdR" id="n3C-vQ-fPC"/>
                         <outlet property="expire" destination="r5w-kz-2Lh" id="gMn-ey-u1T"/>
                         <outlet property="loginName" destination="fOj-f8-xqV" id="95o-vD-A1r"/>
-                        <outlet property="logoUrl" destination="pFw-rx-qBf" id="NcR-ww-zkk"/>
+                        <outlet property="logoUrl" destination="MCH-5h-4SG" id="238-Gu-kZv"/>
                         <outlet property="memberLimitation" destination="0Cw-5j-keC" id="zZY-w5-zWU"/>
-                        <outlet property="saveButton" destination="W0s-LM-upB" id="1vg-zp-UnB"/>
+                        <outlet property="saveSchool" destination="mtf-Af-1Ck" id="fqc-aS-AQq"/>
                         <outlet property="schoolId" destination="WaJ-dZ-EgV" id="80r-bO-g6x"/>
                         <outlet property="schoolName" destination="ckp-Jl-df9" id="M4u-lo-yf1"/>
                         <outlet property="shortName" destination="otB-gp-QnR" id="mra-0I-Zgy"/>
