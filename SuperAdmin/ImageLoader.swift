@@ -19,8 +19,11 @@ class ImageLoader {
             dispatch_sync(dispatch_get_main_queue()!, {
                 if url == imageUrl {
                     target.image = imageData
-                    target.superview!.setNeedsLayout()
-                    target.superview!.layoutIfNeeded()
+                    if target.superview != nil {
+                        target.superview!.setNeedsLayout()
+                        target.superview!.layoutIfNeeded()
+                        
+                    }
                 }
             })
         })
