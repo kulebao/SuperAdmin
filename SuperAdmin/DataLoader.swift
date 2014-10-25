@@ -11,8 +11,13 @@ import Foundation
 class DataLoader {
     
     let serverHost: String = "http://127.0.0.1:9000"
-    let engine = JSONHelper()
+    var engine: JSONHelper!
     var schools: [School] = []
+    var userData: User!
+    
+    init() {
+        
+    }
     
     func loadSchoolsFromStage(callback: ([School]) -> Void) {
         self.login() {
@@ -62,15 +67,22 @@ class DataLoader {
     }
     
     func login(callback: (User) -> Void) {
-        self.engine.HTTPPostJSON("\(self.serverHost)/employee_login.do", jsonObj: ["account_name": "operator", "password": "daishu"]){
-            (data: String, error: String?) in
-            if (error != nil) {
-                println(error)
-            } else {
-                println(data)
-                callback(User(dic: self.engine.JSONParseDict(data)))
+        if engine != nil {
+            callback(self.userData)
+        } else {
+            self.engine = JSONHelper()
+            self.engine.HTTPPostJSON("\(self.serverHost)/employee_login.do", jsonObj: ["account_name": "operator", "password": "daishu"]){
+                (data: String, error: String?) in
+                if (error != nil) {
+                    println(error)
+                } else {
+                    println(data)
+                    self.userData = User(dic: self.engine.JSONParseDict(data))
+                    callback(self.userData)
+                }
             }
         }
+        
         
     }
     func loadChargeInfoFromStage(callback: [School] -> Void) {
