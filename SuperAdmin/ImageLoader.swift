@@ -8,15 +8,16 @@
 
 import Foundation
 
-class ImageLoader {
-    class func loadImage(url: String, target: UIImageView) {
+struct ImageLoader {
+    static var cache: [String:UIImage] = [:]
+    static func loadImage(url: String, target: UIImageView) {
         if url.isEmpty {
             return
         }
         dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), {
             let imageUrl = url
-            if let contentUrl = NSURL(string:url) {
-                var imageData =  UIImage(data: NSData(contentsOfURL: contentUrl)!)
+            if let imageData = ImageLoader.imageOfUrl(url) {
+                self.cache[url] = imageData
                 dispatch_sync(dispatch_get_main_queue()!, {
                     if url == imageUrl {
                         target.image = imageData
@@ -28,5 +29,17 @@ class ImageLoader {
                 })
             }
         })
+    }
+    
+    static func imageOfUrl(url: NSString) -> UIImage? {
+        if let data = cache[url] {
+            return data
+        } else {
+            if let contentUrl = NSURL(string:url) {
+                return UIImage(data: NSData(contentsOfURL: contentUrl)!)
+            } else {
+                return nil
+            }
+        }
     }
 }
