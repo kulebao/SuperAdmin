@@ -22,9 +22,9 @@ class EditSchoolController: UIViewController {
     @IBOutlet weak var memberLimitation: UILabel!
     @IBOutlet weak var address: UITextField!
     
-    @IBOutlet weak var logoUrl: UIImageView!
     @IBOutlet weak var videoLimitation: UILabel!
     
+    @IBOutlet weak var logoImage: UIImageView!
     @IBOutlet weak var saveSchool: UIBarButtonItem!
     
     override func viewDidAppear(animated: Bool) {
@@ -47,7 +47,7 @@ class EditSchoolController: UIViewController {
             self.memberLimitation!.text = "\(self.school.charge!.totalPhoneNumber)"
             self.videoLimitation!.text = "\(self.school.charge!.totalVideoNumber)"
             self.address!.text = self.school.address
-            ImageLoader.loadImage(school.logoUrl, target: self.logoUrl)
+            ImageLoader.loadImage(school.logoUrl, target: self.logoImage)
             self.saveSchool.enabled = false
             self.spinner.hide()
         });

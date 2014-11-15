@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A388a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
@@ -713,7 +713,13 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MCH-5h-4SG">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="112" y="466" width="240" height="128"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="0.0" height="0.0"/>
+                                </variation>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IzW-5y-Ddu">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="112" y="475" width="240" height="128"/>
                                 </variation>
                             </imageView>
                         </subviews>
@@ -743,6 +749,7 @@
                                 <exclude reference="qB1-ug-q12"/>
                                 <exclude reference="44u-Db-VO5"/>
                                 <exclude reference="MCH-5h-4SG"/>
+                                <exclude reference="IzW-5y-Ddu"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -770,6 +777,7 @@
                                 <include reference="qB1-ug-q12"/>
                                 <include reference="44u-Db-VO5"/>
                                 <include reference="MCH-5h-4SG"/>
+                                <include reference="IzW-5y-Ddu"/>
                             </mask>
                         </variation>
                     </view>
@@ -787,6 +795,7 @@
                         <outlet property="contact" destination="xOE-2p-AdR" id="n3C-vQ-fPC"/>
                         <outlet property="expire" destination="r5w-kz-2Lh" id="gMn-ey-u1T"/>
                         <outlet property="loginName" destination="fOj-f8-xqV" id="95o-vD-A1r"/>
+                        <outlet property="logoImage" destination="IzW-5y-Ddu" id="v4v-CL-ang"/>
                         <outlet property="logoUrl" destination="MCH-5h-4SG" id="238-Gu-kZv"/>
                         <outlet property="memberLimitation" destination="0Cw-5j-keC" id="zZY-w5-zWU"/>
                         <outlet property="saveSchool" destination="mtf-Af-1Ck" id="fqc-aS-AQq"/>
