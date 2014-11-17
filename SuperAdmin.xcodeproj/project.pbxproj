@@ -24,6 +24,8 @@
 		058542DC19D84F6C0085CC03 /* Teacher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058542DB19D84F6C0085CC03 /* Teacher.swift */; };
 		058542DE19D84FB70085CC03 /* Score.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058542DD19D84FB70085CC03 /* Score.swift */; };
 		058CF18219F143EB0016FE42 /* EditSchoolChargeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058CF18119F143EB0016FE42 /* EditSchoolChargeController.swift */; };
+		059A2A9B1A1A26A400A08817 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059A2A991A1A26A400A08817 /* LoginViewController.swift */; };
+		059A2A9C1A1A26A400A08817 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 059A2A9A1A1A26A400A08817 /* LoginViewController.xib */; };
 		05AE5F2619DB08CD00403EFA /* EditTeatherController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AE5F2519DB08CD00403EFA /* EditTeatherController.swift */; };
 		05B7E0DA19CB2F97006E9A13 /* DataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B7E0D819CB2F97006E9A13 /* DataLoader.swift */; };
 		05B7E0DB19CB2F97006E9A13 /* JSONHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B7E0D919CB2F97006E9A13 /* JSONHelper.swift */; };
@@ -70,6 +72,8 @@
 		058542DB19D84F6C0085CC03 /* Teacher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Teacher.swift; sourceTree = "<group>"; };
 		058542DD19D84FB70085CC03 /* Score.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Score.swift; sourceTree = "<group>"; };
 		058CF18119F143EB0016FE42 /* EditSchoolChargeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditSchoolChargeController.swift; sourceTree = "<group>"; };
+		059A2A991A1A26A400A08817 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		059A2A9A1A1A26A400A08817 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		05AE5F2519DB08CD00403EFA /* EditTeatherController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditTeatherController.swift; sourceTree = "<group>"; };
 		05B7E0D819CB2F97006E9A13 /* DataLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataLoader.swift; sourceTree = "<group>"; };
 		05B7E0D919CB2F97006E9A13 /* JSONHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONHelper.swift; sourceTree = "<group>"; };
@@ -121,6 +125,8 @@
 		0529090D19C9C66F00695D7E /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				059A2A991A1A26A400A08817 /* LoginViewController.swift */,
+				059A2A9A1A1A26A400A08817 /* LoginViewController.xib */,
 				057FCE2A19C4905200BAA2D9 /* FirstViewController.swift */,
 				057FCE2C19C4905200BAA2D9 /* SecondViewController.swift */,
 				0517657E19C4A5B2002D3957 /* SchoolsViewController.swift */,
@@ -298,6 +304,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				059A2A9C1A1A26A400A08817 /* LoginViewController.xib in Resources */,
 				057FCE3019C4905200BAA2D9 /* Main.storyboard in Resources */,
 				057FCE3519C4905200BAA2D9 /* LaunchScreen.xib in Resources */,
 				057FCE3219C4905200BAA2D9 /* Images.xcassets in Resources */,
@@ -363,6 +370,7 @@
 				05B7FA1619CECCFE002378BC /* ChargeCell.swift in Sources */,
 				050AC23E19D7D546000DF8DE /* Spinner.swift in Sources */,
 				058542D819D84D5C0085CC03 /* ScoreViewController.swift in Sources */,
+				059A2A9B1A1A26A400A08817 /* LoginViewController.swift in Sources */,
 				05B7FA0F19CEBCEA002378BC /* User.swift in Sources */,
 				05B7FA1119CECA36002378BC /* ChargeViewController.swift in Sources */,
 				05AE5F2619DB08CD00403EFA /* EditTeatherController.swift in Sources */,
