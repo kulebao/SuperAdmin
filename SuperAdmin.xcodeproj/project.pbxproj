@@ -36,6 +36,7 @@
 		05BBB18919D9A819009D52CD /* PrincipalsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BBB18819D9A819009D52CD /* PrincipalsController.swift */; };
 		05BBB18B19D9A84B009D52CD /* PrincipalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BBB18A19D9A84B009D52CD /* PrincipalCell.swift */; };
 		05C979E419C7065400A9884B /* SchoolCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C979E319C7065400A9884B /* SchoolCell.swift */; };
+		05D8FF891A1B74E40054EC67 /* Credential.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D8FF881A1B74E40054EC67 /* Credential.swift */; };
 		C0E3700F8D794009BA7BCF83 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 896DC0968B17459CB20E8DA1 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -84,6 +85,7 @@
 		05BBB18819D9A819009D52CD /* PrincipalsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrincipalsController.swift; sourceTree = "<group>"; };
 		05BBB18A19D9A84B009D52CD /* PrincipalCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrincipalCell.swift; sourceTree = "<group>"; };
 		05C979E319C7065400A9884B /* SchoolCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SchoolCell.swift; sourceTree = "<group>"; };
+		05D8FF881A1B74E40054EC67 /* Credential.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Credential.swift; sourceTree = "<group>"; };
 		896DC0968B17459CB20E8DA1 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		954EB4C49E0A4A5489593C6A /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -118,6 +120,7 @@
 				058542DB19D84F6C0085CC03 /* Teacher.swift */,
 				058542DD19D84FB70085CC03 /* Score.swift */,
 				056F543119FA73A30048C106 /* ImageLoader.swift */,
+				05D8FF881A1B74E40054EC67 /* Credential.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -380,6 +383,7 @@
 				057FCE2B19C4905200BAA2D9 /* FirstViewController.swift in Sources */,
 				0552CACA19E98B7C004B2AC5 /* EditSchoolController.swift in Sources */,
 				05BBB18B19D9A84B009D52CD /* PrincipalCell.swift in Sources */,
+				05D8FF891A1B74E40054EC67 /* Credential.swift in Sources */,
 				058542DA19D84E7B0085CC03 /* ScoreCell.swift in Sources */,
 				05B7FA1319CECB97002378BC /* Charge.swift in Sources */,
 			);

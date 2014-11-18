@@ -10,13 +10,18 @@ import Foundation
 
 class DataLoader {
     
-    let serverHost: String = "http://127.0.0.1:9000"
+    
+    let serverHost: String
+    let username: String
+    let password: String
     var engine: JSONHelper!
     var schools: [School] = []
     var userData: User!
     
     init() {
-        
+        serverHost = Credential.hostname
+        username =     Credential.username
+        password = Credential.password
     }
     
     func loadSchoolsFromStage(callback: ([School]) -> Void) {
@@ -71,7 +76,7 @@ class DataLoader {
             callback(self.userData)
         } else {
             self.engine = JSONHelper()
-            self.engine.HTTPPostJSON("\(self.serverHost)/employee_login.do", jsonObj: ["account_name": "operator", "password": "daishu"]){
+            self.engine.HTTPPostJSON("\(self.serverHost)/employee_login.do", jsonObj: ["account_name": username, "password": password]){
                 (data: String, error: String?) in
                 if (error != nil) {
                     println(error)
@@ -106,9 +111,9 @@ class DataLoader {
     
     func chargeInSingleSchool(school: School, callback: School -> Void) {
         self.engine.HTTPGetJSONArray("\(self.serverHost)/kindergarten/\(school.id)/charge", self.singleChargeCallback(school, callback: callback))
-
+        
     }
-
+    
     
     func chargeInSchools(callback: [School] -> Void)(schools: [School]) {
         self.schools = schools
@@ -175,7 +180,7 @@ class DataLoader {
         self.login() {
             (user: User) in
             self.engine.HTTPPostJSON("\(self.serverHost)\(uri)", jsonObj: json) {
-               (data: String, error: String?) -> Void in
+                (data: String, error: String?) -> Void in
                 if (error != nil) {
                     println(error)
                     failed(1, error!)
@@ -184,6 +189,6 @@ class DataLoader {
                 }
             }
         }
-
+        
     }
 }
