@@ -144,6 +144,9 @@
                 </label>
                 <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CFU-VN-3Ij">
                     <rect key="frame" x="0.0" y="-162" width="320" height="162"/>
+                    <variation key="heightClass=regular" misplaced="YES">
+                        <rect key="frame" x="36" y="637" width="600" height="162"/>
+                    </variation>
                 </pickerView>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TQu-au-WHc">
                     <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
@@ -172,10 +175,10 @@
                         </mask>
                     </variation>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="warning" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ehS-A3-5Cy">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="warning" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ehS-A3-5Cy">
                     <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <color key="textColor" red="0.72889046717171713" green="0.070367598973453224" blue="0.082560495642620843" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                     <variation key="heightClass=regular" misplaced="YES">
                         <rect key="frame" x="145" y="502" width="310" height="53"/>

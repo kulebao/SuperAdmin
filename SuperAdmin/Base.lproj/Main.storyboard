@@ -86,20 +86,26 @@
                                 <rect key="frame" x="0.0" y="28" width="142" height="77"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="142" id="RLr-lQ-j0H"/>
                                     <constraint firstAttribute="height" constant="78" id="aDd-Yd-mJv"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="78" id="kKU-eT-fyJ"/>
                                     <constraint firstAttribute="width" constant="142" id="zZ6-HC-nSf"/>
                                 </constraints>
                                 <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <state key="normal" title="学校管理"/>
                                 <variation key="default">
                                     <mask key="constraints">
+                                        <exclude reference="RLr-lQ-j0H"/>
                                         <exclude reference="aDd-Yd-mJv"/>
+                                        <exclude reference="kKU-eT-fyJ"/>
                                         <exclude reference="zZ6-HC-nSf"/>
                                     </mask>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=compact">
                                     <mask key="constraints">
+                                        <include reference="RLr-lQ-j0H"/>
                                         <include reference="aDd-Yd-mJv"/>
+                                        <include reference="kKU-eT-fyJ"/>
                                         <include reference="zZ6-HC-nSf"/>
                                     </mask>
                                 </variation>
@@ -116,9 +122,32 @@
                                     <segue destination="a0u-i9-niY" kind="show" id="r6z-1N-kP7"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oyH-hD-0jy">
+                                <rect key="frame" x="0.0" y="374" width="142" height="77"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="142" id="I0I-kJ-g6G"/>
+                                    <constraint firstAttribute="height" constant="78" id="SR5-R7-7zO"/>
+                                </constraints>
+                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <state key="normal" title="登出"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="I0I-kJ-g6G"/>
+                                        <exclude reference="SR5-R7-7zO"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="I0I-kJ-g6G"/>
+                                        <include reference="SR5-R7-7zO"/>
+                                    </mask>
+                                </variation>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="oyH-hD-0jy" firstAttribute="leading" secondItem="lEM-oc-X5R" secondAttribute="trailing" constant="15" id="4GQ-CY-KbX"/>
                             <constraint firstItem="lEM-oc-X5R" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" id="5ou-vz-rqi"/>
                             <constraint firstItem="cBt-kU-w3m" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" constant="8" id="62e-70-7lx"/>
                             <constraint firstItem="Bwb-yX-ZIc" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" id="7fT-iE-bKj"/>
@@ -136,6 +165,7 @@
                                 <variation key="heightClass=regular-widthClass=compact" constant="13"/>
                             </constraint>
                             <constraint firstItem="cBt-kU-w3m" firstAttribute="leading" secondItem="Bwb-yX-ZIc" secondAttribute="leading" id="LXM-uN-8cE"/>
+                            <constraint firstItem="oyH-hD-0jy" firstAttribute="top" secondItem="2Id-Rp-7hE" secondAttribute="bottom" constant="13" id="MYD-vt-6Hb"/>
                             <constraint firstItem="2Id-Rp-7hE" firstAttribute="top" secondItem="Ezh-wp-vx2" secondAttribute="bottom" constant="7" id="NdF-PJ-bb0">
                                 <variation key="heightClass=regular-widthClass=compact" constant="13"/>
                             </constraint>
@@ -176,6 +206,9 @@
                             <constraint firstItem="ub1-a2-6NZ" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" id="zFk-dl-Xa9"/>
                         </constraints>
                         <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="oyH-hD-0jy"/>
+                            </mask>
                             <mask key="constraints">
                                 <exclude reference="62e-70-7lx"/>
                                 <exclude reference="IqE-tK-yh4"/>
@@ -222,9 +255,14 @@
                                 <exclude reference="IVC-TC-uFz"/>
                                 <exclude reference="ToI-yD-1Zm"/>
                                 <exclude reference="kRX-dw-pNl"/>
+                                <exclude reference="4GQ-CY-KbX"/>
+                                <exclude reference="MYD-vt-6Hb"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="oyH-hD-0jy"/>
+                            </mask>
                             <mask key="constraints">
                                 <include reference="62e-70-7lx"/>
                                 <include reference="IqE-tK-yh4"/>
@@ -271,6 +309,8 @@
                                 <include reference="IVC-TC-uFz"/>
                                 <include reference="ToI-yD-1Zm"/>
                                 <include reference="kRX-dw-pNl"/>
+                                <include reference="4GQ-CY-KbX"/>
+                                <include reference="MYD-vt-6Hb"/>
                             </mask>
                         </variation>
                     </view>

@@ -8,7 +8,7 @@
 
 import Foundation
 
-class User {
+struct User {
     let id: String
     let name: String
     let portrait: String
@@ -27,7 +27,11 @@ class User {
         self.privilegeGroup = privilege
     }
     
-    convenience init(dic: [String: AnyObject]) {
+    init(dic: [String: AnyObject]) {
         self.init(id: dic["id"]! as String, name: dic["name"]! as String, portrait: dic["portrait"]! as String, phone: dic["phone"]! as String, gender: dic["gender"]! as Int, loginName: dic["login_name"]! as String, privilege: dic["privilege_group"]! as String)
+    }
+    
+    static func invalid() -> User {
+        return User(id: "", name: "", portrait: "", phone: "", gender: 1, loginName: "", privilege: "")
     }
 }

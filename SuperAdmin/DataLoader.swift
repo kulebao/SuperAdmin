@@ -80,10 +80,16 @@ class DataLoader {
                 (data: String, error: String?) in
                 if (error != nil) {
                     println(error)
+                    callback(User.invalid())
                 } else {
                     println(data)
-                    self.userData = User(dic: self.engine.JSONParseDict(data))
-                    callback(self.userData)
+                    if data.hasPrefix("{") {
+                        self.userData = User(dic: self.engine.JSONParseDict(data))
+                        callback(self.userData)
+                    } else {
+                        callback(User.invalid())
+                    }
+                    
                 }
             }
         }
