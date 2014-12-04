@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource,UITextFieldDelegate {
     
     @IBOutlet weak var username: UITextField!
     
@@ -20,17 +20,24 @@ class LoginViewController: UIViewController {
     
     @IBOutlet weak var loginButton: UIButton!
     
+    @IBOutlet weak var hostPicker: UIPickerView!
+    
+    let hosts = ["http://localhost:9000", "https://stage2.cocobabys.com", "https://www.cocobabys.com"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         warning.hidden = true
         // Do any additional setup after loading the view.
         loginButton.enabled = false
+        hostname.text = hosts[0]
+        self.hideAllInputView()
     }
     
     
     @IBAction func login(sender: AnyObject) {
         
         if isAllFieldsValid() {
+            
             Credential.hostname = hostname.text
             Credential.username = username.text
             Credential.password = password.text
@@ -46,7 +53,7 @@ class LoginViewController: UIViewController {
             }
         } else {
             showErrorMessage("请填写所有字段。")
-
+            
         }
         
     }
@@ -63,7 +70,7 @@ class LoginViewController: UIViewController {
         dispatch_async(dispatch_get_main_queue()) {
             self.warning.text = msg
             self.warning.hidden = false
- 
+            
         }
     }
     
@@ -78,15 +85,39 @@ class LoginViewController: UIViewController {
         return !hostname.text.isEmpty && !username.text.isEmpty && !password.text.isEmpty
     }
     
-    
-    /*
-    // MARK: - Navigation
-    
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-    // Get the new view controller using segue.destinationViewController.
-    // Pass the selected object to the new view controller.
+    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String! {
+        return self.hosts[row]
     }
-    */
+    
+    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        self.editingChange(pickerView)
+        self.hostname.text = self.hosts[row]
+    }
+    
+    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return self.hosts.count
+    }
+    
+    func textFieldShouldBeginEditing(textField: UITextField) -> Bool {
+        self.hideAllInputView()
+        self.hostPicker.hidden = (textField != self.hostname!)
+        return true
+    }
+    
+    func textFieldShouldEndEditing(textField: UITextField) -> Bool {
+        if textField == self.hostname! {
+            self.hostPicker.hidden = true
+        }
+        return true
+    }
+    
+    func hideAllInputView() {
+        self.hostPicker.hidden = true
+    }
+    
     
 }

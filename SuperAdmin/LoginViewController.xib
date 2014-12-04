@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
@@ -7,6 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="SuperAdmin" customModuleProvider="target">
             <connections>
+                <outlet property="hostPicker" destination="CFU-VN-3Ij" id="EYD-yb-91g"/>
                 <outlet property="hostname" destination="TQu-au-WHc" id="3gh-RH-G1E"/>
                 <outlet property="loginButton" destination="FdV-uf-bh1" id="Lg8-qd-5RJ"/>
                 <outlet property="password" destination="ppi-kC-8f5" id="axp-1S-2Ti"/>
@@ -88,6 +89,7 @@
                     </variation>
                     <connections>
                         <action selector="editingChange:" destination="-1" eventType="editingChanged" id="Z3P-Ia-xVY"/>
+                        <outlet property="delegate" destination="-1" id="4UD-sg-6g1"/>
                     </connections>
                 </textField>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OgX-dg-4qq">
@@ -96,6 +98,7 @@
                     <textInputTraits key="textInputTraits"/>
                     <connections>
                         <action selector="editingChange:" destination="-1" eventType="editingChanged" id="zKr-fd-IIK"/>
+                        <outlet property="delegate" destination="-1" id="Qq7-MQ-pOI"/>
                     </connections>
                 </textField>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="超级后台" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pGP-9P-9Bz">
@@ -142,18 +145,13 @@
                         </mask>
                     </variation>
                 </label>
-                <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CFU-VN-3Ij">
-                    <rect key="frame" x="0.0" y="-162" width="320" height="162"/>
-                    <variation key="heightClass=regular" misplaced="YES">
-                        <rect key="frame" x="36" y="637" width="600" height="162"/>
-                    </variation>
-                </pickerView>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TQu-au-WHc">
                     <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                     <connections>
                         <action selector="editingChange:" destination="-1" eventType="editingChanged" id="ABw-ku-Cwt"/>
+                        <outlet property="delegate" destination="-1" id="uz5-I4-amq"/>
                     </connections>
                 </textField>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="密码" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v6b-k1-1wh">
@@ -180,10 +178,17 @@
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" red="0.72889046717171713" green="0.070367598973453224" blue="0.082560495642620843" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
-                    <variation key="heightClass=regular" misplaced="YES">
-                        <rect key="frame" x="145" y="502" width="310" height="53"/>
-                    </variation>
                 </label>
+                <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CFU-VN-3Ij">
+                    <rect key="frame" x="0.0" y="-162" width="320" height="162"/>
+                    <variation key="heightClass=regular" misplaced="YES">
+                        <rect key="frame" x="36" y="648" width="600" height="180"/>
+                    </variation>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="DCF-Pv-IIG"/>
+                        <outlet property="delegate" destination="-1" id="Tup-Jh-QLt"/>
+                    </connections>
+                </pickerView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
@@ -192,26 +197,34 @@
                 <constraint firstItem="ppi-kC-8f5" firstAttribute="top" secondItem="OgX-dg-4qq" secondAttribute="top" constant="57" id="3Ae-oe-dFC"/>
                 <constraint firstItem="ehS-A3-5Cy" firstAttribute="height" secondItem="FdV-uf-bh1" secondAttribute="height" id="3cw-p1-tS3"/>
                 <constraint firstItem="ppi-kC-8f5" firstAttribute="height" secondItem="TQu-au-WHc" secondAttribute="height" id="4e8-Ft-aw0"/>
+                <constraint firstItem="CFU-VN-3Ij" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="5fB-Gp-70X"/>
                 <constraint firstItem="pGP-9P-9Bz" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="76" id="5zw-Tt-HAH"/>
                 <constraint firstItem="ppi-kC-8f5" firstAttribute="width" secondItem="TQu-au-WHc" secondAttribute="width" id="6At-zO-25b"/>
                 <constraint firstItem="ehS-A3-5Cy" firstAttribute="width" secondItem="FdV-uf-bh1" secondAttribute="width" id="6cd-7Y-05V"/>
+                <constraint firstItem="CFU-VN-3Ij" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="6wz-TA-cgh"/>
+                <constraint firstAttribute="bottom" secondItem="CFU-VN-3Ij" secondAttribute="bottom" id="75Q-hu-85n"/>
+                <constraint firstItem="CFU-VN-3Ij" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="9ox-Do-hFK"/>
                 <constraint firstItem="TQu-au-WHc" firstAttribute="top" secondItem="OgX-dg-4qq" secondAttribute="top" constant="120" id="BST-cz-ECd"/>
                 <constraint firstItem="v6b-k1-1wh" firstAttribute="top" secondItem="K7z-XW-sZy" secondAttribute="bottom" constant="34" id="BpC-QD-hRu"/>
+                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="CFU-VN-3Ij" secondAttribute="trailing" id="BvW-xF-Mg1"/>
                 <constraint firstAttribute="centerX" secondItem="pGP-9P-9Bz" secondAttribute="centerX" id="EoO-VF-Yrp"/>
+                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="CFU-VN-3Ij" secondAttribute="trailing" id="IZA-69-Ev0"/>
+                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="CFU-VN-3Ij" secondAttribute="trailing" constant="-36" id="KD5-bH-JSR"/>
                 <constraint firstItem="K7z-XW-sZy" firstAttribute="leading" secondItem="tuF-sQ-Age" secondAttribute="leading" id="Lph-YN-Oxg"/>
                 <constraint firstAttribute="centerX" secondItem="FdV-uf-bh1" secondAttribute="centerX" id="LzE-Ek-Slz"/>
                 <constraint firstItem="CFU-VN-3Ij" firstAttribute="top" secondItem="FdV-uf-bh1" secondAttribute="top" constant="214" id="NMS-ON-FRq"/>
                 <constraint firstItem="K7z-XW-sZy" firstAttribute="top" secondItem="pGP-9P-9Bz" secondAttribute="top" constant="105" id="NdY-dn-FIT"/>
                 <constraint firstItem="TQu-au-WHc" firstAttribute="leading" secondItem="OgX-dg-4qq" secondAttribute="leading" id="OvS-xf-v1a"/>
-                <constraint firstAttribute="trailing" secondItem="CFU-VN-3Ij" secondAttribute="trailing" constant="-36" id="RNQ-jr-xbd"/>
+                <constraint firstItem="CFU-VN-3Ij" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="36" id="QLi-mz-4p0"/>
+                <constraint firstAttribute="trailing" secondItem="CFU-VN-3Ij" secondAttribute="trailing" constant="36" id="RNQ-jr-xbd"/>
                 <constraint firstItem="OgX-dg-4qq" firstAttribute="leading" secondItem="ppi-kC-8f5" secondAttribute="leading" id="T8f-xh-bI8"/>
                 <constraint firstAttribute="centerX" secondItem="ppi-kC-8f5" secondAttribute="centerX" constant="-60" id="Tmh-hD-joC"/>
+                <constraint firstAttribute="centerX" secondItem="CFU-VN-3Ij" secondAttribute="centerX" constant="-20" id="XNh-eA-g9K"/>
                 <constraint firstItem="ppi-kC-8f5" firstAttribute="height" secondItem="OgX-dg-4qq" secondAttribute="height" id="gRd-E9-qAv"/>
                 <constraint firstItem="ppi-kC-8f5" firstAttribute="width" secondItem="OgX-dg-4qq" secondAttribute="width" id="hBP-Ox-mI5"/>
                 <constraint firstItem="ehS-A3-5Cy" firstAttribute="leading" secondItem="FdV-uf-bh1" secondAttribute="leading" id="hFA-Zt-kaE"/>
                 <constraint firstAttribute="centerY" secondItem="FdV-uf-bh1" secondAttribute="centerY" constant="-50" id="oSM-4H-zgv"/>
                 <constraint firstItem="ehS-A3-5Cy" firstAttribute="top" secondItem="FdV-uf-bh1" secondAttribute="top" constant="64" id="r4d-Yg-cxI"/>
-                <constraint firstItem="CFU-VN-3Ij" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="36" id="rrI-AW-x2w"/>
                 <constraint firstItem="tuF-sQ-Age" firstAttribute="top" secondItem="v6b-k1-1wh" secondAttribute="bottom" constant="42" id="yHd-oY-s6z"/>
                 <constraint firstAttribute="centerX" secondItem="K7z-XW-sZy" secondAttribute="centerX" constant="100" id="zQY-Mf-0GX"/>
             </constraints>
@@ -223,10 +236,10 @@
                     <exclude reference="OgX-dg-4qq"/>
                     <exclude reference="pGP-9P-9Bz"/>
                     <exclude reference="tuF-sQ-Age"/>
-                    <exclude reference="CFU-VN-3Ij"/>
                     <exclude reference="TQu-au-WHc"/>
                     <exclude reference="v6b-k1-1wh"/>
                     <exclude reference="ehS-A3-5Cy"/>
+                    <exclude reference="CFU-VN-3Ij"/>
                 </mask>
                 <mask key="constraints">
                     <exclude reference="5zw-Tt-HAH"/>
@@ -253,9 +266,17 @@
                     <exclude reference="6cd-7Y-05V"/>
                     <exclude reference="hFA-Zt-kaE"/>
                     <exclude reference="r4d-Yg-cxI"/>
+                    <exclude reference="5fB-Gp-70X"/>
+                    <exclude reference="6wz-TA-cgh"/>
+                    <exclude reference="75Q-hu-85n"/>
+                    <exclude reference="9ox-Do-hFK"/>
+                    <exclude reference="BvW-xF-Mg1"/>
+                    <exclude reference="IZA-69-Ev0"/>
+                    <exclude reference="KD5-bH-JSR"/>
                     <exclude reference="NMS-ON-FRq"/>
+                    <exclude reference="QLi-mz-4p0"/>
                     <exclude reference="RNQ-jr-xbd"/>
-                    <exclude reference="rrI-AW-x2w"/>
+                    <exclude reference="XNh-eA-g9K"/>
                 </mask>
             </variation>
             <variation key="heightClass=regular">
@@ -266,10 +287,10 @@
                     <include reference="OgX-dg-4qq"/>
                     <include reference="pGP-9P-9Bz"/>
                     <include reference="tuF-sQ-Age"/>
-                    <include reference="CFU-VN-3Ij"/>
                     <include reference="TQu-au-WHc"/>
                     <include reference="v6b-k1-1wh"/>
                     <include reference="ehS-A3-5Cy"/>
+                    <include reference="CFU-VN-3Ij"/>
                 </mask>
                 <mask key="constraints">
                     <include reference="5zw-Tt-HAH"/>
@@ -296,9 +317,17 @@
                     <include reference="6cd-7Y-05V"/>
                     <include reference="hFA-Zt-kaE"/>
                     <include reference="r4d-Yg-cxI"/>
+                    <exclude reference="5fB-Gp-70X"/>
+                    <include reference="6wz-TA-cgh"/>
+                    <include reference="75Q-hu-85n"/>
+                    <exclude reference="9ox-Do-hFK"/>
+                    <include reference="BvW-xF-Mg1"/>
+                    <include reference="IZA-69-Ev0"/>
+                    <include reference="KD5-bH-JSR"/>
                     <include reference="NMS-ON-FRq"/>
+                    <include reference="QLi-mz-4p0"/>
                     <include reference="RNQ-jr-xbd"/>
-                    <include reference="rrI-AW-x2w"/>
+                    <include reference="XNh-eA-g9K"/>
                 </mask>
             </variation>
             <point key="canvasLocation" x="322" y="147"/>
