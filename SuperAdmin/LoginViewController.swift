@@ -22,7 +22,8 @@ class LoginViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     
     @IBOutlet weak var hostPicker: UIPickerView!
     
-    let hosts = ["http://localhost:9000", "https://stage2.cocobabys.com", "https://www.cocobabys.com"]
+    let hosts = ["local", "stage", "prod"]
+    let hostsMap = ["local": "http://localhost:9000", "stage": "https://stage2.cocobabys.com", "prod": "https://www.cocobabys.com"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,8 +38,12 @@ class LoginViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     @IBAction func login(sender: AnyObject) {
         
         if isAllFieldsValid() {
-            
-            Credential.hostname = hostname.text
+            if let host = self.hostsMap[hostname.text] {
+                Credential.hostname = host
+            } else {
+                Credential.hostname = self.hostsMap["localhost"]
+            }
+
             Credential.username = username.text
             Credential.password = password.text
             
