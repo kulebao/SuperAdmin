@@ -20,6 +20,12 @@ class FirstViewController: UIViewController, MBProgressHUDDelegate {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    @IBAction func logout(sender: AnyObject) {
+        if let window = UIApplication.sharedApplication().delegate?.window? {
+            var loginVC = LoginViewController(nibName: "LoginViewController", bundle: NSBundle.mainBundle())
+            window.rootViewController = loginVC
+        }
+    }
     
 }
 
