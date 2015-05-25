@@ -30,7 +30,7 @@ class School {
     }
     
     convenience init(dic: [String: AnyObject]) {
-        self.init(id: dic["school_id"]! as Int, name: dic["name"]! as String, principal: "王二", logo: dic["school_logo_url"]! as String, fullName: dic["full_name"]! as String, token: dic["token"]! as String, address: School.addressOfSchool(dic["address"]) )
+        self.init(id: dic["school_id"]! as! Int, name: dic["name"]! as! String, principal: "王二", logo: dic["school_logo_url"]! as! String, fullName: dic["full_name"]! as! String, token: dic["token"]! as! String, address: School.addressOfSchool(dic["address"]) )
     }
     
     class func addressOfSchool(input: Optional<AnyObject>) -> String {

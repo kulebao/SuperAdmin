@@ -35,7 +35,7 @@ class SchoolsViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
-        var  cell = tableView.dequeueReusableCellWithIdentifier("MyCell", forIndexPath: indexPath) as SchoolCell
+        var  cell = tableView.dequeueReusableCellWithIdentifier("MyCell", forIndexPath: indexPath) as! SchoolCell
         
         
         let model = self.schools[indexPath.item]
@@ -50,8 +50,8 @@ class SchoolsViewController: UITableViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         super.prepareForSegue(segue, sender: sender)
         if segue.identifier == "editSchool"{
-            let vc = segue.destinationViewController as EditSchoolController
-            let t = sender! as SchoolCell
+            let vc = segue.destinationViewController as! EditSchoolController
+            let t = sender! as! SchoolCell
             vc.school = t.school!
         }
         

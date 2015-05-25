@@ -32,10 +32,10 @@ class DataLoader {
                 if (error != nil) {
                     println(error)
                 } else {
-                    self.schools = data.map({school in School(dic: school as [String: AnyObject])})
+                    self.schools = data.map({school in School(dic: school as! [String: AnyObject])})
                     
                     for school in self.schools {
-                        self.engine.HTTPGetJSONArray("\(self.serverHost)/kindergarten/\(school.id)/principal", self.principalCallback(school, callback))
+                        self.engine.HTTPGetJSONArray("\(self.serverHost)/kindergarten/\(school.id)/principal", callback: self.principalCallback(school, callback: callback))
                     }
                 }
             }
@@ -51,8 +51,8 @@ class DataLoader {
                 return s.id == school.id as Int
             }).map({(s:School) -> School in
                 if (data.count > 0 && data[0]["phone"] as? String != nil) {
-                    let phone: String = data[0]["phone"] as String
-                    self.engine.HTTPGetJSON("\(self.serverHost)/kindergarten/\(s.id)/employee/\(phone)", self.employeeCallback(s))
+                    let phone: String = data[0]["phone"] as! String
+                    self.engine.HTTPGetJSON("\(self.serverHost)/kindergarten/\(s.id)/employee/\(phone)", callback: self.employeeCallback(s))
                 } else {
                     s.principal = Teacher(name: "未指定", school: s.id, loginName: "", birthday: "1980-11-11", id: "0", phone: "-")
                 }
@@ -116,7 +116,7 @@ class DataLoader {
     }
     
     func chargeInSingleSchool(school: School, callback: School -> Void) {
-        self.engine.HTTPGetJSONArray("\(self.serverHost)/kindergarten/\(school.id)/charge", self.singleChargeCallback(school, callback: callback))
+        self.engine.HTTPGetJSONArray("\(self.serverHost)/kindergarten/\(school.id)/charge", callback: self.singleChargeCallback(school, callback: callback))
         
     }
     
@@ -124,7 +124,7 @@ class DataLoader {
     func chargeInSchools(callback: [School] -> Void)(schools: [School]) {
         self.schools = schools
         for school in schools {
-            self.engine.HTTPGetJSONArray("\(self.serverHost)/kindergarten/\(school.id)/charge", self.chargeCallback(school, callback: callback))
+            self.engine.HTTPGetJSONArray("\(self.serverHost)/kindergarten/\(school.id)/charge", callback: self.chargeCallback(school, callback: callback))
         }
     }
     
@@ -134,7 +134,7 @@ class DataLoader {
         } else {
             println(data[0])
             let res: AnyObject = data[0] as AnyObject
-            school.charge = Charge(school: res["school_id"] as Int, member: res["total_phone_number"] as Int, video: res["total_video_account"] as Int, expiryDate:  res["expire_date"] as String)
+            school.charge = Charge(school: res["school_id"] as! Int, member: res["total_phone_number"] as! Int, video: res["total_video_account"] as! Int, expiryDate:  res["expire_date"] as! String)
             callback(school)
             
         }
@@ -147,14 +147,14 @@ class DataLoader {
             println(data[0])
             let res: AnyObject = data[0] as AnyObject
             self.schools.filter({ (s: School) -> Bool in
-                return s.id == res["school_id"] as Int
+                return s.id == res["school_id"] as! Int
             }).map({(s:School) -> School in
-                s.charge = Charge(school: res["school_id"] as Int, member: res["total_phone_number"] as Int, video: res["total_video_account"] as Int, expiryDate: res["expire_date"] as String)
+                s.charge = Charge(school: res["school_id"] as! Int, member: res["total_phone_number"] as! Int, video: res["total_video_account"] as! Int, expiryDate: res["expire_date"] as! String)
                 return s
             })
         }
         if self.schools.filter({ (s: School) -> Bool in
-            return s.charge? == nil
+            return s.charge == nil
         }).count == 0 {
             callback(self.schools)
         }
@@ -175,7 +175,7 @@ class DataLoader {
                 if (error != nil) {
                     println(error)
                 } else {
-                    let teachers = data.map({teacher in Teacher(dic: teacher as [String: AnyObject])})
+                    let teachers = data.map({teacher in Teacher(dic: teacher as! [String: AnyObject])})
                     callback(teachers)
                 }
             }

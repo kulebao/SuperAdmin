@@ -31,7 +31,7 @@ struct ImageLoader {
         })
     }
     
-    static func imageOfUrl(url: NSString) -> UIImage? {
+    static func imageOfUrl(url: String) -> UIImage? {
         if let data = cache[url] {
             return data
         } else {

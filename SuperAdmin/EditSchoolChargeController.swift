@@ -31,7 +31,7 @@ class EditSchoolChargeController: UIViewController {
     @IBAction func saveCharge(sender: AnyObject) {
         spinner.show("Saving...")
         let charge = Charge(school: self.school!.id as Int, member: self.memberCount.text.toInt()!, video: self.videoMemberCount.text.toInt()!, expiryDate: self.school.charge!.expiryDate)
-        charge.save(self.saved, self.saveFailed)
+        charge.save(self.saved, failed:self.saveFailed)
     }
     
     func saved(code: Int, msg: String){

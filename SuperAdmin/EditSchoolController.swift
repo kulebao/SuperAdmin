@@ -31,7 +31,7 @@ class EditSchoolController: UIViewController {
         super.viewDidAppear(animated)
         spinner = Spinner(view: self.view)
         spinner.show("Loading...")
-        DataLoader().loadChargeInfoForSchool(self.school, self.dataArrived)
+        DataLoader().loadChargeInfoForSchool(self.school, callback: self.dataArrived)
     }
     
     func dataArrived(school: School) {
@@ -63,7 +63,7 @@ class EditSchoolController: UIViewController {
     @IBAction func save(sender: AnyObject) {
         self.saveSchool.enabled = false
         let school = School(id: self.school.id, name: self.shortName.text, principal: self.school.principal.name, logo: self.school.logoUrl, fullName: self.schoolName.text, token: self.token.text, address: self.address.text)
-        school.save(self.saved, self.saveFailed)
+        school.save(self.saved, failed: self.saveFailed)
     }
     
     func saved(code: Int, msg: String){
@@ -82,7 +82,7 @@ class EditSchoolController: UIViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         super.prepareForSegue(segue, sender: sender)
         if segue.identifier == "editCharge"{
-            let vc = segue.destinationViewController as EditSchoolChargeController
+            let vc = segue.destinationViewController as! EditSchoolChargeController
             vc.school = self.school
         }
     }

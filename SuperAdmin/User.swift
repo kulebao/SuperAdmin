@@ -28,7 +28,7 @@ struct User {
     }
     
     init(dic: [String: AnyObject]) {
-        self.init(id: dic["id"]! as String, name: dic["name"]! as String, portrait: dic["portrait"]! as String, phone: dic["phone"]! as String, gender: dic["gender"]! as Int, loginName: dic["login_name"]! as String, privilege: dic["privilege_group"]! as String)
+        self.init(id: dic["id"]! as! String, name: dic["name"]! as! String, portrait: dic["portrait"]! as! String, phone: dic["phone"]! as! String, gender: dic["gender"]! as! Int, loginName: dic["login_name"]! as! String, privilege: dic["privilege_group"]! as! String)
     }
     
     static func invalid() -> User {

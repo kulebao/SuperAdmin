@@ -33,7 +33,7 @@ class ChargeViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
-        let cell = tableView.dequeueReusableCellWithIdentifier("ChargeCell", forIndexPath: indexPath) as ChargeCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("ChargeCell", forIndexPath: indexPath) as! ChargeCell
         
         let model = self.schools[indexPath.item]
         

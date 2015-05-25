@@ -34,7 +34,7 @@ class PrincipalsViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
-        let cell = tableView.dequeueReusableCellWithIdentifier("PrincipalCell", forIndexPath: indexPath) as PrincipalCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("PrincipalCell", forIndexPath: indexPath) as! PrincipalCell
         
         let model = self.teachers[indexPath.item]
         
@@ -48,12 +48,12 @@ class PrincipalsViewController: UITableViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         super.prepareForSegue(segue, sender: sender)
         if segue.identifier == "editTeacher"{
-            let vc = segue.destinationViewController as EditTeatherController
-            let t = sender! as PrincipalCell
+            let vc = segue.destinationViewController as! EditTeatherController
+            let t = sender! as! PrincipalCell
             vc.teacher = t.teacher!
         }
         if segue.identifier == "addTeacher"{
-            let vc = segue.destinationViewController as EditTeatherController
+            let vc = segue.destinationViewController as! EditTeatherController
             vc.teacher = Teacher(name: "", school: 0, loginName: "", birthday: "", id: "3_1_1", phone: "1234321")
         }
     }

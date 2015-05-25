@@ -18,7 +18,7 @@ class JSONHelper {
                         callback("", error.localizedDescription)
                     } else {
                         callback(NSString(data: data,
-                            encoding: NSUTF8StringEncoding)!, nil)
+                            encoding: NSUTF8StringEncoding) as! String, nil)
                     }
             }
             
@@ -33,7 +33,7 @@ class JSONHelper {
         if e != nil {
             return ""
         } else {
-            return NSString(data: jsonData, encoding: NSUTF8StringEncoding)!
+            return NSString(data: jsonData, encoding: NSUTF8StringEncoding) as! String
         }
     }
     
@@ -45,7 +45,7 @@ class JSONHelper {
         var jsonObj = NSJSONSerialization.JSONObjectWithData(
             data,
             options: NSJSONReadingOptions(0),
-            error: &e) as Dictionary<String, AnyObject>
+            error: &e) as! Dictionary<String, AnyObject>
         if (e != nil) {
             return Dictionary<String, AnyObject>()
         } else {
@@ -58,7 +58,7 @@ class JSONHelper {
         var jsonObj = NSJSONSerialization.JSONObjectWithData(
             data,
             options: NSJSONReadingOptions(0),
-            error: &e) as [AnyObject]
+            error: &e) as! [AnyObject]
         if e != nil {
             return []
         } else {
@@ -108,6 +108,6 @@ class JSONHelper {
             let data: NSData = jsonString.dataUsingEncoding(
                 NSUTF8StringEncoding)!
             request.HTTPBody = data
-            HTTPsendRequest(request, callback)
+            HTTPsendRequest(request, callback:callback)
     }
 }

@@ -71,7 +71,7 @@ class EditTeatherController: UIViewController, UIPickerViewDelegate, UIPickerVie
         spinner.show("Saving...")
         let data: [String: AnyObject] = ["name": self.name!.text as String, "school_id": self.school!.text.toInt()!, "login_name": self.loginName!.text as String, "birthday": self.birthday!.text as String, "id": self.teacher.id as String, "phone": self.cellPhone!.text! as String]
         let t = Teacher(dic: data)
-        t.save(self.saved, self.saveFailed)
+        t.save(self.saved, failed: self.saveFailed)
     }
     
     func saved(code: Int, msg: String){

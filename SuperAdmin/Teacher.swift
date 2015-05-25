@@ -27,7 +27,7 @@ class Teacher {
         self.phone = phone
     }
     convenience init(dic: [String: AnyObject]) {
-        self.init(name: dic["name"]! as String, school: dic["school_id"]! as Int, loginName: dic["login_name"]! as String, birthday: dic["birthday"]! as String, id: dic["id"]! as String, phone: dic["phone"]! as String)
+        self.init(name: dic["name"]! as! String, school: dic["school_id"]! as! Int, loginName: dic["login_name"]! as! String, birthday: dic["birthday"]! as! String, id: dic["id"]! as! String, phone: dic["phone"]! as! String)
     }
     
     func save(succeed:(Int, String) -> Void, failed: (Int, String) -> Void)  {
