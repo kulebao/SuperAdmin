@@ -20,8 +20,9 @@ class LoginViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     
     @IBOutlet weak var loginButton: UIButton!
     
-    @IBOutlet weak var hostPicker: UIPickerView!
-    
+    var hostPicker: UIPickerView!
+    var lastHostName: String!
+
     let hosts = ["local", "stage", "prod"]
     let hostsMap = ["local": "http://localhost:9000", "stage": "https://stage2.cocobabys.com", "prod": "https://www.cocobabys.com"]
     
@@ -31,6 +32,9 @@ class LoginViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         // Do any additional setup after loading the view.
         loginButton.enabled = false
         hostname.text = hosts[0]
+        hostPicker = self.createHostPicker()
+        hostname.inputView = hostPicker
+        hostname.inputAccessoryView = self.createHostPickerToolBar()
         self.hideAllInputView()
     }
     
@@ -62,6 +66,31 @@ class LoginViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         }
         
     }
+
+    func createHostPicker() -> UIPickerView {
+        let hostPicker = UIPickerView()
+        hostPicker.delegate = self
+        hostPicker.dataSource = self
+        return hostPicker
+    }
+
+    func createHostPickerToolBar() -> UIToolbar {
+        let toolBar = UIToolbar()
+        toolBar.barStyle = UIBarStyle.Default
+        toolBar.translucent = true
+        toolBar.tintColor = UIColor(red: 76/255, green: 217/255, blue: 100/255, alpha: 1)
+        toolBar.sizeToFit()
+
+
+        let doneButton = UIBarButtonItem(barButtonSystemItem:.Done, target: self, action: "donePicker")
+        let spaceButton = UIBarButtonItem(barButtonSystemItem: .FlexibleSpace, target: nil, action: nil)
+        let cancelButton = UIBarButtonItem(barButtonSystemItem:.Cancel, target: self, action: "cancelPicker")
+
+        toolBar.setItems([cancelButton, spaceButton, doneButton], animated: false)
+        toolBar.userInteractionEnabled = true
+        return toolBar
+    }
+
     func gotoMainPage(user: User) {
         dispatch_async(dispatch_get_main_queue()) {
             let mainSB = UIStoryboard(name:"Main", bundle: nil)
@@ -110,6 +139,7 @@ class LoginViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     func textFieldShouldBeginEditing(textField: UITextField) -> Bool {
         self.hideAllInputView()
         self.hostPicker.hidden = (textField != self.hostname!)
+        self.lastHostName = self.hostname.text
         return true
     }
     
@@ -122,6 +152,23 @@ class LoginViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     
     func hideAllInputView() {
         self.hostPicker.hidden = true
+    }
+    
+    func donePicker() {
+        self.hostname.resignFirstResponder()
+    }
+
+    func cancelPicker() {
+        self.hostname.resignFirstResponder()
+        self.hostname.text = self.lastHostName
+        self.hostPicker.selectRow(self.indexOf(self.lastHostName), inComponent: 0, animated: false)
+    }
+    
+    func indexOf(name: String) -> Int {
+        if let i = find(hosts, name) {
+            return i
+        }
+        return 0
     }
     
     

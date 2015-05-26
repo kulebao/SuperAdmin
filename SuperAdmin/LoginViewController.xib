@@ -6,7 +6,6 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="SuperAdmin" customModuleProvider="target">
             <connections>
-                <outlet property="hostPicker" destination="CFU-VN-3Ij" id="EYD-yb-91g"/>
                 <outlet property="hostname" destination="TQu-au-WHc" id="3gh-RH-G1E"/>
                 <outlet property="loginButton" destination="FdV-uf-bh1" id="Lg8-qd-5RJ"/>
                 <outlet property="password" destination="ppi-kC-8f5" id="axp-1S-2Ti"/>
@@ -91,7 +90,7 @@
                         <outlet property="delegate" destination="-1" id="4UD-sg-6g1"/>
                     </connections>
                 </textField>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OgX-dg-4qq">
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="OgX-dg-4qq">
                     <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
@@ -178,13 +177,6 @@
                     <color key="textColor" red="0.72889046717171713" green="0.070367598973453224" blue="0.082560495642620843" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CFU-VN-3Ij">
-                    <rect key="frame" x="0.0" y="-162" width="320" height="162"/>
-                    <connections>
-                        <outlet property="dataSource" destination="-1" id="DCF-Pv-IIG"/>
-                        <outlet property="delegate" destination="-1" id="Tup-Jh-QLt"/>
-                    </connections>
-                </pickerView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
@@ -193,29 +185,18 @@
                 <constraint firstItem="ppi-kC-8f5" firstAttribute="top" secondItem="OgX-dg-4qq" secondAttribute="top" constant="57" id="3Ae-oe-dFC"/>
                 <constraint firstItem="ehS-A3-5Cy" firstAttribute="height" secondItem="FdV-uf-bh1" secondAttribute="height" id="3cw-p1-tS3"/>
                 <constraint firstItem="ppi-kC-8f5" firstAttribute="height" secondItem="TQu-au-WHc" secondAttribute="height" id="4e8-Ft-aw0"/>
-                <constraint firstItem="CFU-VN-3Ij" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="5fB-Gp-70X"/>
                 <constraint firstItem="pGP-9P-9Bz" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="76" id="5zw-Tt-HAH"/>
                 <constraint firstItem="ppi-kC-8f5" firstAttribute="width" secondItem="TQu-au-WHc" secondAttribute="width" id="6At-zO-25b"/>
                 <constraint firstItem="ehS-A3-5Cy" firstAttribute="width" secondItem="FdV-uf-bh1" secondAttribute="width" id="6cd-7Y-05V"/>
-                <constraint firstItem="CFU-VN-3Ij" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="6wz-TA-cgh"/>
-                <constraint firstAttribute="bottom" secondItem="CFU-VN-3Ij" secondAttribute="bottom" id="75Q-hu-85n"/>
-                <constraint firstItem="CFU-VN-3Ij" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="9ox-Do-hFK"/>
                 <constraint firstItem="TQu-au-WHc" firstAttribute="top" secondItem="OgX-dg-4qq" secondAttribute="top" constant="120" id="BST-cz-ECd"/>
                 <constraint firstItem="v6b-k1-1wh" firstAttribute="top" secondItem="K7z-XW-sZy" secondAttribute="bottom" constant="34" id="BpC-QD-hRu"/>
-                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="CFU-VN-3Ij" secondAttribute="trailing" id="BvW-xF-Mg1"/>
                 <constraint firstAttribute="centerX" secondItem="pGP-9P-9Bz" secondAttribute="centerX" id="EoO-VF-Yrp"/>
-                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="CFU-VN-3Ij" secondAttribute="trailing" id="IZA-69-Ev0"/>
-                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="CFU-VN-3Ij" secondAttribute="trailing" constant="-36" id="KD5-bH-JSR"/>
                 <constraint firstItem="K7z-XW-sZy" firstAttribute="leading" secondItem="tuF-sQ-Age" secondAttribute="leading" id="Lph-YN-Oxg"/>
                 <constraint firstAttribute="centerX" secondItem="FdV-uf-bh1" secondAttribute="centerX" id="LzE-Ek-Slz"/>
-                <constraint firstItem="CFU-VN-3Ij" firstAttribute="top" secondItem="FdV-uf-bh1" secondAttribute="top" constant="214" id="NMS-ON-FRq"/>
                 <constraint firstItem="K7z-XW-sZy" firstAttribute="top" secondItem="pGP-9P-9Bz" secondAttribute="top" constant="105" id="NdY-dn-FIT"/>
                 <constraint firstItem="TQu-au-WHc" firstAttribute="leading" secondItem="OgX-dg-4qq" secondAttribute="leading" id="OvS-xf-v1a"/>
-                <constraint firstItem="CFU-VN-3Ij" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="36" id="QLi-mz-4p0"/>
-                <constraint firstAttribute="trailing" secondItem="CFU-VN-3Ij" secondAttribute="trailing" constant="36" id="RNQ-jr-xbd"/>
                 <constraint firstItem="OgX-dg-4qq" firstAttribute="leading" secondItem="ppi-kC-8f5" secondAttribute="leading" id="T8f-xh-bI8"/>
                 <constraint firstAttribute="centerX" secondItem="ppi-kC-8f5" secondAttribute="centerX" constant="-60" id="Tmh-hD-joC"/>
-                <constraint firstAttribute="centerX" secondItem="CFU-VN-3Ij" secondAttribute="centerX" constant="-20" id="XNh-eA-g9K"/>
                 <constraint firstItem="ppi-kC-8f5" firstAttribute="height" secondItem="OgX-dg-4qq" secondAttribute="height" id="gRd-E9-qAv"/>
                 <constraint firstItem="ppi-kC-8f5" firstAttribute="width" secondItem="OgX-dg-4qq" secondAttribute="width" id="hBP-Ox-mI5"/>
                 <constraint firstItem="ehS-A3-5Cy" firstAttribute="leading" secondItem="FdV-uf-bh1" secondAttribute="leading" id="hFA-Zt-kaE"/>
@@ -235,20 +216,8 @@
                     <exclude reference="TQu-au-WHc"/>
                     <exclude reference="v6b-k1-1wh"/>
                     <exclude reference="ehS-A3-5Cy"/>
-                    <exclude reference="CFU-VN-3Ij"/>
                 </mask>
                 <mask key="constraints">
-                    <exclude reference="5fB-Gp-70X"/>
-                    <exclude reference="6wz-TA-cgh"/>
-                    <exclude reference="75Q-hu-85n"/>
-                    <exclude reference="9ox-Do-hFK"/>
-                    <exclude reference="BvW-xF-Mg1"/>
-                    <exclude reference="IZA-69-Ev0"/>
-                    <exclude reference="KD5-bH-JSR"/>
-                    <exclude reference="NMS-ON-FRq"/>
-                    <exclude reference="QLi-mz-4p0"/>
-                    <exclude reference="RNQ-jr-xbd"/>
-                    <exclude reference="XNh-eA-g9K"/>
                     <exclude reference="Lph-YN-Oxg"/>
                     <exclude reference="NdY-dn-FIT"/>
                     <exclude reference="zQY-Mf-0GX"/>
@@ -286,20 +255,8 @@
                     <include reference="TQu-au-WHc"/>
                     <include reference="v6b-k1-1wh"/>
                     <include reference="ehS-A3-5Cy"/>
-                    <include reference="CFU-VN-3Ij"/>
                 </mask>
                 <mask key="constraints">
-                    <exclude reference="5fB-Gp-70X"/>
-                    <include reference="6wz-TA-cgh"/>
-                    <include reference="75Q-hu-85n"/>
-                    <exclude reference="9ox-Do-hFK"/>
-                    <include reference="BvW-xF-Mg1"/>
-                    <include reference="IZA-69-Ev0"/>
-                    <include reference="KD5-bH-JSR"/>
-                    <include reference="NMS-ON-FRq"/>
-                    <include reference="QLi-mz-4p0"/>
-                    <include reference="RNQ-jr-xbd"/>
-                    <include reference="XNh-eA-g9K"/>
                     <include reference="Lph-YN-Oxg"/>
                     <include reference="NdY-dn-FIT"/>
                     <include reference="zQY-Mf-0GX"/>
