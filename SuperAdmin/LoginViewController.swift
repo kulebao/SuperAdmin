@@ -19,11 +19,15 @@ class LoginViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     @IBOutlet weak var warning: UILabel!
     
     @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var xxx: NSLayoutConstraint!
     
     var hostPicker: UIPickerView!
     var lastHostName: String!
-
+    #if DEBUG
     let hosts = ["local", "stage", "prod"]
+    #else
+    let hosts = ["stage", "prod"]
+    #endif
     let hostsMap = ["local": "http://localhost:9000", "stage": "https://stage2.cocobabys.com", "prod": "https://www.cocobabys.com"]
     
     override func viewDidLoad() {
@@ -35,6 +39,8 @@ class LoginViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         hostPicker = self.createHostPicker()
         hostname.inputView = hostPicker
         hostname.inputAccessoryView = self.createHostPickerToolBar()
+        
+        xxx.constant = 8
         self.hideAllInputView()
     }
     
