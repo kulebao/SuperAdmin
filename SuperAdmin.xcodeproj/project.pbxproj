@@ -524,6 +524,7 @@
 					"-framework",
 					SystemConfiguration,
 				);
+				OTHER_SWIFT_FLAGS = "-DDEBUG";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "SuperAdmin/SuperAdmin-Bridging-Header.h";
 			};
