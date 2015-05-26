@@ -1490,77 +1490,50 @@
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="纯练手，Swift娱乐用" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NDk-cv-Gan">
                                 <rect key="frame" x="192" y="329" width="215.5" height="17"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="131" id="bOy-Se-vNQ"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="bOy-Se-vNQ"/>
-                                    </mask>
-                                </variation>
-                                <variation key="heightClass=regular-widthClass=compact">
-                                    <mask key="constraints">
-                                        <include reference="bOy-Se-vNQ"/>
-                                    </mask>
-                                </variation>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" text="高大上的库乐宝超级管理员App" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="zEq-FU-wV5" userLabel="高大上的库乐宝超级管理员APP">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" text="高大上的库乐宝超级管理员App" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="zEq-FU-wV5" userLabel="高大上的库乐宝超级管理员APP">
                                 <rect key="frame" x="195" y="279" width="209.5" height="41.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="eOO-yo-shc"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="28"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="eOO-yo-shc"/>
-                                    </mask>
-                                </variation>
-                                <variation key="heightClass=regular-widthClass=compact">
-                                    <mask key="constraints">
-                                        <include reference="eOO-yo-shc"/>
-                                    </mask>
-                                </variation>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="centerX" secondItem="zEq-FU-wV5" secondAttribute="centerX" id="Ba2-7a-viE"/>
-                            <constraint firstItem="NDk-cv-Gan" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" constant="5" id="PmK-wG-4Mq"/>
-                            <constraint firstItem="zEq-FU-wV5" firstAttribute="top" secondItem="L7p-HK-0SC" secondAttribute="bottom" constant="167" id="Pvm-qU-AVE"/>
-                            <constraint firstAttribute="centerX" secondItem="NDk-cv-Gan" secondAttribute="centerX" id="YpA-j9-RpS"/>
-                            <constraint firstItem="NDk-cv-Gan" firstAttribute="top" secondItem="zEq-FU-wV5" secondAttribute="bottom" constant="200" id="cXu-b3-Rbf"/>
-                            <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="NDk-cv-Gan" secondAttribute="trailing" constant="5" id="ePQ-aU-1BV"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="zEq-FU-wV5" secondAttribute="trailing" constant="5" id="jWx-8d-Fj4"/>
-                            <constraint firstItem="zEq-FU-wV5" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" constant="5" id="tda-ff-nlk"/>
+                            <constraint firstItem="NDk-cv-Gan" firstAttribute="top" secondItem="zEq-FU-wV5" secondAttribute="bottom" priority="750" constant="200" id="0Al-9Z-B2j"/>
+                            <constraint firstItem="NDk-cv-Gan" firstAttribute="centerX" secondItem="zEq-FU-wV5" secondAttribute="centerX" constant="0.5" id="9hL-c5-Ngz"/>
+                            <constraint firstItem="zEq-FU-wV5" firstAttribute="top" secondItem="L7p-HK-0SC" secondAttribute="bottom" constant="167" id="QJo-Mr-kVS"/>
+                            <constraint firstItem="zEq-FU-wV5" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" constant="8" id="RYc-U1-IGe"/>
+                            <constraint firstAttribute="centerX" secondItem="zEq-FU-wV5" secondAttribute="centerX" id="SrN-nE-jRi"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="zEq-FU-wV5" secondAttribute="trailing" constant="8" id="YdW-sV-gvN"/>
+                            <constraint firstItem="Djb-ko-YwX" firstAttribute="top" relation="greaterThanOrEqual" secondItem="NDk-cv-Gan" secondAttribute="bottom" constant="282" id="vu5-kD-eNY">
+                                <variation key="heightClass=regular-widthClass=compact" constant="50"/>
+                            </constraint>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="Ba2-7a-viE"/>
-                                <exclude reference="Pvm-qU-AVE"/>
-                                <exclude reference="jWx-8d-Fj4"/>
-                                <exclude reference="tda-ff-nlk"/>
-                                <exclude reference="PmK-wG-4Mq"/>
-                                <exclude reference="YpA-j9-RpS"/>
-                                <exclude reference="cXu-b3-Rbf"/>
-                                <exclude reference="ePQ-aU-1BV"/>
+                                <exclude reference="QJo-Mr-kVS"/>
+                                <exclude reference="RYc-U1-IGe"/>
+                                <exclude reference="SrN-nE-jRi"/>
+                                <exclude reference="YdW-sV-gvN"/>
+                                <exclude reference="0Al-9Z-B2j"/>
+                                <exclude reference="9hL-c5-Ngz"/>
+                                <exclude reference="vu5-kD-eNY"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="constraints">
-                                <include reference="Ba2-7a-viE"/>
-                                <include reference="Pvm-qU-AVE"/>
-                                <include reference="jWx-8d-Fj4"/>
-                                <include reference="tda-ff-nlk"/>
-                                <include reference="PmK-wG-4Mq"/>
-                                <include reference="YpA-j9-RpS"/>
-                                <include reference="cXu-b3-Rbf"/>
-                                <include reference="ePQ-aU-1BV"/>
+                                <include reference="QJo-Mr-kVS"/>
+                                <include reference="RYc-U1-IGe"/>
+                                <include reference="SrN-nE-jRi"/>
+                                <include reference="YdW-sV-gvN"/>
+                                <include reference="0Al-9Z-B2j"/>
+                                <include reference="9hL-c5-Ngz"/>
+                                <include reference="vu5-kD-eNY"/>
                             </mask>
                         </variation>
                     </view>
